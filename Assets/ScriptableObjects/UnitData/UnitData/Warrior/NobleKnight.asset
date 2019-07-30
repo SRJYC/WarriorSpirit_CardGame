@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f16444738e807304687d8d8932eeab1b, type: 3}
+  m_Name: NobleKnight
+  m_EditorClassIdentifier: 
+  m_ConstantData: {fileID: 11400000, guid: 926c87c4fdfc1794ab125f47c7afa0c8, type: 2}
+  m_SpiritTypes: 
+  m_Abilities:
+  - {fileID: 11400000, guid: c9d928ba8049cee449fab35c96f912cc, type: 2}
+  m_RankUps: []
+  m_StatsChangedEvent: {fileID: 11400000, guid: 84d2f1c3924e32844bdefb35626966dc,
+    type: 2}
+  m_Cost: 0
+  m_Durability: 20
+  m_Power: 0
+  m_Speed: 20
+  unitStats: 
+  valueForStats: 

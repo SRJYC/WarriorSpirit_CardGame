@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7629700856758082800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7629700856758082806}
+  - component: {fileID: 7629700856578786548}
+  - component: {fileID: 7629700856578786549}
+  - component: {fileID: 7629700856578786550}
+  - component: {fileID: 4343526676475918178}
+  - component: {fileID: 1312163428}
+  m_Layer: 0
+  m_Name: GameplayManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7629700856758082806
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7629700856758082800}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7629700856578786548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7629700856758082800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3d84487df278848b2d530a128fa375, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsBusy: 0
+  m_ActionPhaseEvent: {fileID: 11400000, guid: 3d6c79975ce2c844a9be69ef578f9057, type: 2}
+  m_EndActionPhaseEvent: {fileID: 11400000, guid: 596cc38676ed09d4281c4d54acbaeec6,
+    type: 2}
+  m_TurnPassEvent: {fileID: 11400000, guid: b654aeeaf0312ef40abab66522dc87bd, type: 2}
+  m_ConfirmButton: {fileID: 0}
+  m_ActionMessage: {fileID: 0}
+--- !u!114 &7629700856578786549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7629700856758082800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db2c9e59f14f364690016268b49755d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RankUpEvent: {fileID: 11400000, guid: 9224393026adac9469b5104fdfd1b054, type: 2}
+  m_DisplayCardOptionEvent: {fileID: 11400000, guid: 01c191b18fc64224b8d89958ebd274e5,
+    type: 2}
+  m_DisplayRankUpRequirementEvent: {fileID: 11400000, guid: 8876ecdc1f562684a8924005b59f1a57,
+    type: 2}
+  m_PlayerSelect: {fileID: 11400000, guid: bfee3dd5ce9764946b49827cf3119693, type: 2}
+  m_Message: Choose the High Rank Form
+  m_RankUpPhaseEvent: {fileID: 11400000, guid: e07736a4c9cbeab40a8066087592c854, type: 2}
+  m_EndRankUpPhaseEvent: {fileID: 11400000, guid: 71553f2b0a299184480b5ce9444f5a43,
+    type: 2}
+--- !u!114 &7629700856578786550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7629700856758082800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13683d053b6c6b84783fa137a42bc158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4343526676475918178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7629700856758082800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2049c2667fdb0546a0205fad36c4835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_GameStartEvent: {fileID: 11400000, guid: 4582155bdbed67747990fb2b6de12fac, type: 2}
+  m_EndInitializeEvent: {fileID: 11400000, guid: cca6482f32f876a4998114f2642faa05,
+    type: 2}
+--- !u!114 &1312163428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7629700856758082800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bc2653c9c9fadc439af94c4e1e53de0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardPrefab: {fileID: 1415838891725698651, guid: 58f3ae04c3bee82448b4526173371b57,
+    type: 3}
+  m_DrawCard: {fileID: 11400000, guid: 3e64953f7b62aba459e48f5032e64a64, type: 2}
+  m_EndDrawCard: {fileID: 11400000, guid: 150ee9061527a534d960e521d04c772d, type: 2}

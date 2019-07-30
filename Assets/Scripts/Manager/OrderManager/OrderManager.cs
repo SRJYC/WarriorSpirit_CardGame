@@ -1,0 +1,137 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class OrderManager : Singleton<OrderManager>
+{
+    public GameEvent m_OrderInitEvent;
+    public GameEvent m_EndOrderInitEvent;
+
+    public GameObject m_Container;
+
+    public GameObject m_MarkObject;
+    private ObjectPool m_Pool;
+
+    //public ScrollRect scrolRect;
+
+    private List<Unit> m_SortedUnitList;
+    private List<Unit> m_UnsortedUnitList;
+    private Dictionary<Unit, GameObject> m_UnitMarkMap;
+
+    private Unit m_CurrentUnit;
+
+    public Unit CurrentUnit { get { return m_CurrentUnit; } }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        m_Pool = new ObjectPool(m_MarkObject);
+        m_SortedUnitList = new List<Unit>();
+        m_UnsortedUnitList = new List<Unit>();
+        m_UnitMarkMap = new Dictionary<Unit, GameObject>();
+
+        if (m_OrderInitEvent != null)
+            m_OrderInitEvent.RegisterListenner(TurnStartInit);
+    }
+
+    private void OnDestroy()
+    {
+        if (m_OrderInitEvent != null)
+            m_OrderInitEvent.UnregisterListenner(TurnStartInit);
+    }
+
+    /// <summary>
+    /// Move Current to next and return current unit
+    /// </summary>
+    /// <returns></returns>
+    public Unit NextUnit()
+    {
+        if (m_CurrentUnit == null)
+            return null;
+
+        m_UnitMarkMap[m_CurrentUnit].GetComponent<OrderMarkDisplay>().Resize();
+
+        int index = m_SortedUnitList.IndexOf(m_CurrentUnit);
+        if (index < m_SortedUnitList.Count - 1)
+        {
+            m_CurrentUnit = m_SortedUnitList[++index];
+            m_UnitMarkMap[m_CurrentUnit].GetComponent<OrderMarkDisplay>().Enlarge();
+        }
+        else
+        {
+            m_CurrentUnit = null;
+        }
+
+        return m_CurrentUnit;
+    }
+
+    private void TurnStartInit(GameEventData data)
+    {
+        SortList();
+
+        foreach(GameObject mark in m_UnitMarkMap.Values)
+        {
+            mark.GetComponent<OrderMarkDisplay>().SetActiveColor(true);
+        }
+
+        if (m_SortedUnitList.Count > 0)
+        {
+            m_CurrentUnit = m_SortedUnitList[0];
+            m_UnitMarkMap[m_CurrentUnit].GetComponent<OrderMarkDisplay>().Enlarge();
+        }
+        else
+            m_CurrentUnit = null;
+
+        //Debug.Log("Order Manager Trigger ");
+        m_EndOrderInitEvent.Trigger();
+    }
+
+    public void AddUnit(Unit unit)
+    {
+        m_UnsortedUnitList.Add(unit);
+
+        GameObject mark = m_Pool.Get(true);
+        bool ally = GetAllyEnemy(unit);
+
+        OrderMarkDisplay markDisplay = mark.GetComponent<OrderMarkDisplay>();
+        markDisplay.Display(unit, ally);
+        markDisplay.SetActiveColor(false);
+
+        mark.transform.SetParent(m_Container.transform);
+        mark.transform.SetSiblingIndex(m_SortedUnitList.IndexOf(unit));
+
+        m_UnitMarkMap.Add(unit, mark);
+    }
+
+    public void RemoveUnit(Unit unit)
+    {   
+        m_UnsortedUnitList.Remove(unit);
+        m_SortedUnitList.Remove(unit);
+
+        GameObject mark;
+        if(m_UnitMarkMap.TryGetValue(unit, out mark))
+        {
+            mark.transform.SetParent(null);
+            m_Pool.Deactivate(mark, true);
+
+            m_UnitMarkMap.Remove(unit);
+        }
+    }
+
+    private bool GetAllyEnemy(Unit unit)
+    {
+        return PlayerManager.Instance.GetLocalPlayerID() == unit.m_PlayerID;
+    }
+
+    private void SortList()
+    {
+        m_SortedUnitList = m_UnsortedUnitList.OrderByDescending(unit => unit.m_Data.GetStat(UnitStatsProperty.SPD)).ToList();
+
+        for(int i=0; i<m_SortedUnitList.Count; i++)
+        {
+            m_UnitMarkMap[m_SortedUnitList[i]].transform.SetSiblingIndex(i);
+        }
+    }
+}
