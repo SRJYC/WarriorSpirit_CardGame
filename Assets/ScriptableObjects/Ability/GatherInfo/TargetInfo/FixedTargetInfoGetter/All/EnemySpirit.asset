@@ -9,12 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bfd68220a6c161429409a2b8ead5d8c, type: 3}
-  m_Name: NobleKnight
+  m_Script: {fileID: 11500000, guid: 1fac18f9898ee204e9ff44d529a70a91, type: 3}
+  m_Name: EnemySpirit
   m_EditorClassIdentifier: 
-  m_UnitName: Noble Knight
-  m_Description: 'The Warrior who '
-  m_Artwork: {fileID: 0}
-  m_IsWarrior: 1
-  m_CanBeFront: 0
-  m_CanBeBack: 0
+  m_Automatic: 1
+  m_Done: 0
+  m_ExculdeSelf: 1
+  m_ExcludeWarrior: 1
+  m_NeedUnit: 1
+  m_Targets: []
+  m_Blocks: []
+  m_IsAlly: 0

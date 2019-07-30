@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fac18f9898ee204e9ff44d529a70a91, type: 3}
-  m_Name: AllOtherAllyExculdeWarrior
+  m_Name: AllySpirit
   m_EditorClassIdentifier: 
-  m_ExculdeSelf: 1
+  m_Automatic: 1
+  m_Done: 0
+  m_ExculdeSelf: 0
   m_ExcludeWarrior: 1
-  m_Position: {fileID: 0}
-  m_Field: {fileID: 0}
+  m_NeedUnit: 1
   m_Targets: []
   m_Blocks: []
   m_IsAlly: 1

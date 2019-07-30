@@ -21,49 +21,34 @@ public class RankUpManagerCheckPhase
         }
 
         PlayerID id = data1.m_Owner.m_PlayerID;
-        CheckMana(conditions,id);
+        Player player = PlayerManager.Instance.GetPlayer(id);
 
-        CheckPosition(conditions, block);
+        int currentMana = player.m_Mana.currentMana;
 
-        CheckConditions(conditions, data1, data2);
-
-        return conditions;
-    }
-
-    private static void CheckMana(List<RankUpCondition> conditions, PlayerID id)
-    {
-        int currentMana = PlayerManager.Instance.GetPlayer(id).m_Mana.currentMana;
-
-        for (int i = conditions.Count - 1; i >= 0; i--)
-        {
-            UnitData data = conditions[i].m_HighRankSpirit;
-
-            if (data.m_Cost > currentMana)
-                conditions.RemoveAt(i);
-        }
-    }
-
-    private static void CheckPosition(List<RankUpCondition> conditions, FieldBlock block)
-    {
         FieldBlockType type = block.m_RowType;
 
         for (int i = conditions.Count - 1; i >= 0; i--)
         {
             UnitData data = conditions[i].m_HighRankSpirit;
 
-            //can't summoned on block
+            //unique
+            if (!player.CheckUniqueUnit(data))
+                conditions.RemoveAt(i);
+
+            //mana
+            if (data.m_Cost > currentMana)
+                conditions.RemoveAt(i);
+
+            //position
             if ((type == FieldBlockType.Front && !data.CanBeFrontline) || (type == FieldBlockType.Back && !data.CanBeBackline))
                 conditions.RemoveAt(i);
-        }
-    }
 
-    private static void CheckConditions(List<RankUpCondition> conditions, UnitData data1, UnitData data2)
-    {
-        for (int i = conditions.Count - 1; i >= 0; i--)
-        {
+            //condition
             if (!conditions[i].Check(data1, data2))
                 conditions.RemoveAt(i);
         }
+
+        return conditions;
     }
 
     

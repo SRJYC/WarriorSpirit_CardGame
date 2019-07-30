@@ -23,6 +23,9 @@ public class SummonManager
         unit.m_Position.MoveTo(block);
         unit.GetComponent<CardDraggable>().Disable();
 
+        PlayerID id = unit.m_PlayerID;
+        PlayerManager.Instance.GetPlayer(id).m_UnitsOnBoard.SummonToBoard(unit);
+
         OrderManager.Instance.AddUnit(unit);
     }
 

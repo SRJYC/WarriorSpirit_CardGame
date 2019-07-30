@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Hand
+  - Board
   layers:
   - Default
   - TransparentFX
@@ -38,6 +40,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Empty
+    uniqueID: 2210043735
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Board
+    uniqueID: 1462677683
+    locked: 0
+  - name: Floating
+    uniqueID: 2550072663
+    locked: 0
+  - name: Window
+    uniqueID: 2287615953
+    locked: 0
+  - name: UI
+    uniqueID: 3849139879
+    locked: 0
+  - name: Tooltip
+    uniqueID: 791128059
     locked: 0

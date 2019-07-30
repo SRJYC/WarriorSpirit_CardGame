@@ -5,7 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName ="Ability/AbilityInfoGetter/SelectTargetGetter")]
 public class SelectTargetInfoGetter : TargetInfoGetter
 {
-    public FixedTargetInfoGetter m_AvaliableTargetGetter;
+    public List<FixedTargetInfoGetter> m_AvaliableTargetGetter;
+    [HideInInspector]public List<FieldBlock> m_AvaliableBlocks;
 
     public GameEvent m_BlockClickEvent;
     public GameEvent m_CancalSelectEvent;
@@ -18,7 +19,7 @@ public class SelectTargetInfoGetter : TargetInfoGetter
     [Tooltip("Will show confirm button and can continue without getting max number of targets")]
     public bool m_CanEndEarly;
 
-    [Tooltip("Highlight block as well.(If need unit, units will be highlighted)")]
+    [Tooltip("Highlight block as well which means player can select empty block.(If need unit, units will be highlighted)")]
     public bool m_HighlightBlock;
 
     public HighlightType m_avaliableCardType;
@@ -53,10 +54,14 @@ public class SelectTargetInfoGetter : TargetInfoGetter
 
     private void HighlightAvaliableTarget(Unit source)
     {
-        //Debug.Log("Get Range");
-        m_AvaliableTargetGetter.GetInfo(source);
+        m_AvaliableBlocks = new List<FieldBlock>();
+        foreach (FixedTargetInfoGetter infoGetter in  m_AvaliableTargetGetter)
+        {
+            infoGetter.GetInfo(source);
+            m_AvaliableBlocks.AddRange(infoGetter.m_Blocks);
+        }
 
-        foreach (FieldBlock block in m_AvaliableTargetGetter.m_Blocks)
+        foreach (FieldBlock block in m_AvaliableBlocks)
         {
             HighlightTarget(block, false);
         }
@@ -68,8 +73,11 @@ public class SelectTargetInfoGetter : TargetInfoGetter
         if (data == null)
             return;
 
-        if(m_AvaliableTargetGetter.m_Blocks.Contains(data.m_Block))
+        if(m_AvaliableBlocks.Contains(data.m_Block))
         {
+            if (!m_HighlightBlock && data.m_Block.m_Unit == null)
+                return;
+
             Select(data.m_Block);
         }
     }
@@ -172,13 +180,9 @@ public class SelectTargetInfoGetter : TargetInfoGetter
 
     private void UnhighlightAll()
     {
-        foreach (FieldBlock block in m_AvaliableTargetGetter.m_Blocks)
+        foreach (FieldBlock block in m_AvaliableBlocks)
         {
             HighlightTarget(block, false, false);
-        }
-
-        foreach (FieldBlock block in m_AvaliableTargetGetter.m_Blocks)
-        {
             HighlightTarget(block, true, false);
         }
     }

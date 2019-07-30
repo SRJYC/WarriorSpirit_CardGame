@@ -9,6 +9,7 @@ public class SingleAbilityDisplay : MonoBehaviour
 
     public TextMeshProUGUI m_NameText;
     public TextMeshProUGUI m_DescriptionText;
+    public TextMeshProUGUI m_AdditionalText;
     public Image m_Background;
 
     [Header("Difference between Action and Passive")]
@@ -18,11 +19,29 @@ public class SingleAbilityDisplay : MonoBehaviour
     [SerializeField] private Sprite m_PassiveBackground = null;
 
     [SerializeField] private TMP_ColorGradient m_InactiveColor = null;
+
+    public const string cdText = "CD(current CD):";
+    public const string manaText = "Mana Cost:";
     public void Display(Ability data)
     {
         m_Ability = data;
+
+        DisplayCDAndManaCost();
         DisplayText(data.m_Data.m_AbilityName, data.m_Data.m_Description);
+
         ChangeForAction(data.m_IsAction);
+    }
+
+    private void DisplayCDAndManaCost()
+    {
+        string result = "";
+
+        if (m_Ability.m_CD > 0)
+            result += cdText + m_Ability.m_CD + "(" + m_Ability.m_CurrentCD + ")";
+        if(m_Ability.m_ManaCost > 0)
+            result += manaText + m_Ability.m_ManaCost;
+
+        m_AdditionalText.text = result;
     }
 
     private void DisplayText(string name, string description)

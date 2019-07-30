@@ -9,8 +9,10 @@ public class CardDisplay : UnitDataDisplay
     public UnitData m_CardData;
 
     [Header("UI")]
+    [SerializeField] private Image m_Background = null;
     [SerializeField] private TextMeshProUGUI m_NameText = null;
     [SerializeField] private Image m_Art = null;
+    [SerializeField] private GameObject m_Icon = null;
 
     public override void Display(UnitData data)
     {
@@ -34,7 +36,10 @@ public class CardDisplay : UnitDataDisplay
         if (m_CardData == null)
             return;
 
+        m_Background.color = RankColor.Instance.GetColor(m_CardData.Rank);
+
         m_NameText.SetText(m_CardData.UnitName);
         m_Art.sprite = m_CardData.Artwork;
+        m_Icon.SetActive(m_CardData.IsUnique);
     }
 }

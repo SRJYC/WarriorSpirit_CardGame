@@ -33,22 +33,8 @@ public class ActionManager : Singleton<ActionManager>
         if (m_IsBusy)
             return;
 
-        Unit unit = action.m_Owner;
-        if (unit == null)
-        {
-            Debug.Log("Not a real unit");
+        if (!CheckAvaliablity(action))
             return;
-        }
-        if (unit.m_Position.m_Block == null)
-        {
-            Debug.Log("Unit Not On Board");
-            return;
-        }
-        if (!unit.PlayerControl())
-        {
-            Debug.Log("Unit can't be controlled");
-            return;
-        }
 
         EnterPhase();
 
@@ -56,6 +42,41 @@ public class ActionManager : Singleton<ActionManager>
         action.Trigger();
 
         WindowManager.Instance.FocusBoard();
+    }
+
+    private static bool CheckAvaliablity(Ability action)
+    {
+        Unit unit = action.m_Owner;
+        if (unit == null)
+        {
+            Debug.Log("Not a real unit");
+            return false;
+        }
+        else if (unit.m_Position.m_Block == null)
+        {
+            GameMessage.Instance.Display("Spirit is not on Battlefield");
+            return false;
+        }
+        else if (!unit.PlayerControl())
+        {
+            GameMessage.Instance.Display("Spirit can't be controlled. It's either not its turn or it's enemy.");
+            return false;
+        }
+        else if (action.m_CurrentCD > 0)
+        {
+            GameMessage.Instance.Display("This Action is still in Cooldown. You may Pass turn instead.");
+            return false;
+        }
+        else if (action.m_ManaCost > 0)
+        {
+            Player player = PlayerManager.Instance.GetPlayer(unit.m_PlayerID);
+            if (action.m_ManaCost > player.m_Mana.currentMana)
+            {
+                GameMessage.Instance.Display("This Action will cost Mana, make sure you have enough of it.");
+                return false;
+            }
+        }
+        return true;
     }
 
     public void ActionConfirm()

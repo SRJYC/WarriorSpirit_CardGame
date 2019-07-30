@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fa543acf779e9f4b958a72f1d25c966, type: 3}
-  m_Name: Strengthen
+  m_Name: Weaken
   m_EditorClassIdentifier: 
   m_Owner: {fileID: 0}
-  m_Data: {fileID: 11400000, guid: ed6c042d831be5b40b26189716fb0165, type: 2}
+  m_Data: {fileID: 11400000, guid: 241c2360f4d07c84890c2f0f46ff5af7, type: 2}
   m_InfoGetters:
   - {fileID: 11400000, guid: 98974b48259b94e469435d2d64e579d0, type: 2}
   m_AbilityInfos:
@@ -26,7 +26,7 @@ MonoBehaviour:
   m_ActiveListenners: []
   m_Conditions: []
   m_Effects:
-  - {fileID: 11400000, guid: 9ed8d8ea37292eb44a67aeac01fe8a58, type: 2}
+  - {fileID: 11400000, guid: 9daf4b2dafe32c34f9d5bda19fd22828, type: 2}
   m_EffectInfoIndices:
   - row: 00000000
   m_ConditionInfoIndices: []

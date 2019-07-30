@@ -22,4 +22,5 @@ MonoBehaviour:
   m_CanCancel: 0
   m_CanRepeat: 0
   m_selectedCardType: 4
+  m_Message: 
   m_selectedCardPreviewList: []

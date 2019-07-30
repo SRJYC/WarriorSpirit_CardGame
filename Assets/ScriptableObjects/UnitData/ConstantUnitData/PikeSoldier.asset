@@ -19,3 +19,5 @@ MonoBehaviour:
   m_IsWarrior: 0
   m_CanBeFront: 1
   m_CanBeBack: 0
+  m_Unique: 0
+  m_Rank: 2

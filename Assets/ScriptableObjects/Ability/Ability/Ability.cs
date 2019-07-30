@@ -18,6 +18,9 @@ public class Ability : ScriptableObject
     public int m_CD = 0;
     [HideInInspector] public int m_CurrentCD = 0;
 
+    [Header("Mana Cost")]
+    public int m_ManaCost = 0;
+
     [Header("Active")]
     public bool m_IsAction = true;
     public bool m_IsActive = true;
@@ -177,6 +180,9 @@ public class Ability : ScriptableObject
         }
 
         m_CurrentCD = m_CD;
+
+        if(m_ManaCost > 0)
+            PlayerManager.Instance.GetPlayer(m_Owner.m_PlayerID).m_Mana.Cost(m_ManaCost);
     }
 
     private void MapIndices()

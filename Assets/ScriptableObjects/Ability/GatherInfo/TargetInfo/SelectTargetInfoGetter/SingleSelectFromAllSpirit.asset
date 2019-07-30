@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af2b77a2c8b9f3c42aa7d242ffcb633b, type: 3}
-  m_Name: SingleSelectFromAllAlly
-  m_EditorClassIdentifier: Assembly-CSharp::SelectTargetUnitInfo
+  m_Name: SingleSelectFromAllSpirit
+  m_EditorClassIdentifier: 
   m_Automatic: 0
   m_Done: 0
   m_ExculdeSelf: 0
@@ -19,8 +19,10 @@ MonoBehaviour:
   m_NeedUnit: 1
   m_Targets: []
   m_Blocks: []
-  m_AvaliableTargetGetter: {fileID: 11400000, guid: a12eb348e5b63d34ba705e0131809d5f,
-    type: 2}
+  m_AvaliableTargetGetter:
+  - {fileID: 11400000, guid: aeb6aa353463cd645908d5b8f4afbe6a, type: 2}
+  - {fileID: 11400000, guid: c03fb5d5d148bb6438f6bc3895f431bc, type: 2}
+  m_AvaliableBlocks: []
   m_BlockClickEvent: {fileID: 11400000, guid: 5683092d3041a2c4cab346db047ae4ba, type: 2}
   m_CancalSelectEvent: {fileID: 11400000, guid: 99ac84b4b0d740146b70b07f0e77ba69,
     type: 2}

@@ -5,12 +5,10 @@ using UnityEngine;
 public enum SpiritType
 {
     Legion,
-    Knight,
-    Magic,
-    Creation,
     Nature,
+    Mech,
+    Golem,
     Shadow,
     Undead,
-    Beast,
 
 }

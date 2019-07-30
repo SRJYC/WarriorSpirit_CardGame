@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public Deck m_Deck;
     public Hand m_Hand;
     public ManaObject m_Mana;
+    public MyUnits m_UnitsOnBoard;
 
     public ManaDisplay manaDisplay;
 
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour
     {
         m_Deck = GetComponentInChildren<Deck>();
         m_Hand = GetComponentInChildren<Hand>();
+        m_UnitsOnBoard = GetComponent<MyUnits>();
 
         Register();
     }
@@ -70,15 +72,7 @@ public class Player : MonoBehaviour
         Unit unit = data.m_Unit;
         FieldBlock block = data.m_Block;
 
-        //check id
-        if (data.m_Block.m_PlayerID != m_ID)
-            return;
-
-        //check position
-        if (!SummonManager.CheckPosition(unit, block))
-            return;
-
-        if (!SummonManager.CheckCost(unit, m_Mana))
+        if (!CheckSummonAvaliability(data, unit, block))
             return;
 
         int cost = unit.m_Data.GetStat(UnitStatsProperty.Cost);
@@ -87,9 +81,51 @@ public class Player : MonoBehaviour
         SummonManager.Summon(unit, block);
     }
 
+    private bool CheckSummonAvaliability(SummonData data, Unit unit, FieldBlock block)
+    {
+        //check id
+        if (data.m_Block.m_PlayerID != m_ID)
+        {
+            return false;
+        }
+
+        //check position
+        if (!SummonManager.CheckPosition(unit, block))
+        {
+            GameMessage.Instance.Display("That Spirit can't be summoned on that position.");
+            return false;
+        }
+
+
+        //check unique
+        if (!CheckUniqueUnit(unit.m_Data))
+        {
+            GameMessage.Instance.Display("There can only be one Unique Spirit on Battlefield.");
+            return false;
+        }
+
+
+        //check cost
+        if (!SummonManager.CheckCost(unit, m_Mana))
+        {
+            GameMessage.Instance.Display("You don't have enough Mana");
+            return false;
+        }
+
+        return true;
+    }
+
     protected virtual void TryDrawCard(GameEventData eventData)
     {
         m_Deck.notifyDeckManager = true;
         m_Deck.RegularDrawCard();
+    }
+
+    public bool CheckUniqueUnit(UnitData unit)
+    {
+        if (unit.IsUnique && m_UnitsOnBoard.SameUnitExist(unit))
+            return false;
+
+        return true;
     }
 }

@@ -42,7 +42,10 @@ public class UnitDestroy
 
     private void RemoveFromOther()
     {
-        PlayerManager.Instance.GetPlayer(m_Owner.m_PlayerID).m_Hand.RemoveFromHand(m_Owner.gameObject);
+        Player player = PlayerManager.Instance.GetPlayer(m_Owner.m_PlayerID);
+        player.m_Hand.RemoveFromHand(m_Owner.gameObject);
+        player.m_UnitsOnBoard.RemoveFromBoard(m_Owner);
+
         m_Owner.m_Position.RemoveFromBoard();
         OrderManager.Instance.RemoveUnit(m_Owner);
     }
