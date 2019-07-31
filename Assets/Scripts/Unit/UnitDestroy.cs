@@ -25,7 +25,7 @@ public class UnitDestroy
 
         Unregister();
 
-        ParticleManager.Instance.PlayEffect(ParticleManager.ParticleType.burst, m_Owner.gameObject);
+        ParticleManager.Instance.PlayEffect(ParticleManager.ParticleType.destroy, m_Owner.gameObject);
 
         TriggerEvent();
 

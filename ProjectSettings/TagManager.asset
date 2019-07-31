@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Hand
   - Board
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -43,14 +44,14 @@ TagManager:
   - name: Empty
     uniqueID: 2210043735
     locked: 0
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Board
     uniqueID: 1462677683
     locked: 0
   - name: Floating
     uniqueID: 2550072663
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Window
     uniqueID: 2287615953

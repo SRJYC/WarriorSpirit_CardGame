@@ -150,7 +150,7 @@ public class ActionManager : Singleton<ActionManager>
 
     private void EnterPhase()
     {
-        Debug.Log("Trigger " + m_Action);
+        //Debug.Log("Trigger " + m_Action);
         m_IsBusy = true;
         m_ActionPhaseEvent.Trigger();
     }

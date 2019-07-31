@@ -7,27 +7,19 @@ public class ParticleManager : SingletonScriptableObject<ParticleManager>
 {
     public enum ParticleType
     {
-        burst,
+        destroy,
+        applyStatus,
+        hit,
     }
+    public ParticleType reference;
     public List<GameObject> particlePrefab;
 
+    public Vector3 scale = new Vector3(100, 100, 100);
     public void PlayEffect(ParticleType type, GameObject target)
     {
         GameObject particle = Instantiate(particlePrefab[(int)type]);
         particle.transform.position = target.transform.position;
-
-        CoroutineManager.Instance.StartCoroutine(Play(particle));
-    }
-
-    IEnumerator Play(GameObject particle)
-    {
-        ParticleSystem system = particle.GetComponentInChildren<ParticleSystem>();
-
-        while(!system.isStopped)
-        {
-            yield return new WaitForSeconds(1.0f);
-        }
-
-        Destroy(particle);
+        particle.transform.localScale = scale;
+        //particle.GetComponent<ParticleSystem>().Play();
     }
 }

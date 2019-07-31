@@ -25,6 +25,8 @@ public class UnitStatus
     {
         m_Status.Add(status);
         status.AffectUnit(this);
+
+        ParticleManager.Instance.PlayEffect(ParticleManager.ParticleType.applyStatus, m_Owner.gameObject);
     }
 
     public void RemoveStatus(Status status)

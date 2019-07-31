@@ -17,7 +17,7 @@ MonoBehaviour:
   m_Abilities:
   - {fileID: 11400000, guid: 60e91deca492d4c49a26888aeafb56ea, type: 2}
   m_RankUps: []
-  m_StatsChangedEvent: {fileID: 11400000, guid: 84d2f1c3924e32844bdefb35626966dc,
+  m_StatsChangedEvent: {fileID: 11400000, guid: b0f68383cad413848b1c3dc7cebe45c8,
     type: 2}
   m_Cost: 1
   m_Durability: 3

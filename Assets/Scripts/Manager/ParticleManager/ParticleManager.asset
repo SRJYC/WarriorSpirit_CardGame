@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48db8874ebfe1414791c0601ee28b4eb, type: 3}
   m_Name: ParticleManager
   m_EditorClassIdentifier: 
+  reference: 0
   particlePrefab:
-  - {fileID: 4285661942630055076, guid: 6ab6990513b779d47938a7a14b7139c3, type: 3}
+  - {fileID: 100004, guid: 757df604761b8ef42831192c70ee1099, type: 3}
+  - {fileID: 100000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+  - {fileID: 100000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
+  scale: {x: 100, y: 100, z: 100}
