@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a883c82950f65e4db2bed35ad4ba7b0, type: 3}
   m_Name: (Attack)Effect
   m_EditorClassIdentifier: 
-  effect: {fileID: 11400000, guid: b41fe1b4853ab33489aacef41893d8a6, type: 2}
+  effect: {fileID: 11400000, guid: 5f79da4fc7a483541b754784c4d92c7e, type: 2}
   alertEffect: {fileID: 0}

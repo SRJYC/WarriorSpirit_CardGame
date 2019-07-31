@@ -6,6 +6,10 @@ public class AIDeck : Deck
 {
     public override void RegularDrawCard(int OptionNum = 3, int choiceNum = 1, int times = 1)
     {
+        if (m_Hand.ReachMax)
+        {
+            Notify();
+        }
         for (int i = 0; i < times; i++)
         {
             //get cards

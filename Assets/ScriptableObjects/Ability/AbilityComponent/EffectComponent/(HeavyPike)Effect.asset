@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a883c82950f65e4db2bed35ad4ba7b0, type: 3}
-  m_Name: (Strengthen)Effect
+  m_Name: (HeavyPike)Effect
   m_EditorClassIdentifier: 
-  effect: {fileID: 11400000, guid: 78545e38a523c804185a5d1656db5505, type: 2}
+  effect: {fileID: 11400000, guid: 00fdcd789935f4c46a0384687868b1f3, type: 2}
   alertEffect: {fileID: 0}

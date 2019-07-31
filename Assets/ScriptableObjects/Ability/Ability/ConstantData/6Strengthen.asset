@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a883c82950f65e4db2bed35ad4ba7b0, type: 3}
-  m_Name: (Strengthen)Effect
+  m_Script: {fileID: 11500000, guid: 00e63935e4bdb684d86c0ad0b9f705e3, type: 3}
+  m_Name: 6Strengthen
   m_EditorClassIdentifier: 
-  effect: {fileID: 11400000, guid: 78545e38a523c804185a5d1656db5505, type: 2}
-  alertEffect: {fileID: 0}
+  m_AbilityName: Strengthen
+  m_Description: Increase Target POW same as POW until end of the turn.

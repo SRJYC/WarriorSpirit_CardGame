@@ -4,6 +4,7 @@ using UnityEngine;
 
 public enum SpiritType
 {
+    //primary
     Legion,
     Nature,
     Mech,
@@ -11,4 +12,9 @@ public enum SpiritType
     Shadow,
     Undead,
 
+    //secondary
+    Drone,
+    Module,
+
+    Structure,
 }

@@ -43,7 +43,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: tooltipList.Array.size
-    value: 10
+    value: 11
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: tooltipList.Array.data[0]
@@ -51,8 +51,8 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: tooltipList.Array.data[1]
-    value: POWER isn't like ATK. It's rather an evaluation than a strength. Only part
-      of abilities can benefits from POWER.
+    value: 'POWER isn''t like ATK. It''s rather an evaluation than a strength. Not
+      all abilities can benefits from POWER. '
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: tooltipList.Array.data[2]
@@ -87,4 +87,9 @@ Preset:
   - target: {fileID: 0}
     propertyPath: tooltipList.Array.data[9]
     value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: tooltipList.Array.data[10]
+    value: DUR becomes negative, so common damage effect only makes it more durable.
+      You need to gain its DUR until it reaches 0.
     objectReference: {fileID: 0}

@@ -9,8 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a883c82950f65e4db2bed35ad4ba7b0, type: 3}
-  m_Name: (Strengthen)Effect
+  m_Script: {fileID: 11500000, guid: c62f24dfa823841479125dceff43f933, type: 3}
+  m_Name: ApplyYin
   m_EditorClassIdentifier: 
-  effect: {fileID: 11400000, guid: 78545e38a523c804185a5d1656db5505, type: 2}
-  alertEffect: {fileID: 0}
+  m_Status: {fileID: 11400000, guid: d5a740ebf48367d41ac6e61b96f9a7bc, type: 2}
+  m_property: 1
+  m_description: 
+  m_type: 0
+  m_Value: 0
+  sourceProperty: 1
+  negative: 1

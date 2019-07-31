@@ -10,21 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f16444738e807304687d8d8932eeab1b, type: 3}
-  m_Name: Soldier
+  m_Name: SaberSoldier
   m_EditorClassIdentifier: 
-  m_ConstantData: {fileID: 11400000, guid: ecf19576df5852442991473c57925fef, type: 2}
+  m_ConstantData: {fileID: 11400000, guid: 1a167b885d1cce4409c781b3f65c883d, type: 2}
   m_SpiritTypes: 00000000
   m_Abilities:
-  - {fileID: 11400000, guid: c8803c4cf81fae24bbf96f9cb74bade3, type: 2}
+  - {fileID: 11400000, guid: f9ab430ee35d5a74ca29c531b9e618f3, type: 2}
   m_RankUps:
-  - {fileID: 11400000, guid: 13216dcac29aed748a78ee393e9b0dd0, type: 2}
   - {fileID: 11400000, guid: 61da951faa11ff54d920e0223adc4c7c, type: 2}
-  - {fileID: 11400000, guid: 7b733801fd125c94a9593d00d70aa1f2, type: 2}
   m_StatsChangedEvent: {fileID: 11400000, guid: 84d2f1c3924e32844bdefb35626966dc,
     type: 2}
-  m_Cost: 1
-  m_Durability: 3
-  m_Power: 0
-  m_Speed: 8
+  m_Cost: 2
+  m_Durability: 5
+  m_Power: 2
+  m_Speed: 9
   unitStats: 
   valueForStats: 

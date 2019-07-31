@@ -95,7 +95,7 @@ public class Deck : MonoBehaviour
         }
     }
 
-    private void Notify()
+    protected void Notify()
     {
         DeckManager.Instance.EndDrawCard(m_ID);
         notifyDeckManager = false;

@@ -16,7 +16,9 @@ MonoBehaviour:
   m_SpiritTypes: 00000000
   m_Abilities:
   - {fileID: 11400000, guid: 07973fedb7b1b244b84145f681b75f53, type: 2}
-  m_RankUps: []
+  m_RankUps:
+  - {fileID: 11400000, guid: 61da951faa11ff54d920e0223adc4c7c, type: 2}
+  - {fileID: 11400000, guid: 52298b5eeec1ec04fa8cf9c45d9e1053, type: 2}
   m_StatsChangedEvent: {fileID: 11400000, guid: 84d2f1c3924e32844bdefb35626966dc,
     type: 2}
   m_Cost: 2
