@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName ="Ability/Component/Condition")]
 public class ConditionComponent : ScriptableObject
 {
+    public float score;
+
     public ConditionCheck condition;
 
     private List<AbilityInfo> abilityInfos = new List<AbilityInfo>();

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a883c82950f65e4db2bed35ad4ba7b0, type: 3}
   m_Name: (Strengthen)Effect
   m_EditorClassIdentifier: 
+  score: 0.75
   effect: {fileID: 11400000, guid: 78545e38a523c804185a5d1656db5505, type: 2}
   alertEffect: {fileID: 0}

@@ -25,8 +25,8 @@ public class BoardManager : Singleton<BoardManager>
     public FieldController GetFieldController(PlayerID id, bool opposite = false)
     {
         if(opposite)
-            return id == PlayerID.Player1 ? m_Player2Field : m_Player1Field;
+            return id == m_Player1Field.m_PlayerID ? m_Player2Field : m_Player1Field;
         else
-            return id == PlayerID.Player1 ? m_Player1Field : m_Player2Field;
+            return id == m_Player1Field.m_PlayerID ? m_Player1Field : m_Player2Field;
     }
 }

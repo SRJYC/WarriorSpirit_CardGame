@@ -18,7 +18,6 @@ public class ReceiveEventBehavior : StateMachineBehaviour
     {
         if (m_Event != null)
         {
-            m_Event.SetActive(true);
             m_Event.RegisterListenner(Trigger);
         }
 

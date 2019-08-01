@@ -43,6 +43,11 @@ public class StateMachineManager : Singleton<StateMachineManager>
         return StateID.None;
     }
 
+    public bool IsState(StateID id)
+    {
+        return GetCurrentState().Contains(id);
+    }
+
     public void ChangeState(string layer, StateID id)
     {
         StateMachine state;

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a883c82950f65e4db2bed35ad4ba7b0, type: 3}
   m_Name: (GuardAttack)GainDUREffect
   m_EditorClassIdentifier: 
+  score: 1
   effect: {fileID: 11400000, guid: dd0d77cbe0564074694d5be86bd5fe2b, type: 2}
   alertEffect: {fileID: 0}

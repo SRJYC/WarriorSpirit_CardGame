@@ -22,9 +22,9 @@ public class UnitData : ScriptableObject
     public GameEvent m_StatsChangedEvent;
 
     public int m_Cost = 0;
-    [SerializeField] private int m_Durability = 0;
-    [SerializeField] private int m_Power = 0;
-    [SerializeField] private int m_Speed = 0;
+    public int m_Durability = 0;
+    public int m_Power = 0;
+    public int m_Speed = 0;
 
     [Header("Optional Custom Stats")]
     public List<UnitStatsProperty> unitStats;

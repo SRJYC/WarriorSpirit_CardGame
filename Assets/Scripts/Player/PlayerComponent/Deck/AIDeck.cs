@@ -15,7 +15,8 @@ public class AIDeck : Deck
             //get cards
             List<UnitData> cards = m_Deck.GetRandomCards(OptionNum);
 
-            List<UnitData> result = AIManager.Instance.GetCardChoice(cards, choiceNum);
+            List<UnitData> result = new List<UnitData>();
+            result.Add(AIPlayer.AIManager.Instance.DrawCard(cards));
 
             AddToHand(result);
         }

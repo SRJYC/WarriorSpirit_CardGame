@@ -2596,8 +2596,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1413472133}
   - component: {fileID: 1413472134}
-  - component: {fileID: 1413472135}
   - component: {fileID: 1413472136}
+  - component: {fileID: 1413472135}
+  - component: {fileID: 1413472137}
+  - component: {fileID: 1413472138}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -2653,6 +2655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e756cc22098611f4a91727bd53ee6ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_PassEvent: {fileID: 11400000, guid: b654aeeaf0312ef40abab66522dc87bd, type: 2}
+  pass: 0
 --- !u!114 &1413472136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2667,6 +2671,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Units: []
   m_TurnStartEvent: {fileID: 11400000, guid: 70a1d7044c1cf7c408ae9c487c62cc18, type: 2}
+--- !u!114 &1413472137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413472132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508d5b97b0757cd4596e2ff224680609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AI: {fileID: 1413472134}
+  player: {fileID: 0}
+  AllyWarrior: {fileID: 0}
+  EnemyWarrior: {fileID: 0}
+  AllAllySpirits: []
+  AllEnemySpirits: []
+  CardsInHand: []
+  EmptyFront: {fileID: 0}
+  EmptyBack: {fileID: 0}
+  Mana: 0
+--- !u!114 &1413472138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413472132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d5117b229de2194c92e1b512d07ac52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPlayEvent: {fileID: 11400000, guid: 4dc02d8bab71416489f94b7d3fc79147, type: 2}
+  stopPlayEvent: {fileID: 11400000, guid: b654aeeaf0312ef40abab66522dc87bd, type: 2}
 --- !u!1 &1433508740
 GameObject:
   m_ObjectHideFlags: 0
@@ -3294,11 +3334,6 @@ PrefabInstance:
       propertyPath: Empty
       value: 
       objectReference: {fileID: 6523488880840859245}
-    - target: {fileID: 8933595316327485247, guid: e19838b8c474dbb44adfbfb0657d988f,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.9794922
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e19838b8c474dbb44adfbfb0657d988f, type: 3}
 --- !u!114 &1499313936 stripped

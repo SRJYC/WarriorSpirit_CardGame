@@ -17,7 +17,6 @@ public class TriggerEventBehavior : StateMachineBehaviour
     {
         if(m_Event != null)
         {
-            m_Event.SetActive(true);
             m_Event.Trigger();
         }
 

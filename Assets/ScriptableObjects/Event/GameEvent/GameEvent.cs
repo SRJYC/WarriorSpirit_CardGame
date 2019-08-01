@@ -23,15 +23,6 @@ public class GameEvent : ScriptableObject
         m_Listenners = null;
     }
 
-    public void SetActive(bool set)
-    {
-        //if(active != set)
-        //{
-         //   Debug.Log("Active [" + set + "] : [" + this + "]");
-        //    active = set;
-        //}
-    }
-
     public void Trigger(GameEventData eventData = null)
     {
         //Debug.Log("Trigger Event : [" + this + "]");// with Active Status :["+active+"]");

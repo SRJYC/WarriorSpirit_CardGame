@@ -15,8 +15,8 @@ MonoBehaviour:
   m_Warrior: {fileID: 11400000, guid: c74f2c863e757cf4f9ae5078b97b47b4, type: 2}
   m_CardList:
   - {fileID: 11400000, guid: 482e2cc0a7b969344b9ffeca2ceb44b8, type: 2}
-  - {fileID: 11400000, guid: 482e2cc0a7b969344b9ffeca2ceb44b8, type: 2}
-  - {fileID: 11400000, guid: 482e2cc0a7b969344b9ffeca2ceb44b8, type: 2}
-  - {fileID: 11400000, guid: 482e2cc0a7b969344b9ffeca2ceb44b8, type: 2}
   - {fileID: 11400000, guid: 029b082ed55ca42439340d9356219c12, type: 2}
-  - {fileID: 11400000, guid: 029b082ed55ca42439340d9356219c12, type: 2}
+  - {fileID: 11400000, guid: dc140dba34e77a44cb5f1cc44efa9f97, type: 2}
+  - {fileID: 11400000, guid: 7ff339b9463a4824f990bf7a20ffdebe, type: 2}
+  - {fileID: 11400000, guid: a024705bc7adf91448034aa6eb06ebd3, type: 2}
+  - {fileID: 11400000, guid: 460d64118576b1743bcbc8866ab3caf3, type: 2}

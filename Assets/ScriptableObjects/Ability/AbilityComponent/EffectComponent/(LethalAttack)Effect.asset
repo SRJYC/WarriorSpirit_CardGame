@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a883c82950f65e4db2bed35ad4ba7b0, type: 3}
-  m_Name: (Attack)Effect
+  m_Name: (LethalAttack)Effect
   m_EditorClassIdentifier: 
-  score: 1.5
-  effect: {fileID: 11400000, guid: 5f79da4fc7a483541b754784c4d92c7e, type: 2}
+  score: 5
+  effect: {fileID: 11400000, guid: 8d8316f681deca74b91d94fe53bda8f1, type: 2}
   alertEffect: {fileID: 0}

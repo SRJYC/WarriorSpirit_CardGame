@@ -2,36 +2,80 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIManager : Singleton<AIManager>
+namespace AIPlayer
 {
-    public List<UnitData> GetCardChoice(List<UnitData> options, int num = 1, bool repeat = false)
+    public class AIManager : Singleton<AIManager>
     {
-        Debug.Log("AI choose random card from options");
+        public GameEvent m_PassEvent;
 
-        int size = options.Count;
-        if (size <= num)
+        public bool pass = false;
+        public UnitData DrawCard(List<UnitData> options)
         {
-            return options;
+            AIView.Instance.View();
+            return AIMove.DrawCard.Think(options);
         }
 
-        List<UnitData> list = new List<UnitData>();
-
-        List<int> indices = new List<int>();
-        for (int i = 0; i < num; i++)
+        public void Play()
         {
-            int index = Random.Range(0, size);
-            while (!repeat && indices.Contains(index))
+            pass = false;
+            StopAllCoroutines();
+            StartCoroutine(PlayCard());
+        }
+
+        public void Stop()
+        {
+            StopAllCoroutines();
+        }
+
+        IEnumerator PlayCard()
+        {
+            while(!pass)
             {
-                index = Random.Range(0, size);
+                AIView.Instance.View();
+                AIMove.PlayCard.Think();
+
+                yield return new WaitForSeconds(0.5f);
             }
-            indices.Add(index);
         }
 
-        foreach (int i in indices)
+        public void Pass()
         {
-            list.Add(options[i]);
+            if (StateMachineManager.Instance.IsState(StateID.EnemyTurn))
+                m_PassEvent.Trigger();
+            else
+                pass = true;
+        }
+        public List<UnitData> GetCardChoice(List<UnitData> options, int num = 1, bool repeat = false)
+        {
+            Debug.Log("AI choose random card from options");
+
+            int size = options.Count;
+            if (size <= num)
+            {
+                return options;
+            }
+
+            List<UnitData> list = new List<UnitData>();
+
+            List<int> indices = new List<int>();
+            for (int i = 0; i < num; i++)
+            {
+                int index = Random.Range(0, size);
+                while (!repeat && indices.Contains(index))
+                {
+                    index = Random.Range(0, size);
+                }
+                indices.Add(index);
+            }
+
+            foreach (int i in indices)
+            {
+                list.Add(options[i]);
+            }
+
+            return list;
         }
 
-        return list;
     }
 }
+

@@ -74,6 +74,7 @@ public class Ability : ScriptableObject
         {
             clone.m_AbilityInfos[i] = Instantiate(clone.m_AbilityInfos[i]);
         }
+        
         for(int i=0;i<m_Conditions.Length;i++)
         {
             clone.m_Conditions[i] = Instantiate(clone.m_Conditions[i]);

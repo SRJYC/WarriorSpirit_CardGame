@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Effect", menuName = "Ability/Component/Effect")]
 public class EffectComponent : ScriptableObject
 {
+    public float score;
+
     public Effect effect;
     public Effect alertEffect;
 
