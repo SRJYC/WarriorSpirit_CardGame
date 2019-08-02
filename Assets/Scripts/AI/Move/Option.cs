@@ -37,5 +37,23 @@ namespace AIPlayer
                 block = position;
             }
         }
+
+        public class ActionOption : Option
+        {
+            public readonly Ability ability;
+            public ActionOption(Ability a)
+            {
+                ability = a;
+            }
+        }
+
+        public class TargetOption : Option
+        {
+            public readonly FieldBlock block;
+            public TargetOption(FieldBlock b)
+            {
+                block = b;
+            }
+        }
     }
 }

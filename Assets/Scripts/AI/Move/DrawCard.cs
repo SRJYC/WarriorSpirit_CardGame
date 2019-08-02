@@ -21,22 +21,22 @@ namespace AIPlayer
             {
                 List<UnitOption> list = new List<UnitOption>();
 
-                Debug.Log("AI Draw Card");
+                //Debug.Log("AI Draw Card");
                 foreach (UnitData op in options)
                 {
-                    Debug.Log("Option [" + op.UnitName + "]");
+                    //Debug.Log("Option [" + op.UnitName + "]");
 
                     UnitOption option = new UnitOption(op);
 
                     int score = AIRule.EvaluateUnitData.Evaulate(op);
                     option.score += score;
-                    Debug.Log("\t Unit Evaulate Score: [" + score + "]");
+                    //Debug.Log("\t Unit Evaulate Score: [" + score + "]");
 
                     score = AIRule.EvaluateDuplicateInHand.Evaulate(op);
                     option.score += score;
-                    Debug.Log("\t Duplicate Card in Hand Evaulate Score: [" + score + "]");
+                    //Debug.Log("\t Duplicate Card in Hand Evaulate Score: [" + score + "]");
 
-                    Debug.Log("Total: " + option.score);
+                    //Debug.Log("Total: " + option.score);
 
                     list.Add(option);
                 }

@@ -34,17 +34,14 @@ public class RankUpManagerCheckPhase
             //unique
             if (!player.CheckUniqueUnit(data))
                 conditions.RemoveAt(i);
-
             //mana
-            if (data.m_Cost > currentMana)
+            else if (data.m_Cost > currentMana)
                 conditions.RemoveAt(i);
-
             //position
-            if ((type == FieldBlockType.Front && !data.CanBeFrontline) || (type == FieldBlockType.Back && !data.CanBeBackline))
+            else if ((type == FieldBlockType.Front && !data.CanBeFrontline) || (type == FieldBlockType.Back && !data.CanBeBackline))
                 conditions.RemoveAt(i);
-
             //condition
-            if (!conditions[i].Check(data1, data2))
+            else if (!conditions[i].Check(data1, data2))
                 conditions.RemoveAt(i);
         }
 

@@ -23,11 +23,13 @@ namespace AIPlayer
                 score += data.m_Power * scorePerPOW;
                 score += data.m_Speed * scorePerSPD;
                 score += data.m_Cost * scorePerCost;
+                //Debug.Log("\t Unit Stats Evaulate Score: [" + score + "]");
 
-                foreach(Ability ability in data.m_Abilities)
+                foreach (Ability ability in data.m_Abilities)
                 {
                     score += EvaluateAbility.Evaluate(ability);
                 }
+                //Debug.Log("\t Unit Ability Evaulate Score: [" + score + "]");
 
                 return score;
             }

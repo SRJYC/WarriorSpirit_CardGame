@@ -72,9 +72,14 @@ public class StatsChangeEffect : Effect
                 value = 1;
                 break;
             case ChangeType.power:
-                value = power;
+                if (power >= 0)
+                    value = power;
+                else
+                    value = 0;
                 break;
         }
+
+        
 
         value += m_modifer;
 

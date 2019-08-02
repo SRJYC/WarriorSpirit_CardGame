@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName ="Ability/Ability/Ability")]
 public class Ability : ScriptableObject
 {
+    public bool AIPositive;
+
     #region All field
     [HideInInspector] public Unit m_Owner;
 

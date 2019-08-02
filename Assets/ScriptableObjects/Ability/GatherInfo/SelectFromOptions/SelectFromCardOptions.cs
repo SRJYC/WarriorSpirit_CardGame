@@ -3,32 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Ability/AbilityInfoGetter/SelectFromCardOptions")]
-public class SelectFromCardOptions : AbilityInfoGetter
+public class SelectFromCardOptions : SelectTargetInfoGetter
 {
     public delegate void CancelCallback();
     public CancelCallback cancelCallback;
 
-    public GameEvent m_CardSelectEvent;
-    public GameEvent m_CancalSelectEvent;
-
-    [Header("Select")]
-    public int m_Num;
-    [Tooltip("Can confirm with number left isn't 0")]
-    public bool m_CanEndEarly = false;
-
     [Tooltip("Can cancel selection")]
     public bool m_CanCancel = true;
-
-    [Tooltip("Can select same target multiple times")]
-    public bool m_CanRepeat;
-
-    [Header("Highlight")]
-    public HighlightType m_selectedCardType;
 
     [Header("Words to Display")]
     public string m_Message;
 
-    protected int numberLeft;
     [HideInInspector]public List<GameObject> m_selectedCardPreviewList;
 
     public void GetInfo(CancelCallback method)
@@ -41,16 +26,24 @@ public class SelectFromCardOptions : AbilityInfoGetter
 
     public override void GetInfo(Unit source)
     {
-        m_Done = false;
+        if (EnemySelect)
+        {
+            Filter();
+            m_Done = true;
+            EnemySelect = false;
+        }
+        else
+        {
+            m_Done = false;
 
-        m_selectedCardPreviewList = new List<GameObject>();
+            m_selectedCardPreviewList = new List<GameObject>();
 
-        numberLeft = m_Num;
+            numberLeft = m_Num;
 
-        DisplayInfo();
+            DisplayInfo();
 
-        Register();
-
+            Register();
+        }
     }
 
     public override void StoreInfo(AbilityInfo info)
@@ -66,7 +59,7 @@ public class SelectFromCardOptions : AbilityInfoGetter
         ActionManager.Instance.m_ConfirmButton.callback += Done;
     }
 
-    public void SelectTrigger(GameEventData eventData)
+    public override void SelectTrigger(GameEventData eventData)
     {
         CardPreviewData data = eventData.CastDataType<CardPreviewData>();
         if (data == null)
@@ -93,17 +86,17 @@ public class SelectFromCardOptions : AbilityInfoGetter
 
     private void Register()
     {
-        m_CardSelectEvent.RegisterListenner(SelectTrigger);
+        m_SelectEvent.RegisterListenner(SelectTrigger);
         m_CancalSelectEvent.RegisterListenner(Cancel);
     }
 
     private void Unregister()
     {
-        m_CardSelectEvent.UnregisterListenner(SelectTrigger);
+        m_SelectEvent.UnregisterListenner(SelectTrigger);
         m_CancalSelectEvent.UnregisterListenner(Cancel);
     }
 
-    public void Cancel(GameEventData data = null)
+    public override void Cancel(GameEventData data = null)
     {
         //Debug.Log("Cancel Select : " + m_Blocks.Count);
         if (m_selectedCardPreviewList.Count == 0)

@@ -8,7 +8,7 @@ public class SelectTargetInfoGetter : TargetInfoGetter
     public List<FixedTargetInfoGetter> m_AvaliableTargetGetter;
     [HideInInspector]public List<FieldBlock> m_AvaliableBlocks;
 
-    public GameEvent m_BlockClickEvent;
+    public GameEvent m_SelectEvent;
     public GameEvent m_CancalSelectEvent;
 
     public int m_Num;
@@ -27,23 +27,56 @@ public class SelectTargetInfoGetter : TargetInfoGetter
     public HighlightType m_selectedCardType;
     public HighlightType m_selectedBlockType;
 
-    private int numberLeft;
+    protected int numberLeft;
+
+    [HideInInspector] public bool EnemySelect = false;
     public override void GetInfo(Unit source)
     {
-        m_Done = false;
+        if (EnemySelect)
+        {
+            Filter();
+            m_Done = true;
+            EnemySelect = false;
+        }
+        else
+        {
+            m_Done = false;
 
-        Reset();
-
-        numberLeft = m_Num;
-        DisplayInfo();
-        HighlightAvaliableTarget(source);
-        Register();
-
+            Reset();
+            numberLeft = m_Num;
+            DisplayInfo();
+            HighlightAvaliableTarget(source);
+            Register();
+        }
     }
 
+    public void GetAvaliableTargets(Unit source)
+    {
+        m_AvaliableBlocks = new List<FieldBlock>();
+        foreach (FixedTargetInfoGetter infoGetter in m_AvaliableTargetGetter)
+        {
+            infoGetter.GetInfo(source);
+            m_AvaliableBlocks.AddRange(infoGetter.m_Blocks);
+        }
+    }
+
+    private void Done()
+    {
+        HideInfo();
+
+        UnhighlightAll();
+
+        Unregister();
+
+        Filter();
+
+        m_Done = true;
+    }
+
+    #region ability message
     private void DisplayInfo()
     {
-        ActionManager.Instance.m_ActionMessage.Display("Please select "+numberLeft+" more targets");
+        ActionManager.Instance.m_ActionMessage.Display("Please select " + numberLeft + " more targets");
 
         if (m_CanEndEarly)
         {
@@ -52,22 +85,34 @@ public class SelectTargetInfoGetter : TargetInfoGetter
         }
     }
 
-    private void HighlightAvaliableTarget(Unit source)
+    private void HideInfo()
     {
-        m_AvaliableBlocks = new List<FieldBlock>();
-        foreach (FixedTargetInfoGetter infoGetter in  m_AvaliableTargetGetter)
-        {
-            infoGetter.GetInfo(source);
-            m_AvaliableBlocks.AddRange(infoGetter.m_Blocks);
-        }
+        ActionManager.Instance.m_ActionMessage.Hide();
 
-        foreach (FieldBlock block in m_AvaliableBlocks)
+        if (m_CanEndEarly)
         {
-            HighlightTarget(block, false);
+            ActionManager.Instance.m_ConfirmButton.Hide();
         }
     }
+    #endregion
 
-    public void SelectTrigger(GameEventData eventData)
+    #region Event for select and cancel
+    private void Register()
+    {
+        m_SelectEvent.RegisterListenner(SelectTrigger);
+        m_CancalSelectEvent.RegisterListenner(Cancel);
+    }
+
+    private void Unregister()
+    {
+        m_SelectEvent.UnregisterListenner(SelectTrigger);
+        m_CancalSelectEvent.UnregisterListenner(Cancel);
+    }
+    #endregion
+
+
+    #region Select and Cancel
+    public virtual void SelectTrigger(GameEventData eventData)
     {
         SingleBlockData data = eventData.CastDataType<SingleBlockData>();
         if (data == null)
@@ -106,19 +151,8 @@ public class SelectTargetInfoGetter : TargetInfoGetter
             Done();
     }
 
-    private void Register()
-    {
-        m_BlockClickEvent.RegisterListenner(SelectTrigger);
-        m_CancalSelectEvent.RegisterListenner(Cancel);
-    }
 
-    private void Unregister()
-    {
-        m_BlockClickEvent.UnregisterListenner(SelectTrigger);
-        m_CancalSelectEvent.UnregisterListenner(Cancel);
-    }
-
-    public void Cancel(GameEventData data = null)
+    public virtual void Cancel(GameEventData data = null)
     {
         //Debug.Log("Cancel Select : " + m_Blocks.Count);
         if (m_Blocks.Count == 0)
@@ -155,26 +189,16 @@ public class SelectTargetInfoGetter : TargetInfoGetter
         DisplayInfo();
     }
 
-    private void Done()
+    #endregion
+
+    #region highlight
+    private void HighlightAvaliableTarget(Unit source)
     {
-        HideInfo();
+        GetAvaliableTargets(source);
 
-        UnhighlightAll();
-
-        Unregister();
-
-        Filter();
-
-        m_Done = true;
-    }
-
-    private void HideInfo()
-    {
-        ActionManager.Instance.m_ActionMessage.Hide();
-
-        if (m_CanEndEarly)
+        foreach (FieldBlock block in m_AvaliableBlocks)
         {
-            ActionManager.Instance.m_ConfirmButton.Hide();
+            HighlightTarget(block, false);
         }
     }
 
@@ -210,4 +234,5 @@ public class SelectTargetInfoGetter : TargetInfoGetter
                 HighlightManager.Instance.Unhighlight(go, cardType);
         }
     }
+    #endregion
 }

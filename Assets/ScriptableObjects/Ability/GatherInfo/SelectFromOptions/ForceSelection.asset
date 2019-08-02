@@ -13,14 +13,27 @@ MonoBehaviour:
   m_Name: ForceSelection
   m_EditorClassIdentifier: 
   m_Automatic: 0
-  m_Done: 0
-  m_CardSelectEvent: {fileID: 11400000, guid: 4166c70abd8105c49a6acbc02cc719cd, type: 2}
+  m_Done: 1
+  m_ExculdeSelf: 0
+  m_ExcludeWarrior: 0
+  m_NeedUnit: 1
+  m_Targets: []
+  m_Blocks: []
+  m_AvaliableTargetGetter: []
+  m_AvaliableBlocks: []
+  m_SelectEvent: {fileID: 11400000, guid: 4166c70abd8105c49a6acbc02cc719cd, type: 2}
   m_CancalSelectEvent: {fileID: 11400000, guid: 99ac84b4b0d740146b70b07f0e77ba69,
     type: 2}
-  m_Num: 0
-  m_CanEndEarly: 0
-  m_CanCancel: 0
+  m_Num: 1
   m_CanRepeat: 0
+  m_CanEndEarly: 0
+  m_HighlightBlock: 0
+  m_avaliableCardType: 0
+  m_avaliableBlockType: 0
   m_selectedCardType: 4
-  m_Message: 
-  m_selectedCardPreviewList: []
+  m_selectedBlockType: 0
+  EnemySelect: 0
+  m_CanCancel: 0
+  m_Message: Choose the card that will add to your hand.
+  m_selectedCardPreviewList:
+  - {fileID: 0}

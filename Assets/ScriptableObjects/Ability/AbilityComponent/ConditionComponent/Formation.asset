@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b5acf2c021de04d931cba41fa9a043, type: 3}
   m_Name: Formation
   m_EditorClassIdentifier: 
-  score: 2
+  score: 1.5
   condition: {fileID: 11400000, guid: 576ba7a7fc369ee4cb6c5b67562dd162, type: 2}

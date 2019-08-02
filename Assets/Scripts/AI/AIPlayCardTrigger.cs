@@ -24,7 +24,7 @@ namespace AIPlayer
 
         public void StartPlay(GameEventData data)
         {
-            AIManager.Instance.Play();
+            AIManager.Instance.PlayCard();
         }
 
         public void StopPlay(GameEventData data)

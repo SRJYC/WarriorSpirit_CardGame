@@ -32,7 +32,7 @@ public abstract class TargetInfoGetter : AbilityInfoGetter
         targetInfo.m_Blocks = m_Blocks;
     }
 
-    protected void Reset()
+    public void Reset()
     {
         m_Blocks = new List<FieldBlock>();
         m_Targets = new List<Unit>();

@@ -15,11 +15,24 @@ namespace AIPlayer
             return AIMove.DrawCard.Think(options);
         }
 
-        public void Play()
+        public void PlayCard()
         {
             pass = false;
             StopAllCoroutines();
-            StartCoroutine(PlayCard());
+            StartCoroutine(PlayCardCoroutine());
+        }
+
+        public void UseAction()
+        {
+            Debug.Log("Use Action");
+
+            AIView.Instance.View();
+
+            Unit unit = OrderManager.Instance.CurrentUnit;
+            if (unit.m_PlayerID != AIView.Instance.AI.m_ID)
+                return;
+
+            AIMove.UseAction.Think(unit);
         }
 
         public void Stop()
@@ -27,7 +40,7 @@ namespace AIPlayer
             StopAllCoroutines();
         }
 
-        IEnumerator PlayCard()
+        IEnumerator PlayCardCoroutine()
         {
             while(!pass)
             {

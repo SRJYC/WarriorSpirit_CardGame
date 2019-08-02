@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa543acf779e9f4b958a72f1d25c966, type: 3}
   m_Name: 6Strengthen
   m_EditorClassIdentifier: 
+  AIPositive: 1
   m_Owner: {fileID: 0}
   m_Data: {fileID: 11400000, guid: ed6c042d831be5b40b26189716fb0165, type: 2}
   m_InfoGetters:

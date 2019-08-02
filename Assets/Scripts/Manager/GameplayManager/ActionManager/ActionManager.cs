@@ -28,20 +28,25 @@ public class ActionManager : Singleton<ActionManager>
         m_IsBusy = false;
     }
 
-    public void TriggerAction(Ability action)
+    public void TriggerAction(Ability action, bool Check = true, bool enterActionPhase = true)
     {
+        Debug.Log("Trigger Ability [" + action.m_Data.m_AbilityName + "]");
         if (m_IsBusy)
             return;
 
-        if (!CheckAvaliablity(action))
+        Debug.Log("Not Busy");
+        if (Check && !CheckAvaliablity(action))
             return;
 
-        EnterPhase();
-
-        m_Action = action;
-        action.Trigger();
+        Debug.Log("pass check");
+        if (enterActionPhase)
+            EnterPhase();
 
         WindowManager.Instance.FocusBoard();
+
+        Debug.Log("Action Trigger");
+        m_Action = action;
+        action.Trigger();
     }
 
     private static bool CheckAvaliablity(Ability action)
@@ -81,12 +86,16 @@ public class ActionManager : Singleton<ActionManager>
 
     public void ActionConfirm()
     {
-        StartCoroutine(PlayerConfirm());
+        Debug.Log("Need Confirm");
+        if (StateMachineManager.Instance.IsState(StateID.ActionPhase) || StateMachineManager.Instance.IsState(StateID.PlayerTurn))
+            StartCoroutine(PlayerConfirm());
+        else
+            Enemy.Instance.Confirm(TakeEffect);
     }
 
     IEnumerator PlayerConfirm()
     {
-
+        Debug.Log("Player Confirm");
         click = false;
         confirm = false;
 
@@ -108,11 +117,16 @@ public class ActionManager : Singleton<ActionManager>
 
         if (confirm)
         {
-            m_Action.TakeEffect();
-            Invoke("EndTurn", 1);
+            TakeEffect();
         }
 
         ExitPhase();
+    }
+
+    private void TakeEffect()
+    {
+        m_Action.TakeEffect();
+        Invoke("EndTurn", 1);
     }
 
     private void ShowInfo()
@@ -146,23 +160,26 @@ public class ActionManager : Singleton<ActionManager>
             return;
 
         m_Action.CancelInfoGetter();
+        ExitPhase();
     }
 
     private void EnterPhase()
     {
-        //Debug.Log("Trigger " + m_Action);
+        Debug.Log("Enter Phase");
         m_IsBusy = true;
         m_ActionPhaseEvent.Trigger();
     }
 
     private void ExitPhase()
     {
+        Debug.Log("Exit Phase");
         m_IsBusy = false;
         m_EndActionPhaseEvent.Trigger();
     }
 
     private void EndTurn()
     {
+        Debug.Log("End Turn");
         m_TurnPassEvent.Trigger();
     }
 }

@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class Enemy : Singleton<Enemy>
 {
-    public PlayerID m_ID { get; private set; }
-
-    public void Init(PlayerID id)
+    public enum Type
     {
-        m_ID = id;
+        AI,
+        NetPlayer,
+    }
+    public Type m_Type;
+
+    public delegate void ConfirmCallback();
+    public ConfirmCallback confirmCallback;
+
+    public void Confirm(ConfirmCallback callback)
+    {
+        if (m_Type == Type.AI)
+            callback.Invoke();
     }
 }

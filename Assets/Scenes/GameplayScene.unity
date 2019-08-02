@@ -2459,6 +2459,7 @@ GameObject:
   - component: {fileID: 1329939495}
   - component: {fileID: 1329939494}
   - component: {fileID: 1329939496}
+  - component: {fileID: 1329939497}
   m_Layer: 0
   m_Name: PlayerManager
   m_TagString: Untagged
@@ -2512,6 +2513,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TurnStartEvent: {fileID: 11400000, guid: 70a1d7044c1cf7c408ae9c487c62cc18, type: 2}
   m_ManaList: []
+--- !u!114 &1329939497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329939493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1af59bbd93a60754a8087b790a7ca59c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Type: 0
 --- !u!1 &1404632712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2600,6 +2614,7 @@ GameObject:
   - component: {fileID: 1413472135}
   - component: {fileID: 1413472137}
   - component: {fileID: 1413472138}
+  - component: {fileID: 1413472139}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -2707,6 +2722,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPlayEvent: {fileID: 11400000, guid: 4dc02d8bab71416489f94b7d3fc79147, type: 2}
   stopPlayEvent: {fileID: 11400000, guid: b654aeeaf0312ef40abab66522dc87bd, type: 2}
+--- !u!114 &1413472139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413472132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94570b1ed72743e478ace326a9f1c213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPlayEvent: {fileID: 11400000, guid: 888e3879974507947b2d4b1872b15eed, type: 2}
 --- !u!1 &1433508740
 GameObject:
   m_ObjectHideFlags: 0
