@@ -9,6 +9,6 @@ public class SourceInfo : AbilityInfo
 
     public int GetPower()
     {
-        return -1;
+        return m_Source.m_Data.GetStat(UnitStatsProperty.POW);
     }
 }

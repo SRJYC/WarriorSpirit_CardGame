@@ -72,10 +72,7 @@ public class StatsChangeEffect : Effect
                 value = 1;
                 break;
             case ChangeType.power:
-                if (power >= 0)
-                    value = power;
-                else
-                    value = 0;
+                value = power;
                 break;
         }
 
