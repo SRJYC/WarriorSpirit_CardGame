@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: becbaba630139144fafcaaec5d29c537, type: 3}
+  m_Name: Legion_PowerG2
+  m_EditorClassIdentifier: 
+  typeChecks:
+  - {fileID: 11400000, guid: 00089969fa0f96c41a86b7f28f03a0b7, type: 2}
+  propertyConditions:
+  - {fileID: 11400000, guid: 1cdcb391e34d9ff439b2ab4f8f1d5910, type: 2}

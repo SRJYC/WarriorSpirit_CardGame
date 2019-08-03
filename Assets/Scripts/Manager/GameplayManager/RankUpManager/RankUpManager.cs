@@ -50,7 +50,10 @@ public class RankUpManager : MonoBehaviour
         List<RankUpCondition> conditions = RankUpManagerCheckPhase.GetAllConditions(data.data1,data.data2,data.block);
         
         if (conditions.Count <= 0)
+        {
+            GameMessage.Instance.Display("No Avaliable Rank Up Option.");
             return;
+        }
 
         Debug.Log("Get Choice");
         //foreach(RankUpCondition rankUpCondition in conditions)
@@ -91,10 +94,11 @@ public class RankUpManager : MonoBehaviour
         if (m_PlayerSelect.m_selectedCardPreviewList.Count > 0)
         {
             Summon();
-
-            HideWindow();
         }
 
+        HideWindow();
+
+        ExitPhase();
     }
 
     private void Summon()
@@ -109,6 +113,7 @@ public class RankUpManager : MonoBehaviour
     {
         StopCoroutine(coroutine);
         HideWindow();
+        ExitPhase();
     }
 
     private void HideWindow()
@@ -120,8 +125,6 @@ public class RankUpManager : MonoBehaviour
         CardSelectOptionsData data2 = new CardSelectOptionsData();
         data2.m_Switch = false;
         m_DisplayCardOptionEvent.Trigger(data2);
-
-        ExitPhase();
     }
 
     private void EnterPhase()

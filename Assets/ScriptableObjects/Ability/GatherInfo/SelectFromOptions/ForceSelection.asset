@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Automatic: 0
   m_Done: 1
+  m_NeedUnit: 1
+  m_NeedEmpty: 0
   m_ExculdeSelf: 0
   m_ExcludeWarrior: 0
-  m_NeedUnit: 1
   m_Targets: []
   m_Blocks: []
   m_AvaliableTargetGetter: []
@@ -28,10 +29,7 @@ MonoBehaviour:
   m_CanRepeat: 0
   m_CanEndEarly: 0
   m_HighlightBlock: 0
-  m_avaliableCardType: 0
-  m_avaliableBlockType: 0
-  m_selectedCardType: 4
-  m_selectedBlockType: 0
+  m_HighlightOptions: {fileID: 11400000, guid: 9caf5c1aa692e6b46a4ed15e2fd69b34, type: 2}
   EnemySelect: 0
   m_CanCancel: 0
   m_Message: Choose the card that will add to your hand.

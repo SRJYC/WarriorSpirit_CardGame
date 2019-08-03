@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f16444738e807304687d8d8932eeab1b, type: 3}
+  m_Name: Guard
+  m_EditorClassIdentifier: 
+  m_ConstantData: {fileID: 11400000, guid: 30f5a07eb1bf139498a8bb0b2a5b3d5a, type: 2}
+  m_SpiritTypes: 00000000
+  m_Abilities:
+  - {fileID: 11400000, guid: 07973fedb7b1b244b84145f681b75f53, type: 2}
+  m_RankUps:
+  - {fileID: 11400000, guid: 61da951faa11ff54d920e0223adc4c7c, type: 2}
+  - {fileID: 11400000, guid: 52298b5eeec1ec04fa8cf9c45d9e1053, type: 2}
+  - {fileID: 11400000, guid: 24d083844c23cc2448bb27cf0fb6ac0e, type: 2}
+  m_StatsChangedEventForDisplay: {fileID: 11400000, guid: b0f68383cad413848b1c3dc7cebe45c8,
+    type: 2}
+  m_StatsChangedEventForUnits: {fileID: 11400000, guid: 84d2f1c3924e32844bdefb35626966dc,
+    type: 2}
+  m_Cost: 2
+  m_Durability: 2
+  m_Power: 1
+  m_Speed: 7
+  unitStats: 
+  valueForStats: 

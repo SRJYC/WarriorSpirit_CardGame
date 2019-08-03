@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Formation
   m_EditorClassIdentifier: 
   score: 1.5
-  condition: {fileID: 11400000, guid: 576ba7a7fc369ee4cb6c5b67562dd162, type: 2}
+  conditions:
+  - {fileID: 11400000, guid: 576ba7a7fc369ee4cb6c5b67562dd162, type: 2}

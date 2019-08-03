@@ -9,7 +9,8 @@ namespace AIPlayer
     {
         public class PlayCard
         {
-            public const float rankUpScoreRatio = 0.8f;
+            //score ratio for Spirits that's used in Rank up, need subtract from it
+            public const float rankUpScoreRatio = 0.07f;
 
             public static void Think()
             {
@@ -87,7 +88,7 @@ namespace AIPlayer
 
                     UnitOption option = new UnitOption(data);
 
-                    int score = AIRule.EvaluateUnitData.Evaulate(data);
+                    float score = AIRule.EvaluateUnitData.Evaulate(data);
                     option.score += score;
                     Debug.Log("\t Unit Evaulate Score: [" + score + "]");
 
@@ -120,10 +121,19 @@ namespace AIPlayer
 
                             RankUpOption option = new RankUpOption(data, unit1.m_Data, unit2.m_Data, block);
 
-                            int score = AIRule.EvaluateUnitData.Evaulate(data);
-                            score = Mathf.RoundToInt(score * rankUpScoreRatio);
+                            float score = AIRule.EvaluateUnitData.Evaulate(data);
                             option.score += score;
                             Debug.Log("\t Unit Evaulate Score: [" + score + "]");
+
+                            float scoreForUnitOnBoard = AIRule.EvaluateUnitData.Evaulate(unit1.m_Data);
+                            scoreForUnitOnBoard = scoreForUnitOnBoard * rankUpScoreRatio;
+                            option.score -= scoreForUnitOnBoard;
+                            Debug.Log("\t ["+ unit1.m_Data.UnitName + "] Unit Evaulate Score: (-)[" + scoreForUnitOnBoard + "]");
+
+                            float scoreForUnitOnHand = AIRule.EvaluateUnitData.Evaulate(unit2.m_Data);
+                            scoreForUnitOnHand = scoreForUnitOnHand * rankUpScoreRatio;
+                            option.score -= scoreForUnitOnHand;
+                            Debug.Log("\t [" + unit2.m_Data.UnitName + "] Unit Evaulate Score: (-)[" + scoreForUnitOnHand + "]");
 
                             Debug.Log("Total: " + option.score);
 

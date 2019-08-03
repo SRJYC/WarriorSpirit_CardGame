@@ -4,10 +4,10 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - m_AvaliableTargetGetter: {instanceID: 0}
-  - m_BlockClickEvent: {fileID: 11400000, guid: 5683092d3041a2c4cab346db047ae4ba,
-      type: 2}
+  - m_SelectEvent: {fileID: 11400000, guid: 5683092d3041a2c4cab346db047ae4ba, type: 2}
   - m_CancalSelectEvent: {fileID: 11400000, guid: 99ac84b4b0d740146b70b07f0e77ba69,
+      type: 2}
+  - m_HighlightOptions: {fileID: 11400000, guid: 020d777363b67e34aa71a4dc5cfd52b3,
       type: 2}
   executionOrder: 0
   icon: {instanceID: 0}

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1652c97213248d04ebc4e7395d0f3471, type: 3}
+  m_Name: Loss
+  m_EditorClassIdentifier: 
+  m_StatusName: Loss
+  m_Description: The DUR it gains will be lost very soon.
+  m_Duration: 1
+  m_EndEffectEvent: {fileID: 11400000, guid: afacc002841afc248bca444433acf0cb, type: 2}
+  power: -1
+  isGameEvent: 0
+  gameEvent: {fileID: 0}
+  isUnitEvent: 0
+  unitEvent: {fileID: 0}
+  effects: []
+  triggeredAtEnd: 1
+  endEffects:
+  - {fileID: 11400000, guid: 62409ce356c0c004589f132de0d74c90, type: 2}

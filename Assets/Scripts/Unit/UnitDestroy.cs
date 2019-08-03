@@ -52,6 +52,7 @@ public class UnitDestroy
 
     private void Register()
     {
+        Debug.Log("Register");
         m_StatsChangeEvent.RegisterListenner(m_Owner, CheckDUR);
     }
 
@@ -62,6 +63,7 @@ public class UnitDestroy
 
     private void CheckDUR(GameEventData eventData)
     {
+        Debug.Log("Check DUR");
         UnitStatsChangeData data = eventData.CastDataType<UnitStatsChangeData>();
         if (data == null)
             return;

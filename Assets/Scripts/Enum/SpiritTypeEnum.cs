@@ -7,13 +7,13 @@ public enum SpiritType
     //primary
     Legion,
     Nature,
-    Mech,
+    Fairy,
     Golem,
     Shadow,
     Undead,
 
     //secondary
-    Drone,
+    Artifact,
     Module,
 
     Structure,

@@ -5,27 +5,27 @@ using UnityEngine;
 [CreateAssetMenu(menuName ="Ability/AbilityInfoGetter/SelectTargetGetter")]
 public class SelectTargetInfoGetter : TargetInfoGetter
 {
+    [Header("Select Range")]
     public List<FixedTargetInfoGetter> m_AvaliableTargetGetter;
     [HideInInspector]public List<FieldBlock> m_AvaliableBlocks;
 
+    [Header("Select Event")]
     public GameEvent m_SelectEvent;
     public GameEvent m_CancalSelectEvent;
 
+    [Header("Quantity")]
     public int m_Num;
 
+    [Header("Select Options")]
     [Tooltip("Can select same target multiple times")]
     public bool m_CanRepeat;
-
     [Tooltip("Will show confirm button and can continue without getting max number of targets")]
     public bool m_CanEndEarly;
 
+    [Header("Highlight Options")]
     [Tooltip("Highlight block as well which means player can select empty block.(If need unit, units will be highlighted)")]
     public bool m_HighlightBlock;
-
-    public HighlightType m_avaliableCardType;
-    public HighlightType m_avaliableBlockType;
-    public HighlightType m_selectedCardType;
-    public HighlightType m_selectedBlockType;
+    public HighlightOptionsForSelection m_HighlightOptions;
 
     protected int numberLeft;
 
@@ -120,9 +120,6 @@ public class SelectTargetInfoGetter : TargetInfoGetter
 
         if(m_AvaliableBlocks.Contains(data.m_Block))
         {
-            if (!m_HighlightBlock && data.m_Block.m_Unit == null)
-                return;
-
             Select(data.m_Block);
         }
     }
@@ -213,8 +210,8 @@ public class SelectTargetInfoGetter : TargetInfoGetter
 
     private void HighlightTarget(FieldBlock block, bool isSelect, bool highlight = true)
     {
-        HighlightType cardType = isSelect ? m_selectedCardType : m_avaliableCardType;
-        HighlightType blockType = isSelect ? m_selectedBlockType : m_avaliableBlockType;
+        HighlightType cardType = isSelect ? m_HighlightOptions.m_selectedCardType : m_HighlightOptions.m_avaliableCardType;
+        HighlightType blockType = isSelect ? m_HighlightOptions.m_selectedBlockType : m_HighlightOptions.m_avaliableBlockType;
 
         if (m_HighlightBlock)
         {

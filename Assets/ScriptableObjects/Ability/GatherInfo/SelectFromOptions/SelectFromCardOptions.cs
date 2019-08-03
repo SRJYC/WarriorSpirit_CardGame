@@ -8,7 +8,7 @@ public class SelectFromCardOptions : SelectTargetInfoGetter
     public delegate void CancelCallback();
     public CancelCallback cancelCallback;
 
-    [Tooltip("Can cancel selection")]
+    [Header("Can cancel selection")]
     public bool m_CanCancel = true;
 
     [Header("Words to Display")]
@@ -175,8 +175,8 @@ public class SelectFromCardOptions : SelectTargetInfoGetter
     private void HighlightTarget(GameObject card, bool highlight = true)
     {
         if (highlight)
-            HighlightManager.Instance.Highlight(card, m_selectedCardType);
+            HighlightManager.Instance.Highlight(card, m_HighlightOptions.m_selectedCardType);
         else
-            HighlightManager.Instance.Unhighlight(card, m_selectedCardType);
+            HighlightManager.Instance.Unhighlight(card, m_HighlightOptions.m_selectedCardType);
     }
 }

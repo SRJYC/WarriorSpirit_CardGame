@@ -19,7 +19,8 @@ public class UnitData : ScriptableObject
     public List<RankUpCondition> m_RankUps = new List<RankUpCondition>();
 
     [Header("Stats")]
-    public GameEvent m_StatsChangedEvent;
+    public GameEvent m_StatsChangedEventForDisplay;
+    public UnitEvent m_StatsChangedEventForUnits;
 
     public int m_Cost = 0;
     public int m_Durability = 0;
@@ -184,7 +185,8 @@ public class UnitData : ScriptableObject
 
         eventData.m_AfterChange = GetStat(stat);
 
-        m_StatsChangedEvent.Trigger(eventData);
+        m_StatsChangedEventForDisplay.Trigger(eventData);
+        m_StatsChangedEventForUnits.Trigger(m_Owner, eventData);
         //Debug.Log(m_Owner + " " + stat + " Change to: " + GetStat(stat));
     }
 

@@ -69,7 +69,7 @@ namespace AIPlayer
                         SelectTargetInfoGetter select = (SelectTargetInfoGetter)infoGetter;
                         select.GetAvaliableTargets(unit);
 
-                        List<FieldBlock> options = GetAvaliableTargets(select);
+                        List<FieldBlock> options = select.m_AvaliableBlocks;
                         List<TargetOption> optionsList = EvaluateOptions(ability, options);
 
                         if (optionsList.Count == 0)
@@ -105,17 +105,6 @@ namespace AIPlayer
                 }
 
                 return optionsList;
-            }
-
-            private static List<FieldBlock> GetAvaliableTargets(SelectTargetInfoGetter select)
-            {
-                List<FieldBlock> options = select.m_AvaliableBlocks;
-                if (select.m_NeedUnit && !select.m_HighlightBlock)
-                {
-                    options.RemoveAll(block => block.m_Unit == null);
-                }
-
-                return options;
             }
         }
     }

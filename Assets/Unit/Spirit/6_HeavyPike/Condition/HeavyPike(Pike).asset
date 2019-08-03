@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7fde014ade0f764ebd8c41178a2ada0, type: 3}
+  m_Name: HeavyPike(Pike)
+  m_EditorClassIdentifier: 
+  data1Condition: {fileID: 11400000, guid: 2baa76768776bba4e920493888023d8f, type: 2}
+  data2Condition: {fileID: 11400000, guid: c4c07322088c02849aaad9f95ba6fc06, type: 2}
+  m_HighRankSpirit: {fileID: 11400000, guid: 89501bbcbdb9d754cb82746849314277, type: 2}
+  m_Scarifice: 0

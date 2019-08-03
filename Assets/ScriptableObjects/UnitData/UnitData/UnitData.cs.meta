@@ -5,7 +5,9 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - m_ConstantData: {instanceID: 0}
-  - m_StatsChangedEvent: {fileID: 11400000, guid: b0f68383cad413848b1c3dc7cebe45c8,
+  - m_StatsChangedEventForDisplay: {fileID: 11400000, guid: b0f68383cad413848b1c3dc7cebe45c8,
+      type: 2}
+  - m_StatsChangedEventForUnits: {fileID: 11400000, guid: 84d2f1c3924e32844bdefb35626966dc,
       type: 2}
   executionOrder: 0
   icon: {instanceID: 0}

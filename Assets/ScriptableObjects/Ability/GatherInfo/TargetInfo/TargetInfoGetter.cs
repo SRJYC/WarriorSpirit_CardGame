@@ -4,9 +4,13 @@ using UnityEngine;
 
 public abstract class TargetInfoGetter : AbilityInfoGetter
 {
+    [Header("Condition")]
+    public bool m_NeedUnit = true;
+    public bool m_NeedEmpty = false;
+
+    [Header("If need unit, then:")]
     public bool m_ExculdeSelf;
     public bool m_ExcludeWarrior;
-    public bool m_NeedUnit = true;
 
     protected FieldBlock m_Position;
     protected FieldController m_Field;
@@ -49,10 +53,21 @@ public abstract class TargetInfoGetter : AbilityInfoGetter
 
     protected void ExculdeBlocks()
     {
-        if(m_ExculdeSelf)
-            m_Blocks.RemoveAll(block => block == m_Position);
+        if (m_NeedUnit)
+        {
+            if(!m_NeedEmpty)
+                m_Blocks.RemoveAll(block => block.m_Unit == null);
 
-        if (m_ExcludeWarrior)
-            m_Blocks.RemoveAll(block => block.m_RowType == FieldBlockType.Center);
+            if (m_ExculdeSelf)
+                m_Blocks.RemoveAll(block => block == m_Position);
+
+            if (m_ExcludeWarrior)
+                m_Blocks.RemoveAll(block => block.m_RowType == FieldBlockType.Center);
+        }
+        else
+        {
+            if(m_NeedEmpty)
+                m_Blocks.RemoveAll(block => block.m_Unit != null);
+        }
     }
 }

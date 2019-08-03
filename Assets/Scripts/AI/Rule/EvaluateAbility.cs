@@ -11,7 +11,7 @@ namespace AIPlayer
             public const int manaCostScore = -4;
             public const int effectMultiplier = 5;
             public const int conditionMultiplier = -5;
-            public static int Evaluate(Ability ability)
+            public static float Evaluate(Ability ability)
             {
                 float score = 0;
 
@@ -27,7 +27,7 @@ namespace AIPlayer
                     score += effect.score * effectMultiplier;
                 }
 
-                return Mathf.RoundToInt(score);
+                return score;
             }
         }
     }

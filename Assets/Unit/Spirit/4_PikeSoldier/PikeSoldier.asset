@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f16444738e807304687d8d8932eeab1b, type: 3}
+  m_Name: PikeSoldier
+  m_EditorClassIdentifier: 
+  m_ConstantData: {fileID: 11400000, guid: 818c50893b769334bb7a008a316194c1, type: 2}
+  m_SpiritTypes: 00000000
+  m_Abilities:
+  - {fileID: 11400000, guid: 78020ae0bfd9e334887791bc09606b7b, type: 2}
+  m_RankUps:
+  - {fileID: 11400000, guid: 52298b5eeec1ec04fa8cf9c45d9e1053, type: 2}
+  - {fileID: 11400000, guid: 586c52d92f6e6cb458f3cff272e5a5c0, type: 2}
+  m_StatsChangedEventForDisplay: {fileID: 11400000, guid: b0f68383cad413848b1c3dc7cebe45c8,
+    type: 2}
+  m_StatsChangedEventForUnits: {fileID: 11400000, guid: 84d2f1c3924e32844bdefb35626966dc,
+    type: 2}
+  m_Cost: 2
+  m_Durability: 3
+  m_Power: 2
+  m_Speed: 7
+  unitStats: 
+  valueForStats: 

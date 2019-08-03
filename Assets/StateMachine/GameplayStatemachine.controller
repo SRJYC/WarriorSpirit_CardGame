@@ -1688,8 +1688,8 @@ AnimatorState:
   - {fileID: -284810910828883945}
   - {fileID: -4841260812528961083}
   m_StateMachineBehaviours:
-  - {fileID: -5867958587800908909}
   - {fileID: 3882269526203441355}
+  - {fileID: -5867958587800908909}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

@@ -14,9 +14,9 @@ namespace AIPlayer
             public const int scorePerSPD = 3;
             public const int scorePerCost = -10;
 
-            public static int Evaulate(UnitData data)
+            public static float Evaulate(UnitData data)
             {
-                int score = 0;
+                float score = 0;
 
                 score += data.Rank * scorePerRank;
                 score += data.m_Durability * scorePerDUR;

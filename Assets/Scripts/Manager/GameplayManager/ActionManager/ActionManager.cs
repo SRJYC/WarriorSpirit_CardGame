@@ -30,21 +30,21 @@ public class ActionManager : Singleton<ActionManager>
 
     public void TriggerAction(Ability action, bool Check = true, bool enterActionPhase = true)
     {
-        Debug.Log("Trigger Ability [" + action.m_Data.m_AbilityName + "]");
+        //Debug.Log("Trigger Ability [" + action.m_Data.m_AbilityName + "]");
         if (m_IsBusy)
             return;
 
-        Debug.Log("Not Busy");
+        //Debug.Log("Not Busy");
         if (Check && !CheckAvaliablity(action))
             return;
 
-        Debug.Log("pass check");
+        //Debug.Log("pass check");
         if (enterActionPhase)
             EnterPhase();
 
         WindowManager.Instance.FocusBoard();
 
-        Debug.Log("Action Trigger");
+        //Debug.Log("Action Trigger");
         m_Action = action;
         action.Trigger();
     }
@@ -86,7 +86,7 @@ public class ActionManager : Singleton<ActionManager>
 
     public void ActionConfirm()
     {
-        Debug.Log("Need Confirm");
+        //Debug.Log("Need Confirm");
         if (StateMachineManager.Instance.IsState(StateID.ActionPhase) || StateMachineManager.Instance.IsState(StateID.PlayerTurn))
             StartCoroutine(PlayerConfirm());
         else
@@ -95,7 +95,7 @@ public class ActionManager : Singleton<ActionManager>
 
     IEnumerator PlayerConfirm()
     {
-        Debug.Log("Player Confirm");
+        //Debug.Log("Player Confirm");
         click = false;
         confirm = false;
 
@@ -111,7 +111,7 @@ public class ActionManager : Singleton<ActionManager>
             }
         }
 
-        Debug.Log("Confirm "+ confirm);
+        //Debug.Log("Confirm "+ confirm);
 
         HideInfo();
 
@@ -165,14 +165,14 @@ public class ActionManager : Singleton<ActionManager>
 
     private void EnterPhase()
     {
-        Debug.Log("Enter Phase");
+        //Debug.Log("Enter Phase");
         m_IsBusy = true;
         m_ActionPhaseEvent.Trigger();
     }
 
     private void ExitPhase()
     {
-        Debug.Log("Exit Phase");
+        //Debug.Log("Exit Phase");
         m_IsBusy = false;
         m_EndActionPhaseEvent.Trigger();
     }

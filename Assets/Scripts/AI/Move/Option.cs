@@ -8,7 +8,7 @@ namespace AIPlayer
     {
         public class Option
         {
-            public int score = 0;
+            public float score = 0;
         }
 
         public class UnitOption : Option

@@ -33,7 +33,10 @@ public class EffectComponent : ScriptableObject
     {
         //Debug.Log(this + " take effect with condition " + CheckCondition());
         if (CheckCondition())
-            effect.TakeEffect(abilityInfos.ToArray());
+        {
+            if(effect != null)
+                effect.TakeEffect(abilityInfos.ToArray());
+        }
         else if (alertEffect != null)
             alertEffect.TakeEffect(abilityInfos.ToArray());
     }

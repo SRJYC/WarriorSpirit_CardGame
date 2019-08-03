@@ -7,12 +7,13 @@ public class StatsChangeEffect : Effect
     [SerializeField] protected ChangeType m_ChangeTypeToSpirit = ChangeType.minimum;
     [SerializeField] protected ChangeType m_ChangeTypeToWarrior = ChangeType.minimum;
 
-    public int m_SourceDelta;
-    public int m_TargetDelta;
+    [HideInInspector]public int m_SourceDelta;
+    [HideInInspector]public int m_TargetDelta;
     public int m_modifer { get { return m_SourceDelta + m_TargetDelta; } }
 
     protected EffectData m_EventData;
 
+    [Header("Event")]
     public UnitEvent m_BeforeActionEvent;
     public UnitEvent m_BeforeReceiveEffectEvent;
     public UnitEvent m_AfterReceiveEffectEvent;

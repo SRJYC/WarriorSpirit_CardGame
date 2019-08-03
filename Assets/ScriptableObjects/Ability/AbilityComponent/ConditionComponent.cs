@@ -7,7 +7,8 @@ public class ConditionComponent : ScriptableObject
 {
     public float score;
 
-    public ConditionCheck condition;
+    [Header("Must Satisfy All Condition")]
+    public List<ConditionCheck> conditions;
 
     private List<AbilityInfo> abilityInfos = new List<AbilityInfo>();
 
@@ -19,7 +20,14 @@ public class ConditionComponent : ScriptableObject
 
     public bool Check()
     {
-        return condition.Check(abilityInfos.ToArray());
+        foreach(ConditionCheck condition in conditions)
+        {
+            if(!condition.Check(abilityInfos.ToArray()))
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     public void Add(AbilityInfo info)

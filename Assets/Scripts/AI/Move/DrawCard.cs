@@ -28,7 +28,7 @@ namespace AIPlayer
 
                     UnitOption option = new UnitOption(op);
 
-                    int score = AIRule.EvaluateUnitData.Evaulate(op);
+                    float score = AIRule.EvaluateUnitData.Evaulate(op);
                     option.score += score;
                     //Debug.Log("\t Unit Evaulate Score: [" + score + "]");
 
