@@ -52,7 +52,7 @@ public class UnitDestroy
 
     private void Register()
     {
-        Debug.Log("Register");
+        //Debug.Log("Register");
         m_StatsChangeEvent.RegisterListenner(m_Owner, CheckDUR);
     }
 

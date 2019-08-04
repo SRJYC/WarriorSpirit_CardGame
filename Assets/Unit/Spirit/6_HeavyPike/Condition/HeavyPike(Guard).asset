@@ -12,7 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fde014ade0f764ebd8c41178a2ada0, type: 3}
   m_Name: HeavyPike(Guard)
   m_EditorClassIdentifier: 
-  data1Condition: {fileID: 11400000, guid: 3a06391981ff0bd429edaaa259d153ff, type: 2}
-  data2Condition: {fileID: 11400000, guid: ddfc508550058ea41ab2c66bd57ccb77, type: 2}
   m_HighRankSpirit: {fileID: 11400000, guid: 89501bbcbdb9d754cb82746849314277, type: 2}
   m_Scarifice: 0
+  data1Condition:
+    nameCheck:
+      m_Unit: {fileID: 11400000, guid: 029b082ed55ca42439340d9356219c12, type: 2}
+    typeChecks: []
+    propertyConditions: []
+  data2Condition:
+    nameCheck:
+      m_Unit: {fileID: 0}
+    typeChecks:
+    - spiritTypes: 00000000
+    propertyConditions:
+    - property: 1
+      compare: 4
+      value: 3

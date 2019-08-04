@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class RankInfoSceneManager : MonoBehaviour
 {
-    public AllCardCollection m_AllSpirits;
+    public AllSpiritCollection m_AllSpirits;
 
     public UnitData m_SelectedSpirit;
 

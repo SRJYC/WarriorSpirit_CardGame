@@ -27,6 +27,7 @@ public class UnitStatus
         status.AffectUnit(this);
 
         ParticleManager.Instance.PlayEffect(ParticleManager.ParticleType.applyStatus, m_Owner.gameObject);
+        AudioManager.Instance.Play(SoundEffectType.Status);
     }
 
     public void RemoveStatus(Status status)

@@ -12,7 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fde014ade0f764ebd8c41178a2ada0, type: 3}
   m_Name: Yang
   m_EditorClassIdentifier: 
-  data1Condition: {fileID: 0}
-  data2Condition: {fileID: 11400000, guid: 6bee7eef32a9ddb41b11aeb3b0c93fbb, type: 2}
   m_HighRankSpirit: {fileID: 11400000, guid: 460d64118576b1743bcbc8866ab3caf3, type: 2}
   m_Scarifice: 0
+  data1Condition:
+    nameCheck:
+      m_Unit: {fileID: 0}
+    typeChecks: []
+    propertyConditions: []
+  data2Condition:
+    nameCheck:
+      m_Unit: {fileID: 0}
+    typeChecks:
+    - spiritTypes: 01000000
+    propertyConditions: []

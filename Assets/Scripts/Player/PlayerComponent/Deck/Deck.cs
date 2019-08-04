@@ -100,4 +100,13 @@ public class Deck : MonoBehaviour
         DeckManager.Instance.EndDrawCard(m_ID);
         notifyDeckManager = false;
     }
+
+    public void AddToDeck(UnitData data)
+    {
+        if(!m_Deck.m_CardList.Contains(data))
+        {
+            Debug.Log("[" + data.name + "] add to deck");
+            m_Deck.m_CardList.Add(data);
+        }
+    }
 }

@@ -12,7 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fde014ade0f764ebd8c41178a2ada0, type: 3}
   m_Name: Little Light
   m_EditorClassIdentifier: 
-  data1Condition: {fileID: 0}
-  data2Condition: {fileID: 11400000, guid: 80bff87d21910524e9bbfada637c233d, type: 2}
   m_HighRankSpirit: {fileID: 11400000, guid: 8d1e56fe861d2f54d9fd5266cf5f4046, type: 2}
   m_Scarifice: 0
+  data1Condition:
+    nameCheck:
+      m_Unit: {fileID: 0}
+    typeChecks: []
+    propertyConditions: []
+  data2Condition:
+    nameCheck:
+      m_Unit: {fileID: 0}
+    typeChecks:
+    - spiritTypes: 02000000
+    propertyConditions: []

@@ -5,7 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(menuName ="Unit/UnitData")]
 public class UnitData : ScriptableObject
 {
-    //public UnitData m_OriginData { get; private set; }
+    #region field
+    [Header("Reference to Origin Data (no clone)")]
+    [HideInInspector] public UnitData m_OriginData = null;
+
     [Header("Reference to Constant Data (no clone)")]
     [SerializeField] private ConstantUnitData m_ConstantData = null;
 
@@ -14,9 +17,6 @@ public class UnitData : ScriptableObject
 
     [Header("Abilities(will clone)")]
     public List<Ability> m_Abilities = new List<Ability>();
-
-    [Header("Rank Up Options")]
-    public List<RankUpCondition> m_RankUps = new List<RankUpCondition>();
 
     [Header("Stats")]
     public GameEvent m_StatsChangedEventForDisplay;
@@ -36,6 +36,8 @@ public class UnitData : ScriptableObject
     public Unit m_Owner { get; private set; }
 
     private const int BASE_LEVEL = 0;
+
+    #endregion
 
     public void Init(Unit unit)
     {
@@ -81,6 +83,8 @@ public class UnitData : ScriptableObject
 
         clone.Init(unit);
 
+        clone.m_OriginData = this;
+
         return clone;
     }
 
@@ -93,6 +97,7 @@ public class UnitData : ScriptableObject
     public bool CanBeBackline { get { return m_ConstantData.m_CanBeBack; } }
     public bool IsUnique { get { return m_ConstantData.m_Unique; } }
     public int Rank { get { return m_ConstantData.m_Rank; } }
+    public List<RankUpCondition> m_RankUps { get { return m_ConstantData.m_RankUps; } }
 
     public List<SpiritType> GetSpiritTypes()
     {
@@ -192,9 +197,11 @@ public class UnitData : ScriptableObject
 
     private void PrivateChangeStats(UnitStatsProperty stat, int amount, bool set, bool force)
     {
+        TriggerSFX(amount);
+
         if (m_Stats.ContainsKey(stat))
         {
-            if(set)
+            if (set)
             {
                 m_Stats[stat] = amount;
             }
@@ -203,12 +210,20 @@ public class UnitData : ScriptableObject
                 m_Stats[stat] += amount;
             }
         }
-        else if(force)
+        else if (force)
         {
             m_Stats.Add(stat, amount);
         }
         else
-            Debug.LogError("Can't Change "+ stat+": Stats Doesn't Exist");
+            Debug.LogError("Can't Change " + stat + ": Stats Doesn't Exist");
+    }
+
+    private static void TriggerSFX(int amount)
+    {
+        if (amount >= 0)
+            AudioManager.Instance.Play(SoundEffectType.Postive);
+        else
+            AudioManager.Instance.Play(SoundEffectType.Negative);
     }
     #endregion
 }

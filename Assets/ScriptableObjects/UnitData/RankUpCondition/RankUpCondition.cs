@@ -5,13 +5,16 @@ using UnityEngine;
 [CreateAssetMenu(menuName ="RankUpConditionCheck/FullCheck")]
 public class RankUpCondition : ScriptableObject
 {
-    public SingleUnitCondition data1Condition = null;
-    public SingleUnitCondition data2Condition = null;
-
+    [Header("High Rank Spirit")]
     public UnitData m_HighRankSpirit;
-
     [Tooltip("With [Scarifice] property, this condition will be checked even the original spirit is in hand(slot 2).")]
     public bool m_Scarifice = false;
+
+    [Header("Spirit 1 / Spirit on Board")]
+    public SingleUnitCondition data1Condition = null;
+    [Header("Spirit 2 / Spirit on Board")]
+    public SingleUnitCondition data2Condition = null;
+
 
     /// <summary>
     /// 

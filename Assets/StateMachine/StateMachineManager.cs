@@ -53,16 +53,25 @@ public class StateMachineManager : Singleton<StateMachineManager>
         StateMachine state;
         if (states.TryGetValue(layer, out state))
         {
-            state.CurrentState = id;
+            PrivateChangeState(layer, id, state);
         }
         else
         {
             state = new StateMachine();
-            state.CurrentState = id;
             states.Add(layer, state);
-        }
 
-        TriggerEvent(layer);
+            PrivateChangeState(layer, id, state);
+        }
+    }
+
+    private void PrivateChangeState(string layer, StateID id, StateMachine state)
+    {
+        if (state.CurrentState != id)
+        {
+            Debug.Log("Change State");
+            state.CurrentState = id;
+            TriggerEvent(layer);
+        }
     }
 
     private void TriggerEvent(string layer)

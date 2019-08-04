@@ -18,4 +18,5 @@ public enum StateID
     UnitTurnEndPhase,
     TurnEndPhase,
     GameEnd,
+    Gameplay,
 }

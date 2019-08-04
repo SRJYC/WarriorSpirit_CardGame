@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "RankUpConditionCheck/SinglePropertyCheck")]
-public class SinglePropertyCondition : ScriptableObject
+[System.Serializable]
+public class SinglePropertyCondition
 {
     public enum Compare
     {
@@ -14,6 +14,7 @@ public class SinglePropertyCondition : ScriptableObject
         greaterAndEqual
     }
 
+    [Header("Spirit's Property must Satisfy")]
     public UnitStatsProperty property;
     public Compare compare;
     public int value;
@@ -40,7 +41,7 @@ public class SinglePropertyCondition : ScriptableObject
 
     public override string ToString()
     {
-        string result = property.ToString();
+        string result = "Stat: "+property.ToString();
         switch (compare)
         {
             case Compare.equalTo:

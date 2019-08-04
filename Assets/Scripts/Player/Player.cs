@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
         m_Deck = GetComponentInChildren<Deck>();
         m_Hand = GetComponentInChildren<Hand>();
         m_UnitsOnBoard = GetComponent<MyUnits>();
+        m_UnitsOnBoard.Init(this);
 
         Register();
     }

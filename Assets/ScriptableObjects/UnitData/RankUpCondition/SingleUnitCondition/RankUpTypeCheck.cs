@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "RankUpConditionCheck/TypeCheck")]
-public class RankUpTypeCheck : ScriptableObject
+[System.Serializable]
+public class RankUpTypeCheck
 {
+    [Header("Spirit needs to be one of the following types")]
     public SpiritType[] spiritTypes = new SpiritType[0];
     
     public bool Check(UnitData data)
@@ -19,7 +20,7 @@ public class RankUpTypeCheck : ScriptableObject
 
     public override string ToString()
     {
-        string result = "";
+        string result = "Type: ";
         string connect = " or ";
         for (int i = 0; i < spiritTypes.Length; i++)
         {
