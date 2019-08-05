@@ -89,5 +89,6 @@ GM_DrawCard	Choose one Card add to your Hand	N/A
 GMT_Mana	Increase Maximum amount by 1 at turn start each turn until reach the limit 7.	N/A	
 GML_SwitchButton	Switch	N/A	
 GI_DeckLimit	A deck must have 1 Warrior and 6 Spirits. You can have at most 3 copies of same Spirit. You can only add basic Spirits to your deck and Rank Up in game.	N/A	
-GI_RankDetail	You can drag cards to [Rank Detail] to see its Rank Up Options and Requirements.	N/A	
+GI_RankDetail	Rank Detail	N/A	
 GI_AddCard	Drag card from top to center to add the card to your deck.	N/A	
+GI_SaveButton	SAVE	N/A	
