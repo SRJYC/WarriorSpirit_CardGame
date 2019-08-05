@@ -11,7 +11,10 @@ public class RankUpManager : MonoBehaviour
     public GameEvent m_DisplayCardOptionEvent;
     public GameEvent m_DisplayRankUpRequirementEvent;
     public SelectFromCardOptions m_PlayerSelect;
-    public string m_Message;
+
+    [Header("Message")]
+    public TextProperty m_Message;
+    public TextProperty Text_NoOption;
 
     private IEnumerator coroutine;
     private RankUpData data;
@@ -51,7 +54,7 @@ public class RankUpManager : MonoBehaviour
         
         if (conditions.Count <= 0)
         {
-            GameMessage.Instance.Display("No Avaliable Rank Up Option.");
+            GameMessage.Instance.Display(Text_NoOption.ToString());
             return;
         }
 
@@ -83,7 +86,7 @@ public class RankUpManager : MonoBehaviour
     IEnumerator GetPlayerChoice()
     {
         m_PlayerSelect.m_Num = 1;
-        m_PlayerSelect.m_Message = m_Message;
+        m_PlayerSelect.m_Message = m_Message.ToString();
         m_PlayerSelect.GetInfo(Cancel);
 
         while(!m_PlayerSelect.m_Done)

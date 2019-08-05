@@ -24,7 +24,7 @@ public class UnitTextDisplay : UnitDataDisplay
             AddType("Warrior", ref typeText, "color=#e5e4e2", "color");
         foreach (SpiritType type in unitData.GetSpiritTypes())
         {
-            AddType(type.ToString(), ref typeText);
+            AddType(AllTextEnumProxy.Instance.GetText(type), ref typeText);
         }
         m_TypeText.text = typeText;
 

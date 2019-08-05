@@ -54,6 +54,11 @@ MonoBehaviour:
   m_TurnPassEvent: {fileID: 11400000, guid: b654aeeaf0312ef40abab66522dc87bd, type: 2}
   m_ConfirmButton: {fileID: 0}
   m_ActionMessage: {fileID: 0}
+  Text_NotOnBoard: {fileID: 11400000, guid: a2316e8c642c3dc499d88f8449545d79, type: 2}
+  Text_CantControl: {fileID: 11400000, guid: 9f83fa39ec61042438e3675c324245b0, type: 2}
+  Text_Cooldown: {fileID: 11400000, guid: 07b511df23ffd0b41bf46486febe4218, type: 2}
+  Text_Mana: {fileID: 11400000, guid: 1963841d7c012f34aa728a44e55b7b09, type: 2}
+  Text_Confirm: {fileID: 11400000, guid: 71370daec038ccd47971c2f5fcdbcdcf, type: 2}
 --- !u!114 &7629700856578786549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,7 +77,8 @@ MonoBehaviour:
   m_DisplayRankUpRequirementEvent: {fileID: 11400000, guid: 8876ecdc1f562684a8924005b59f1a57,
     type: 2}
   m_PlayerSelect: {fileID: 11400000, guid: bfee3dd5ce9764946b49827cf3119693, type: 2}
-  m_Message: Choose the High Rank Form
+  m_Message: {fileID: 11400000, guid: ae897c4442bc5b340be2eef29fe8287a, type: 2}
+  Text_NoOption: {fileID: 11400000, guid: c1c95696a6d107c4b9f864a93f1d0323, type: 2}
   m_RankUpPhaseEvent: {fileID: 11400000, guid: e07736a4c9cbeab40a8066087592c854, type: 2}
   m_EndRankUpPhaseEvent: {fileID: 11400000, guid: 71553f2b0a299184480b5ce9444f5a43,
     type: 2}

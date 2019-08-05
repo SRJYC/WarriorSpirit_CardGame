@@ -76,7 +76,8 @@ public class SelectTargetInfoGetter : TargetInfoGetter
     #region ability message
     private void DisplayInfo()
     {
-        ActionManager.Instance.m_ActionMessage.Display("Please select " + numberLeft + " more targets");
+        int select = m_Num - numberLeft;
+        ActionManager.Instance.m_ActionMessage.Display(select +"/"+ m_Num);
 
         if (m_CanEndEarly)
         {

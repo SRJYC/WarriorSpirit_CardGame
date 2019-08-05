@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1652c97213248d04ebc4e7395d0f3471, type: 3}
   m_Name: Loss
   m_EditorClassIdentifier: 
-  m_StatusName: Loss
-  m_Description: The DUR it gains will be lost very soon.
+  m_StatusName: {fileID: 11400000, guid: 70893dd9c9bd95e429ba672689d48c42, type: 2}
+  m_Description: {fileID: 11400000, guid: b5df7150977ad6e42983ec71681dfdbf, type: 2}
   m_Duration: 1
   m_EndEffectEvent: {fileID: 11400000, guid: afacc002841afc248bca444433acf0cb, type: 2}
   power: -1

@@ -27,10 +27,10 @@ public class Deck : MonoBehaviour
     private DeckDrawCard m_DrawCardComponent;
     public SelectFromCardOptions m_PlayerSelect;
     public GameEvent m_DisplayCardOptionEvent;
-    public string message;
+    public TextProperty message;
     private void Start()
     {
-        m_DrawCardComponent = new DeckDrawCard(this,m_PlayerSelect, m_DisplayCardOptionEvent,message);
+        m_DrawCardComponent = new DeckDrawCard(this,m_PlayerSelect, m_DisplayCardOptionEvent,message.ToString());
     }
 
     public void Init(Hand hand, CardCollection deck, PlayerID id)

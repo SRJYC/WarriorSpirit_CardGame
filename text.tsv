@@ -1,0 +1,89 @@
+ID	English	SimpleChinese	
+Artifact	Artifact	神器	
+Breaker	Breaker	破坏者	
+Charged	Charged	充能	
+Cost	Cost	Cost	
+DUR	DUR	DUR	
+Fairy	Fairy	妖精	
+Formation	Formation	阵型	
+GL_Confirm	Confirm	确认	
+GM_BreakerNote	Spirit with BREAKER can deal more damage to Spirit.	拥有[破坏者]属性的[灵]可以对[灵]造成更多伤害	
+GM_CantControl	Spirit can't be controlled. It's either not its turn or it's enemy.	无法控制，可能还没有到其行动的回合，或者这是敌方	
+GM_Confirm	Please [Confirm] Your Choice	请[确认]你的选择	
+GM_Cooldown	This Action is still in Cooldown. You may Pass turn instead.	[行动]还在冷却中,你可选择[Pass]你的回合.	
+GM_CostNote	Player need to pay COST to summon Spirit. It's not a big restriction. The real matter is what you have on board.	玩家需要消耗法力召唤[灵]	
+GM_DurNote	DURABILITY is like hitpoint. When it reaches 0,unit is destroyed. There's no maximum value.	[DUR]下降为0时,单位死亡. [DUR]没有上限.	
+GM_Mana	This Action will cost Mana, make sure you have enough of it.	这个[行动]需要消耗法力	
+GM_MsgWhenSelect	Select and Confirm Your Choice.	选择并确认	
+GM_NegativeNote	DUR becomes negative, so common damage effect only makes it more durable. You need to gain its DUR until it reaches 0.	[DUR]变成负数,当其提升至0或以上时才会死亡.普通的伤害只会加强它.	
+GM_NoOption	No Avaliable Rank Up Option.	未达成任何进阶的条件	
+GM_NotOnBoard	Spirit is not on Battlefield	[灵]不在战场上	
+GM_PowerNote	POWER isn't like ATK. It's rather an evaluation than a strength. Not all abilities can benefits from POWER.	不是所有的能力都需要[POW],但是它是进阶的重要标准.	
+GM_SpeedNote	SPEED determines the order.	速度决定行动顺序	
+GMT_EnemyDeck	Enemy Deck Number	敌方卡组数量	
+GMT_EnemyHand	Card Number in Enemy Hand	敌方手牌数量	
+GMT_PositionIcon	These icons show which postion the unit can be summoned on.	表示[灵]可以召唤的位置	
+GMT_YourDeck	Your Deck Number.	你的卡组数量	
+Golem	Golem	魔像	
+Legion	Legion	军团	
+LV	LV	LV	
+Module	Module	组件	
+Nature	Nature	自然	
+Negative	Negative	负极	
+None	None	无	
+POW	POW	POW	
+Rank	Rank	阶级	
+Shadow	Shadow	暗影	
+SPD	SPD	SPD	
+Structure	Structure	建筑	
+Undead	Undead	亡灵	
+US10_Description	This Spirit can extend another Spirit's lifetime. But only Fairy Type Spirit can really benefit from it.	N/A	
+US10_Name	Little Light	N/A	
+US10A1_Description	Target Ally Spirit DUR+1. And its DUR-1 at Whole Turn End if it's not Fairy Type	N/A	
+US10A1_Name	Help	N/A	
+US10A1St1_Description	The DUR it gains will be lost very soon.	N/A	
+US10A1St1_Name	Loss	N/A	
+US2_Description	The basic spirits in Legion. It has great potential.	N/A	
+US2_Name	Soldier	N/A	
+US2A1_Description	Attack Spirit in front. Deal 1 damage to it.	N/A	
+US2A1_Name	Attack	N/A	
+US3_Description	More armor, more durability. It can survive until its potential released.	N/A	
+US3_Name	Guard	N/A	
+US3A1_Description	Attack Spirit in front. Deal 1 damage to it. If there are two other Legion Spirit with equal or higher power,then Gain 1 DUR.	N/A	
+US3A1_Name	Attack	N/A	
+US4_Description	Enhance Soldier with Pike. It increase its range and power of attack. It's the first threat of enemy Warrior.	N/A	
+US4_Name	Pike Soldier	N/A	
+US4A1_Description	Attack Enemy in front. Deal 1 damage to it. It can reach 2nd block if there's no Enemy on the 1st.	N/A	
+US4A1_Name	Pike	N/A	
+US5_Description	Enhance Soldier with Saber. It increase its range and power of attack.	N/A	
+US5_Name	Saber Soldier	N/A	
+US5A1_Description	Attack Enemy in front and adjcent Enemy. Deal 1 damage to them	N/A	
+US5A1_Name	Slash	N/A	
+US6_Description	Enhance Pikeman with Heavy Armor, dramatically increase its durability. And, be careful, danger is near.	N/A	
+US6_Name	Heavy Pike	N/A	
+US6A1_Description	Attack Enemy in front. Deal [POW] damage to Spirit and 1 damage to Warrior. It can reach 2nd block if there's no Enemy on the 1st.	N/A	
+US6A1_Name	Pike	N/A	
+US6A2_Description	Damage all Enemy in front.	N/A	
+US6A2_Name	Puncture	N/A	
+US7_Description	The basic element of Nature. Its power and effect can expand.	N/A	
+US7_Name	Yin	N/A	
+US7A1_Description	Increase Target POW same as POW until end of the turn.	N/A	
+US7A1_Name	Weaken	N/A	
+US8_Description	The basic element of Nature. Its power and effect can expand.	N/A	
+US8_Name	Yang	N/A	
+US8A1_Description	Increase Target POW same as POW until end of the turn.	N/A	
+US8A1_Name	Strengthen	N/A	
+US9_Description	The base form of Fairy Type. Its mobility grants it various path of Rank Up.	N/A	
+US9_Name	Pixie	N/A	
+US9A1_Description	Move to another empty block.	N/A	
+US9A1_Name	Move	N/A	
+UW1_Description	The Warrior who is known by his leadership. He is expert in command Legion Type Spirit.	N/A	
+UW1_Name	Noble Knight	N/A	
+UW1A1_Description	Target one of your spirit. Until the end of this turn, it gains <b>Formation</b> if it's Legion. Otherwise, it gains Legion Type.	N/A	
+UW1A1_Name	Support	N/A	
+UW1A1St1_Description	Unit will be considered as there're two other Legion Spirits with higher power in the same row.	N/A	
+UW1A1St1_Name	Formation	N/A	
+UW1A1St2_Description	Unit will be considered as Legion type.	N/A	
+UW1A1St2_Name	Legion Spirit	N/A	
+GM_DrawCard	Choose one Card add to your Hand	N/A	
+GMT_Mana	Increase Maximum amount by 1 at turn start each turn until reach the limit 7.	N/A	

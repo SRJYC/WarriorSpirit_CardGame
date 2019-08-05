@@ -31,7 +31,7 @@ public class SinglePropertyDisplay : MonoBehaviour
             m_Value.text = value.ToString();
         }
 
-        m_Label.text = statsProperty.ToString();
+        m_Label.text = AllTextEnumProxy.Instance.GetText(statsProperty);
 
         ChangeTootltip(statsProperty);
     }

@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b913f4527e1d9344a94bb690ec6ba41, type: 3}
   m_Name: Formation
   m_EditorClassIdentifier: 
-  m_StatusName: Formation
-  m_Description: Unit will be considered as there're two other Legion Spirits with
-    higher power in the same row.
+  m_StatusName: {fileID: 11400000, guid: 11b3704934c03ea4eb6ab0b9d65135ab, type: 2}
+  m_Description: {fileID: 11400000, guid: 4a661f889ef63ce45bcfb1d75ab3ab58, type: 2}
   m_Duration: 1
   m_EndEffectEvent: {fileID: 11400000, guid: afacc002841afc248bca444433acf0cb, type: 2}
   m_Property: 9

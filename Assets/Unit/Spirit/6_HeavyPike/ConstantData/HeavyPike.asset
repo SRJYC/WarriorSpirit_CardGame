@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bfd68220a6c161429409a2b8ead5d8c, type: 3}
   m_Name: HeavyPike
   m_EditorClassIdentifier: 
-  m_UnitName: Heavy Pike
-  m_Description: Enhance Pikeman with Heavy Armor, dramatically increase its durability.
-    And, be careful, danger is near.
+  m_UnitName: {fileID: 11400000, guid: fa799bd6476e49a4a8f93587bff4a933, type: 2}
+  m_Description: {fileID: 11400000, guid: f596fb23cd85c7d4b810c074a45e1038, type: 2}
   m_Artwork: {fileID: 21300000, guid: 84531c5f96e7ed5419dd10f1187767fb, type: 3}
   m_IsWarrior: 0
   m_CanBeFront: 1
   m_CanBeBack: 0
   m_Unique: 0
   m_Rank: 3
+  m_RankUps: []

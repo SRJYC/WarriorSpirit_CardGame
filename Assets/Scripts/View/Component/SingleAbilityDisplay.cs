@@ -27,7 +27,7 @@ public class SingleAbilityDisplay : MonoBehaviour
         m_Ability = data;
 
         DisplayCDAndManaCost();
-        DisplayText(data.m_Data.m_AbilityName, data.m_Data.m_Description);
+        DisplayText(data.m_AbilityName.ToString(), data.m_Description.ToString());
 
         ChangeForAction(data.m_IsAction);
     }

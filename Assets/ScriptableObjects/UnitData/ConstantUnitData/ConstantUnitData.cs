@@ -8,8 +8,8 @@ using UnityEngine;
 public class ConstantUnitData : ScriptableObject
 {
     [Header("Base Info")]
-    public string m_UnitName;
-    [TextArea(3, 10)] public string m_Description;
+    public TextProperty m_UnitName;
+    public TextProperty m_Description;
     public Sprite m_Artwork;
 
     [Header("Card Type")]

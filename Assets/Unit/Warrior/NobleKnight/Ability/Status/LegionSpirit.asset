@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e488fbb5e6fb0c6439e1ea4f1ecd7acb, type: 3}
   m_Name: LegionSpirit
   m_EditorClassIdentifier: 
-  m_StatusName: LegionSpirit
-  m_Description: Unit will be considered as Legion type.
+  m_StatusName: {fileID: 11400000, guid: 294fa92fac2f3654aa489586255a7fb1, type: 2}
+  m_Description: {fileID: 11400000, guid: d575b4b39963db742bf63d175825abc1, type: 2}
   m_Duration: 1
   m_EndEffectEvent: {fileID: 11400000, guid: afacc002841afc248bca444433acf0cb, type: 2}
   m_Type: 0

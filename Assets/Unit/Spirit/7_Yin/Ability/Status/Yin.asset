@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b913f4527e1d9344a94bb690ec6ba41, type: 3}
   m_Name: Yin
   m_EditorClassIdentifier: 
-  m_StatusName: Yin
-  m_Description: POW -1
+  m_StatusName: {fileID: 11400000, guid: 2d4bd7d7176bf864a914e118154eb6c3, type: 2}
+  m_Description: {fileID: 0}
   m_Duration: 1
   m_EndEffectEvent: {fileID: 11400000, guid: afacc002841afc248bca444433acf0cb, type: 2}
   m_Property: 1

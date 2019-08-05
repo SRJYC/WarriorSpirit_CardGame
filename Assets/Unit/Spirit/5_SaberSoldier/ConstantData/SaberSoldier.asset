@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bfd68220a6c161429409a2b8ead5d8c, type: 3}
   m_Name: SaberSoldier
   m_EditorClassIdentifier: 
-  m_UnitName: Saber Soldier
-  m_Description: 'Enhance Soldier with Saber. It increase its range and power of attack. '
+  m_UnitName: {fileID: 11400000, guid: 8582f865b4d239c40914fdf737033ffc, type: 2}
+  m_Description: {fileID: 11400000, guid: fc08afab1f656b24c8c930852b710ace, type: 2}
   m_Artwork: {fileID: 21300000, guid: 84531c5f96e7ed5419dd10f1187767fb, type: 3}
   m_IsWarrior: 0
   m_CanBeFront: 1
   m_CanBeBack: 0
   m_Unique: 0
   m_Rank: 2
+  m_RankUps:
+  - {fileID: 11400000, guid: 61da951faa11ff54d920e0223adc4c7c, type: 2}

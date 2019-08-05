@@ -156,7 +156,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 756191820}
-  tooltip: {fileID: 402620462}
 --- !u!4 &164280738
 Transform:
   m_ObjectHideFlags: 0
@@ -443,6 +442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Event: {fileID: 11400000, guid: 260b120c43fdb44469e46af128cf7739, type: 2}
   m_TimeRequire: 1
+  m_text: {fileID: 11400000, guid: 75ac0e2b3fd205b4bb34132ed9691b83, type: 2}
   m_Tooltip: Enemy Deck Number
 --- !u!224 &331237149 stripped
 RectTransform:
@@ -636,6 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Event: {fileID: 11400000, guid: 260b120c43fdb44469e46af128cf7739, type: 2}
   m_TimeRequire: 1
+  m_text: {fileID: 0}
   m_Tooltip: 
 --- !u!114 &402620463
 MonoBehaviour:
@@ -752,7 +753,7 @@ MonoBehaviour:
   notifyDeckManager: 0
   m_PlayerSelect: {fileID: 0}
   m_DisplayCardOptionEvent: {fileID: 0}
-  message: 
+  message: {fileID: 0}
 --- !u!4 &407458392
 Transform:
   m_ObjectHideFlags: 0
@@ -1562,6 +1563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Event: {fileID: 11400000, guid: 260b120c43fdb44469e46af128cf7739, type: 2}
   m_TimeRequire: 1
+  m_text: {fileID: 11400000, guid: c669d5af5053af24faac6ce739cb1d8e, type: 2}
   m_Tooltip: Card Number in Enemy Hand
 --- !u!114 &799326778
 MonoBehaviour:
@@ -1976,7 +1978,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1259042242}
-  tooltip: {fileID: 1798349538}
 --- !u!4 &1135384554 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8018629911329798903, guid: eee97754ef446fc449ffe82a37520afa,
@@ -3334,6 +3335,12 @@ PrefabInstance:
       propertyPath: Empty
       value: 
       objectReference: {fileID: 6523488880840859245}
+    - target: {fileID: 5968022672102018014, guid: e19838b8c474dbb44adfbfb0657d988f,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 11400000, guid: 6c7a0dbb698120f43877c201c69e1518,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e19838b8c474dbb44adfbfb0657d988f, type: 3}
 --- !u!114 &1499313936 stripped
@@ -3476,27 +3483,6 @@ MonoBehaviour:
   m_Windows:
   - {fileID: 1499313936}
   - {fileID: 1238397259544671074}
---- !u!1 &1520616975 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7935177426780588550, guid: c5cfb15ae68aa8c41b7935f1601fc404,
-    type: 3}
-  m_PrefabInstance: {fileID: 275690673023303345}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1520616976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520616975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad758b1395f8a194983b6c3fe47e46d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Event: {fileID: 11400000, guid: 260b120c43fdb44469e46af128cf7739, type: 2}
-  m_TimeRequire: 1
-  m_Tooltip: Your Deck Number.
 --- !u!1001 &1521835823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3647,7 +3633,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 275690673023303345}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520616975}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c69cc19e68511f438366ec544673b3c, type: 3}
@@ -3768,6 +3754,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Event: {fileID: 11400000, guid: 260b120c43fdb44469e46af128cf7739, type: 2}
   m_TimeRequire: 1
+  m_text: {fileID: 0}
   m_Tooltip: 
 --- !u!1 &1871855077
 GameObject:
@@ -4135,35 +4122,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 423784548, guid: c5cfb15ae68aa8c41b7935f1601fc404, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1744894633
-      objectReference: {fileID: 0}
-    - target: {fileID: 7707270649487406557, guid: c5cfb15ae68aa8c41b7935f1601fc404,
-        type: 3}
-      propertyPath: m_text
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7707270649487406557, guid: c5cfb15ae68aa8c41b7935f1601fc404,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 7707270649487406557, guid: c5cfb15ae68aa8c41b7935f1601fc404,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7707270649487406557, guid: c5cfb15ae68aa8c41b7935f1601fc404,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7707270649487406557, guid: c5cfb15ae68aa8c41b7935f1601fc404,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5cfb15ae68aa8c41b7935f1601fc404, type: 3}
 --- !u!1001 &785493591891417668
@@ -6790,6 +6748,37 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4769152471661663592, guid: 1beb527fdcd72d14aa950d07fcafee38,
+        type: 3}
+      propertyPath: m_LabelText
+      value: 
+      objectReference: {fileID: 11400000, guid: e4769bd37d443104ca3f593d8e65f894,
+        type: 2}
+    - target: {fileID: 3341104183195414515, guid: 1beb527fdcd72d14aa950d07fcafee38,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341104183195414515, guid: 1beb527fdcd72d14aa950d07fcafee38,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341104183195414515, guid: 1beb527fdcd72d14aa950d07fcafee38,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341104183195414515, guid: 1beb527fdcd72d14aa950d07fcafee38,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341104183195414515, guid: 1beb527fdcd72d14aa950d07fcafee38,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1beb527fdcd72d14aa950d07fcafee38, type: 3}
 --- !u!224 &7495261016340162601 stripped
@@ -7017,7 +7006,7 @@ PrefabInstance:
     - target: {fileID: 6632845211318422623, guid: 5c5e7c91e77c2034ca4030e6037d1541,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 130
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6632845211318422623, guid: 5c5e7c91e77c2034ca4030e6037d1541,
         type: 3}

@@ -7,13 +7,17 @@ public class Status : ScriptableObject
     public UnitStatus m_Status;
 
     [Header("Info")]
-    public string m_StatusName;
-    [TextArea(1,3)]
-    public string m_Description;
+    public TextProperty m_StatusName;
+    public TextProperty m_Description;
 
     [Header("Duration")]
     public int m_Duration;
     public GameEvent m_EndEffectEvent;
+
+    public virtual string GetDescription()
+    {
+        return m_Description.ToString();
+    }
 
     public virtual void AffectUnit(UnitStatus unitStatus)
     {

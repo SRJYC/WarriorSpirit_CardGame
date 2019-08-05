@@ -3,7 +3,17 @@ guid: ec3d84487df278848b2d530a128fa375
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - m_ActionPhaseEvent: {instanceID: 0}
+  - m_EndActionPhaseEvent: {instanceID: 0}
+  - m_TurnPassEvent: {instanceID: 0}
+  - m_ConfirmButton: {instanceID: 0}
+  - m_ActionMessage: {instanceID: 0}
+  - Text_NotOnBoard: {fileID: 11400000, guid: a2316e8c642c3dc499d88f8449545d79, type: 2}
+  - Text_CantControl: {fileID: 11400000, guid: 9f83fa39ec61042438e3675c324245b0, type: 2}
+  - Text_Cooldown: {fileID: 11400000, guid: 07b511df23ffd0b41bf46486febe4218, type: 2}
+  - Text_Mana: {fileID: 11400000, guid: 1963841d7c012f34aa728a44e55b7b09, type: 2}
+  - Text_Confirm: {fileID: 11400000, guid: 71370daec038ccd47971c2f5fcdbcdcf, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

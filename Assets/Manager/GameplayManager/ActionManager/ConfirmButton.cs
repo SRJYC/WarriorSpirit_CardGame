@@ -5,8 +5,10 @@ using UnityEngine;
 public class ConfirmButton : MonoBehaviour
 {
     public delegate void Callback();
-
     public Callback callback;
+
+    public TMPro.TextMeshProUGUI m_Label;
+    public TextProperty m_LabelText;
 
     private void Start()
     {
@@ -20,6 +22,8 @@ public class ConfirmButton : MonoBehaviour
 
     public void Show()
     {
+        m_Label.text = m_LabelText.ToString();
+
         gameObject.SetActive(true);
         callback = null;
     }

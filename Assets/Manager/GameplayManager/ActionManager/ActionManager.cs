@@ -18,6 +18,13 @@ public class ActionManager : Singleton<ActionManager>
     private bool click = false;
     private bool confirm = false;
 
+    [Header("Message To Show")]
+    public TextProperty Text_NotOnBoard;
+    public TextProperty Text_CantControl;
+    public TextProperty Text_Cooldown;
+    public TextProperty Text_Mana;
+
+    public TextProperty Text_Confirm;
     private void Awake()
     {
         m_ConfirmButton = FindObjectOfType<ConfirmButton>();
@@ -49,7 +56,7 @@ public class ActionManager : Singleton<ActionManager>
         action.Trigger();
     }
 
-    private static bool CheckAvaliablity(Ability action)
+    private bool CheckAvaliablity(Ability action)
     {
         Unit unit = action.m_Owner;
         if (unit == null)
@@ -59,17 +66,17 @@ public class ActionManager : Singleton<ActionManager>
         }
         else if (unit.m_Position.m_Block == null)
         {
-            GameMessage.Instance.Display("Spirit is not on Battlefield");
+            GameMessage.Instance.Display(Text_NotOnBoard.ToString());
             return false;
         }
         else if (!unit.PlayerControl())
         {
-            GameMessage.Instance.Display("Spirit can't be controlled. It's either not its turn or it's enemy.");
+            GameMessage.Instance.Display(Text_CantControl.ToString());
             return false;
         }
         else if (action.m_CurrentCD > 0)
         {
-            GameMessage.Instance.Display("This Action is still in Cooldown. You may Pass turn instead.");
+            GameMessage.Instance.Display(Text_Cooldown.ToString());
             return false;
         }
         else if (action.m_ManaCost > 0)
@@ -77,7 +84,7 @@ public class ActionManager : Singleton<ActionManager>
             Player player = PlayerManager.Instance.GetPlayer(unit.m_PlayerID);
             if (action.m_ManaCost > player.m_Mana.currentMana)
             {
-                GameMessage.Instance.Display("This Action will cost Mana, make sure you have enough of it.");
+                GameMessage.Instance.Display(Text_Mana.ToString());
                 return false;
             }
         }
@@ -132,7 +139,7 @@ public class ActionManager : Singleton<ActionManager>
 
     private void ShowInfo()
     {
-        m_ActionMessage.Display("Please [Confirm] Your Choice");
+        m_ActionMessage.Display(Text_Confirm.ToString());
 
         m_ConfirmButton.Show();
         m_ConfirmButton.callback += Confirm;

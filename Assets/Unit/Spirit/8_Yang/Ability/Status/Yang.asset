@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b913f4527e1d9344a94bb690ec6ba41, type: 3}
   m_Name: Yang
   m_EditorClassIdentifier: 
-  m_StatusName: Yang
-  m_Description: POW +1
+  m_StatusName: {fileID: 11400000, guid: 2e3e150349aa6d94ea66a22f6185afba, type: 2}
+  m_Description: {fileID: 0}
   m_Duration: 1
   m_EndEffectEvent: {fileID: 11400000, guid: afacc002841afc248bca444433acf0cb, type: 2}
   m_Property: 1

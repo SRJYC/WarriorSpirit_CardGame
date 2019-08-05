@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AIPositive: 0
   m_Owner: {fileID: 0}
-  m_Data: {fileID: 11400000, guid: d7f8592812a1a5c4cb9bee3ce3dc3d03, type: 2}
+  m_AbilityName: {fileID: 11400000, guid: c538e099f8b636648b99368993cd2c7c, type: 2}
+  m_Description: {fileID: 11400000, guid: bbcfafdb1dfde544a841c979bc60a4fe, type: 2}
   m_InfoGetters:
   - {fileID: 11400000, guid: 5d8493d9f91c3d4499be272ba10d2868, type: 2}
   - {fileID: 11400000, guid: 67b04aba0ee6bd345a2cb2c493feebcd, type: 2}

@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bfd68220a6c161429409a2b8ead5d8c, type: 3}
   m_Name: Yang
   m_EditorClassIdentifier: 
-  m_UnitName: Yang
-  m_Description: The basic element of Nature. Its power and effect can expand.
+  m_UnitName: {fileID: 11400000, guid: 2e3e150349aa6d94ea66a22f6185afba, type: 2}
+  m_Description: {fileID: 11400000, guid: b1ffac6731ec7de418b215fa74a66dde, type: 2}
   m_Artwork: {fileID: 21300000, guid: a81e1affe252092458ac1d48ce24ad12, type: 3}
   m_IsWarrior: 0
   m_CanBeFront: 1
   m_CanBeBack: 1
   m_Unique: 0
   m_Rank: 1
+  m_RankUps: []

@@ -10,9 +10,12 @@ public class Ability : ScriptableObject
     #region All field
     [HideInInspector] public Unit m_Owner;
 
-    public AbilityConstantData m_Data;
+    [Header("Base Info")]
+    public TextProperty m_AbilityName;
+    public TextProperty m_Description;
     //public AbilityVariables m_Variables;
 
+    [Header("Ability Info")]
     [Tooltip("Info[i] will store info of InfoGetter[i]")] public AbilityInfoGetter[] m_InfoGetters;
     [Tooltip("Info[i] will store info of InfoGetter[i]")] public AbilityInfo[] m_AbilityInfos;
 

@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bfd68220a6c161429409a2b8ead5d8c, type: 3}
   m_Name: NobleKnight
   m_EditorClassIdentifier: 
-  m_UnitName: Noble Knight
-  m_Description: 'The Warrior who '
+  m_UnitName: {fileID: 11400000, guid: bd1de3501a5d44a45828cfef7b0f83fa, type: 2}
+  m_Description: {fileID: 11400000, guid: 33150f83604f8da44a6607de4693d98e, type: 2}
   m_Artwork: {fileID: 21300000, guid: 84531c5f96e7ed5419dd10f1187767fb, type: 3}
   m_IsWarrior: 1
   m_CanBeFront: 0
   m_CanBeBack: 0
   m_Unique: 0
   m_Rank: 0
+  m_RankUps: []

@@ -9,7 +9,6 @@ public class ApplyVariedStatesChangeStatusEffect : Effect
 
     [Header("Status Value")]
     public UnitStatsProperty m_property;
-    public string m_description;
 
     public enum DefaultType
     {
@@ -58,9 +57,6 @@ public class ApplyVariedStatesChangeStatusEffect : Effect
                 deltaValue = value <= m_Value ? m_Value : value;
                 break;
         }
-
-        string op = deltaValue >= 0 ? " +" : " ";
-        status.m_Description = m_description + " " + m_property.ToString() + op + deltaValue;
 
         status.m_ChangedValue = deltaValue;
     }
