@@ -18,7 +18,7 @@ public class RankInfoSceneManager : MonoBehaviour
     public GameEvent m_ChangeConditionEvent;
     public GameEvent m_ChangeSelectEvent;
 
-    private bool firstDisplay = true; 
+    public bool firstDisplay = true; 
     private void Start()
     {
         m_ChangeConditionEvent.RegisterListenner(ChangeCondition);

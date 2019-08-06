@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f16444738e807304687d8d8932eeab1b, type: 3}
-  m_Name: Little Light
+  m_Name: 6_HeavyPike
   m_EditorClassIdentifier: 
-  m_ConstantData: {fileID: 11400000, guid: 068d941b40b549844ada4198679426b7, type: 2}
-  m_SpiritTypes: 02000000
+  m_OriginData: {fileID: 0}
+  m_ConstantData: {fileID: 11400000, guid: db709938e76ae5b40b75470c52c2f27a, type: 2}
+  m_SpiritTypes: 00000000
   m_Abilities:
-  - {fileID: 11400000, guid: 8c02e148a41c8b04f81282593a8d799c, type: 2}
-  m_RankUps: []
+  - {fileID: 11400000, guid: f6d9e6d4ba35bd04ea772e29d4dc73da, type: 2}
+  - {fileID: 11400000, guid: df10aca452489df45ac632a93fe0ac2f, type: 2}
   m_StatsChangedEventForDisplay: {fileID: 11400000, guid: b0f68383cad413848b1c3dc7cebe45c8,
     type: 2}
   m_StatsChangedEventForUnits: {fileID: 11400000, guid: 84d2f1c3924e32844bdefb35626966dc,
     type: 2}
-  m_Cost: 1
-  m_Durability: 1
-  m_Power: 1
-  m_Speed: 8
+  m_Cost: 3
+  m_Durability: 5
+  m_Power: 2
+  m_Speed: 5
   unitStats: 
   valueForStats: 

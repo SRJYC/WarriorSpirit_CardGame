@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bfd68220a6c161429409a2b8ead5d8c, type: 3}
   m_Name: SaberSoldier
   m_EditorClassIdentifier: 
+  ID: 6
   m_UnitName: {fileID: 11400000, guid: 8582f865b4d239c40914fdf737033ffc, type: 2}
   m_Description: {fileID: 11400000, guid: fc08afab1f656b24c8c930852b710ace, type: 2}
   m_Artwork: {fileID: 21300000, guid: 84531c5f96e7ed5419dd10f1187767fb, type: 3}

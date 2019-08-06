@@ -9,16 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e378ca1e9d931c478e4b940ed3a5a55, type: 3}
+  m_Script: {fileID: 11500000, guid: 0fabc3cf7e90bb0409509fb07b0afe71, type: 3}
   m_Name: AllSpirits
   m_EditorClassIdentifier: 
-  m_Spirits:
-  - {fileID: 11400000, guid: 029b082ed55ca42439340d9356219c12, type: 2}
+  m_Warrior: {fileID: 0}
+  m_CardList:
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 482e2cc0a7b969344b9ffeca2ceb44b8, type: 2}
-  - {fileID: 11400000, guid: 7ff339b9463a4824f990bf7a20ffdebe, type: 2}
+  - {fileID: 11400000, guid: 029b082ed55ca42439340d9356219c12, type: 2}
   - {fileID: 11400000, guid: dc140dba34e77a44cb5f1cc44efa9f97, type: 2}
-  - {fileID: 11400000, guid: 460d64118576b1743bcbc8866ab3caf3, type: 2}
-  - {fileID: 11400000, guid: a024705bc7adf91448034aa6eb06ebd3, type: 2}
+  - {fileID: 11400000, guid: 7ff339b9463a4824f990bf7a20ffdebe, type: 2}
   - {fileID: 11400000, guid: 89501bbcbdb9d754cb82746849314277, type: 2}
+  - {fileID: 11400000, guid: a024705bc7adf91448034aa6eb06ebd3, type: 2}
+  - {fileID: 11400000, guid: 460d64118576b1743bcbc8866ab3caf3, type: 2}
   - {fileID: 11400000, guid: 62de3bb5e0bb5d24e87dd47f8ef7bfc3, type: 2}
   - {fileID: 11400000, guid: 8d1e56fe861d2f54d9fd5266cf5f4046, type: 2}

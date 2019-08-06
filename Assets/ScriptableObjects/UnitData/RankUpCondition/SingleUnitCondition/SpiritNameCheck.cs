@@ -13,7 +13,6 @@ public class SpiritNameCheck
 
     public override string ToString()
     {
-        string result = "Require Spirit: " + m_Unit.UnitName;
-        return result;
+        return m_Unit != null ? m_Unit.UnitName : "";
     }
 }

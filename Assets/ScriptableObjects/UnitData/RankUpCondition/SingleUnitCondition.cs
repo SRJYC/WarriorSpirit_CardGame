@@ -22,7 +22,7 @@ public class SingleUnitCondition
     {
         string result = "";
 
-        result += nameCheck.ToString() + "\n";
+        result += "<b>"+nameCheck.ToString() + "</b>\n";
 
         foreach (RankUpTypeCheck condition in typeChecks)
         {

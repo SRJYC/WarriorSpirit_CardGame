@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bfd68220a6c161429409a2b8ead5d8c, type: 3}
   m_Name: Soldier
   m_EditorClassIdentifier: 
+  ID: 2
   m_UnitName: {fileID: 11400000, guid: c9a4a03ffa7958248b84d49782fccdde, type: 2}
   m_Description: {fileID: 11400000, guid: d699d05d413c9a241945e20c015e839e, type: 2}
   m_Artwork: {fileID: 21300000, guid: 84531c5f96e7ed5419dd10f1187767fb, type: 3}

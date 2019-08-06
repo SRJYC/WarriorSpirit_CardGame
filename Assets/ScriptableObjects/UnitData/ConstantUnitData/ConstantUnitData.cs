@@ -8,6 +8,7 @@ using UnityEngine;
 public class ConstantUnitData : ScriptableObject
 {
     [Header("Base Info")]
+    public int ID;
     public TextProperty m_UnitName;
     public TextProperty m_Description;
     public Sprite m_Artwork;

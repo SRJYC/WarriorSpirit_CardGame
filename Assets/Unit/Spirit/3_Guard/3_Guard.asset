@@ -10,21 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f16444738e807304687d8d8932eeab1b, type: 3}
-  m_Name: HeavyPike
+  m_Name: 3_Guard
   m_EditorClassIdentifier: 
-  m_ConstantData: {fileID: 11400000, guid: db709938e76ae5b40b75470c52c2f27a, type: 2}
+  m_OriginData: {fileID: 0}
+  m_ConstantData: {fileID: 11400000, guid: 30f5a07eb1bf139498a8bb0b2a5b3d5a, type: 2}
   m_SpiritTypes: 00000000
   m_Abilities:
-  - {fileID: 11400000, guid: f6d9e6d4ba35bd04ea772e29d4dc73da, type: 2}
-  - {fileID: 11400000, guid: df10aca452489df45ac632a93fe0ac2f, type: 2}
-  m_RankUps: []
+  - {fileID: 11400000, guid: 07973fedb7b1b244b84145f681b75f53, type: 2}
   m_StatsChangedEventForDisplay: {fileID: 11400000, guid: b0f68383cad413848b1c3dc7cebe45c8,
     type: 2}
   m_StatsChangedEventForUnits: {fileID: 11400000, guid: 84d2f1c3924e32844bdefb35626966dc,
     type: 2}
-  m_Cost: 3
-  m_Durability: 5
-  m_Power: 2
-  m_Speed: 5
+  m_Cost: 2
+  m_Durability: 2
+  m_Power: 1
+  m_Speed: 7
   unitStats: 
   valueForStats: 

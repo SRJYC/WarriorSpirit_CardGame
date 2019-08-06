@@ -92,3 +92,7 @@ GI_DeckLimit	A deck must have 1 Warrior and 6 Spirits. You can have at most 3 co
 GI_RankDetail	Rank Detail	N/A	
 GI_AddCard	Drag card from top to center to add the card to your deck.	N/A	
 GI_SaveButton	SAVE	N/A	
+GM_CardListExplain1	Below are Spirits that may Rank Up to Selected Spirit	N/A	
+GM_Satify	The unit on board must satify	N/A	
+GM_CardListExplain2	Above are Spirits that selected Spirit may Rank Up to	N/A	
+GM_ScarficeExplain	The red icon indicate this Spirit has Sacrifice Property. It means even the base Spirit is in Slot 2 (in hand), this Spirit will still be considered as a possible result of Rank Up.	N/A	

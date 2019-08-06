@@ -10,22 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f16444738e807304687d8d8932eeab1b, type: 3}
-  m_Name: PikeSoldier
+  m_Name: 10_Little Light
   m_EditorClassIdentifier: 
-  m_ConstantData: {fileID: 11400000, guid: 818c50893b769334bb7a008a316194c1, type: 2}
-  m_SpiritTypes: 00000000
+  m_OriginData: {fileID: 0}
+  m_ConstantData: {fileID: 11400000, guid: 068d941b40b549844ada4198679426b7, type: 2}
+  m_SpiritTypes: 02000000
   m_Abilities:
-  - {fileID: 11400000, guid: 78020ae0bfd9e334887791bc09606b7b, type: 2}
-  m_RankUps:
-  - {fileID: 11400000, guid: 52298b5eeec1ec04fa8cf9c45d9e1053, type: 2}
-  - {fileID: 11400000, guid: 586c52d92f6e6cb458f3cff272e5a5c0, type: 2}
+  - {fileID: 11400000, guid: 8c02e148a41c8b04f81282593a8d799c, type: 2}
   m_StatsChangedEventForDisplay: {fileID: 11400000, guid: b0f68383cad413848b1c3dc7cebe45c8,
     type: 2}
   m_StatsChangedEventForUnits: {fileID: 11400000, guid: 84d2f1c3924e32844bdefb35626966dc,
     type: 2}
-  m_Cost: 2
-  m_Durability: 3
-  m_Power: 2
-  m_Speed: 7
+  m_Cost: 1
+  m_Durability: 1
+  m_Power: 1
+  m_Speed: 8
   unitStats: 
   valueForStats: 

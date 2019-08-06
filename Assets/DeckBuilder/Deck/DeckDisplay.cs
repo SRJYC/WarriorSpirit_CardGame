@@ -11,12 +11,11 @@ namespace DeckBuilder
         public SingleCardDisplay warriorDisplay;
         public List<SingleCardDisplay> cardDisplays;
 
-        public bool hasChange = false;
-
         public const int CopyLimit = 3;
 
         public void Start()
         {
+            warriorDisplay.Init(this, -1);
             for (int i = 0; i < cardDisplays.Count; i++)
             {
                 cardDisplays[i].Init(this, i);
@@ -25,9 +24,6 @@ namespace DeckBuilder
 
         public void ChangeDeck(CardCollection cc)
         {
-            //if (hasChange)
-            //    return;
-
             Display(cc);
         }
 
@@ -45,19 +41,17 @@ namespace DeckBuilder
 
         public void ChangeCard(int index, UnitData data)
         {
+            //Debug.Log("index:" + index);
             if(index < 0 && data.IsWarrior)
             {
                 deck.m_Warrior = data;
                 warriorDisplay.Display(data);
-
-                hasChange = true;
             }
-            else if(NumOfCard(data) < CopyLimit)
+            else if(index >=0 && NumOfCard(data) < CopyLimit)
             {
+                //Debug.Log(NumOfCard(data));
                 deck.m_CardList[index] = data;
                 cardDisplays[index].Display(data);
-
-                hasChange = true;
             }
         }
 
@@ -66,7 +60,7 @@ namespace DeckBuilder
             int n = 0;
             foreach(UnitData card in deck.m_CardList)
             {
-                if (card == deck)
+                if (card == data)
                     n++;
             }
 

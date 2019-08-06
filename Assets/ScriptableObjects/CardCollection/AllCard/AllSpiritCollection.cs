@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Unit/AllSpirit")]
 public class AllSpiritCollection: ScriptableObject
 {
-    public List<UnitData> m_Spirits;
+    public CardCollection m_Spirits;
 
     private Dictionary<UnitData, List<UnitData>> m_OriginSpirits;
 
@@ -13,8 +13,11 @@ public class AllSpiritCollection: ScriptableObject
     {
         m_OriginSpirits = new Dictionary<UnitData, List<UnitData>>();
 
-        foreach (UnitData data in m_Spirits)
+        foreach (UnitData data in m_Spirits.m_CardList)
         {
+            if (data == null)
+                continue;
+
             foreach(RankUpCondition condition in data.m_RankUps)
             {
                 UnitData highRankUnit = condition.m_HighRankSpirit;

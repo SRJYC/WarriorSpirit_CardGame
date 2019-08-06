@@ -89,6 +89,7 @@ public class UnitData : ScriptableObject
     }
 
     #region access data
+    public int ID { get { return m_ConstantData.ID; } }
     public string UnitName { get { return m_ConstantData.m_UnitName.ToString(); } }
     public string Description { get { return m_ConstantData.m_Description.ToString(); } }
     public Sprite Artwork { get { return m_ConstantData.m_Artwork; } }
