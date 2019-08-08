@@ -38,6 +38,8 @@ public class RankInfoSceneManager : MonoBehaviour
     {
         m_ChangeConditionEvent.UnregisterListenner(ChangeCondition);
         m_ChangeSelectEvent.UnregisterListenner(ChangeSelect);
+
+        CancelInvoke();
     }
 
     void Display()

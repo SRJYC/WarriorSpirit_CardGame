@@ -24,6 +24,7 @@ public class TurnCountDisplay : MonoBehaviour
     private void OnDestroy()
     {
         turnStartEvent.UnregisterListenner(Display);
+        CancelInvoke();
     }
 
     void Display(GameEventData data)

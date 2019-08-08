@@ -17,7 +17,7 @@ namespace AIPlayer
                 if (!xor)
                     return 100;
                 else
-                    return 0;
+                    return -100;
             }
         }
     }

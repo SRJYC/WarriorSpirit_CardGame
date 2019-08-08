@@ -1,4 +1,4 @@
-ID	English	SimpleChinese	
+ID	English	简体中文	
 Artifact	Artifact	神器	
 Breaker	Breaker	破坏者	
 Charged	Charged	充能	
@@ -89,10 +89,44 @@ GM_DrawCard	Choose one Card add to your Hand	N/A
 GMT_Mana	Increase Maximum amount by 1 at turn start each turn until reach the limit 7.	N/A	
 GML_SwitchButton	Switch	N/A	
 GI_DeckLimit	A deck must have 1 Warrior and 6 Spirits. You can have at most 3 copies of same Spirit. You can only add basic Spirits to your deck and Rank Up in game.	N/A	
-GI_RankDetail	Rank Detail	N/A	
+GI_RankDetail	You can drag cards to [Rank Detail] to see its Rank Up Options and Requirements.	N/A	
 GI_AddCard	Drag card from top to center to add the card to your deck.	N/A	
 GI_SaveButton	SAVE	N/A	
 GM_CardListExplain1	Below are Spirits that may Rank Up to Selected Spirit	N/A	
 GM_Satify	The unit on board must satify	N/A	
 GM_CardListExplain2	Above are Spirits that selected Spirit may Rank Up to	N/A	
-GM_ScarficeExplain	The red icon indicate this Spirit has Sacrifice Property. It means even the base Spirit is in Slot 2 (in hand), this Spirit will still be considered as a possible result of Rank Up.	N/A	
+GM_ScarficeExplain	The red icon indicate this Spirit has Sacrifice Property. It means even the base Spirit is used as Material (in hand), this Spirit will still be considered as a possible result of Rank Up as the base Spirit is Base.	N/A	
+GML_ChangeSet	Change Set	改变套牌	
+GML_NotAvaliable	Not Avaliable	不可用	
+GML_Quit	Quit	退出	
+GML_Rule	Rule (Read Me)	规则（必读）	
+GML_Set	Your Set	你的套牌	
+GM_Restart	Need Restart Game	需要重启游戏	
+GI_1IntroHeader	<b>Introduction:</b>	<b>介绍:</b>	
+GI_2IntroContent	First. Thanks For Playing! This is a Card Game Demo created all by myself. So, please don't expect any fancy Images and Music.	首先，感谢游玩！这是一个个人制作的卡牌对战游戏Demo. 并没有优秀美工和音乐，请见谅.	
+GI_3RuleHeader	<b>Rule:</b>	<b>规则:</b>	
+GI_4Win	There are 2 kinds of cards, Warrior and Spirit. Warrior is like player's Avatar and Spirit is like player's minion. Destroy Enemy Warrior to win the game.	卡片分为两种[战士]与[灵]. 摧毁敌方[战士]以获得胜利.	
+GI_5ControlHeader	<b>Control:</b>	<b>控制:</b>	
+GI_6Control1	You can always right-click a card in Gameplay or in Deck Builder to see its detail. 	N/A	
+GI_7Control2	You can drag a card and drop it on the board to summon it.	N/A	
+GI_8Control3	You can drag a card and drop it on a Spirit (that’s on the board) to Rank Up.	N/A	
+GI_9Control4	You can right-click to cancel your selection in Gameplay.	N/A	
+GI_10SetHeader	<b>Set: </b>	<b>套牌:</b>	
+GI_11Set	You can choose 1 Warrior and 6 Spirits in your set. The Warrior will be summoned on your board at the beginning and the 6 Spirits will be added to your deck. 	N/A	
+GI_12BoardHeader	<b>Board:</b>	<b>场地:</b>	
+GI_13Board	Each player has a field. Player can only summon Spirits on his field. Each Field contains 7 blocks. 3 are frontline, 3 are backline, and 1 is center. Spirit may have restrictions of position. For example, it can only be summoned to the frontline.	N/A	
+GI_14GamePhaseHeader	<b>Game Phase:</b>	<b>游戏阶段:</b>	
+GI_15GamePhase1	Each player will draw random three cards at Game Start. Then each turn, the Player can choose 1 from 3 cards randomly chosen from the deck and add it to the Hand. 	N/A	
+GI_16GamePhase2	After Drawing, players can Summon or Rank Up Spirit. Beware, they both cost Mana. After using cards, press <b>Pass</b> button to end this phase.	N/A	
+GI_17GamePhase3	Next, all units will take turn one by one based on their SPD. You can use action or pass the turn. To use action, you have to Right Click the card to open Info Window and then click Action.	N/A	
+GI_18RankUpHeader	<b>Rank Up:</b>	<b>升阶:</b>	
+GI_19RU1	Spirit can Rank Up if the Player drags another card and drop on it. So the Player can access more powerful Spirit. All High-Rank Spirits require the two Low-Rank Spirits to have some properties. You can view Rank up detail in Deck Builder.	N/A	
+GI_20RU2	The conditions showed in the left is the requirement for Spirit 1 which is the Spirit on the board. It’s also the Spirit to Rank Up, so it’s called Base.	N/A	
+GI_21RU3	The conditions showed in the right is the requirement for Spirit 2 which is the Spirit in the Hand. It’s the Spirit that’s used to Rank Up, so it’s called Material.	N/A	
+GI_22RU4	Rank Up will cost Mana as well.	N/A	
+GI_23RU5	If player summoned(or Rank Up) any new Spirits (not in the deck) three times, then this Spirit will be added to the Deck. Therefore, player has a chance to draw the Spirit directly and summon it without Rank Up or used as Material.	N/A	
+GM_SetNotAvaliable	Your Set Is Not Avaliable	N/A	
+GML_RankDetail	Rank Detail	N/A	
+GM_GameWin	Victory	N/A	
+GM_GameLose	Loss	N/A	
+GM_GameEnd	Game Over	N/A	

@@ -13,25 +13,29 @@ public class ReceiveEventBehavior : StateMachineBehaviour
     [Header("Exist Trigger")]
     public string parameter;
 
-    public Animator m_Animator;
+    public bool dontUnregisterAtExit = false;
+    [HideInInspector]public Animator m_Animator;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        m_Animator = animator;
+
         if (m_Event != null)
         {
             m_Event.RegisterListenner(Trigger);
         }
-
-        m_Animator = animator;
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (m_Event != null)
+        if (m_Event != null && !dontUnregisterAtExit)
             m_Event.UnregisterListenner(Trigger);
     }
 
     private void Trigger(GameEventData data)
     {
-        m_Animator.SetTrigger(parameter);
+        if(m_Animator != null)
+            m_Animator.SetTrigger(parameter);
+        else if(m_Event != null)
+            m_Event.UnregisterListenner(Trigger);
     }
 }

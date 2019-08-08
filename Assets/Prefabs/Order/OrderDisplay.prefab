@@ -259,6 +259,8 @@ MonoBehaviour:
   m_Container: {fileID: 7994369369543529019}
   m_MarkObject: {fileID: 1788180357554549927, guid: c1c58a27df197f949bb9bddf4365d957,
     type: 3}
+  m_WarriorDestroyEvent: {fileID: 11400000, guid: 625378533fdbc364e8067684a27d64ac,
+    type: 2}
 --- !u!1 &7994369369543529019
 GameObject:
   m_ObjectHideFlags: 0

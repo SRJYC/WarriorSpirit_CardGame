@@ -75,6 +75,9 @@ namespace AIPlayer
                         if (optionsList.Count == 0)
                             return false;
 
+                        if (Common.RandomOptionOfBest<TargetOption>(optionsList).score < 0)
+                            return false;
+
                         SelectTargets(select, optionsList);
                     }
                 }
@@ -88,7 +91,9 @@ namespace AIPlayer
                 for (int i = 0; i < select.m_Num; i++)
                 {
                     TargetOption target = Common.RandomOptionOfBest<TargetOption>(optionsList);
+
                     select.m_Blocks.Add(target.block);
+
                     if (!select.m_CanRepeat)
                         optionsList.Remove(target);
                 }

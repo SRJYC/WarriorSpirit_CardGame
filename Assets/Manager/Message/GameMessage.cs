@@ -14,7 +14,13 @@ public class GameMessage : Singleton<GameMessage>
     // Start is called before the first frame update
     void Start()
     {
-        Hide();
+        m_CanvasGroup.alpha = 0;
+        Debug.developerConsoleVisible = true;
+    }
+
+    private void OnDestroy()
+    {
+        CancelInvoke();
     }
 
     public void Display(string msg)

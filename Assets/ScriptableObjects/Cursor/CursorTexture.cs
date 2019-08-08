@@ -21,7 +21,10 @@ public class CursorTexture : ScriptableObject
         {
             int index = (int)type;
             if(index < textures.Count)
-                Cursor.SetCursor(textures[index], Vector2.zero, CursorMode.Auto);
+            {
+                Vector2 cursorHotspot = new Vector2(textures[index].width / 2, textures[index].height / 2);
+                Cursor.SetCursor(textures[index], cursorHotspot, CursorMode.Auto);
+            }
         }
     }
 }

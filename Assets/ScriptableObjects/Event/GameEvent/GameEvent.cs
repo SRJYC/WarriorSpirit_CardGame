@@ -14,13 +14,14 @@ public class GameEvent : ScriptableObject
     //private List<GameEventListenner> m_Listenners = new List<GameEventListenner>();
 
     private List<ListennerTrigger> ToRemove = new List<ListennerTrigger>();
-    private int chain = 0;
+    [SerializeField] private int chain = 0;
 
     //[SerializeField]private bool active = false;
 
     public void OnEnable()
     {
         m_Listenners = null;
+        chain = 0;
     }
 
     public void Trigger(GameEventData eventData = null)
@@ -46,6 +47,7 @@ public class GameEvent : ScriptableObject
 
     public void UnregisterListenner(ListennerTrigger trigger)
     {
+        //Debug.Log(this + " Try to Remove " + trigger);
         ToRemove.Add(trigger);
         RemoveListenner();
     }
@@ -56,6 +58,7 @@ public class GameEvent : ScriptableObject
         {
             foreach(ListennerTrigger trigger in ToRemove)
             {
+                //Debug.Log(this + " Remove " + trigger);
                 m_Listenners -= trigger;
             }
             ToRemove.Clear();

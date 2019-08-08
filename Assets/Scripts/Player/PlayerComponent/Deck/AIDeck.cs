@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class AIDeck : Deck
 {
+    public override void Start()
+    {
+
+    }
+
     public override void RegularDrawCard(int OptionNum = 3, int choiceNum = 1, int times = 1)
     {
-        if (m_Hand.ReachMax)
+        if (m_Hand.ReachMax && notifyDeckManager)
         {
             Notify();
+            return;
         }
+
         for (int i = 0; i < times; i++)
         {
             //get cards

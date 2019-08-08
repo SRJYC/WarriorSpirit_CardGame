@@ -8,6 +8,11 @@ public class StatsChangeStatus : Status
     public UnitStatsProperty m_Property;
     public int m_ChangedValue;
 
+    public override string GetDescription()
+    {
+        string and = m_ChangedValue >= 0 ? " +" : " ";
+        return AllTextEnumProxy.Instance.GetText(m_Property) + and + m_ChangedValue;
+    }
 
     public override void AffectUnit(UnitStatus unitStatus)
     {

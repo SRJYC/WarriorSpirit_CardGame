@@ -50,6 +50,7 @@ public class DeckManager : Singleton<DeckManager>
 
     private void DrawCardPhaseStart(GameEventData data)
     {
+        Debug.Log(this + " Reset Notify");
         for (int i=0; i<draw.Length; i++)
         {
             draw[i] = false;
@@ -58,13 +59,20 @@ public class DeckManager : Singleton<DeckManager>
 
     public void EndDrawCard(PlayerID id)
     {
+        Debug.Log(this + " Receve Notify " + id);
+
         draw[(int)id] = true;
 
         for (int i = 0; i < draw.Length; i++)
         {
             if (!draw[i])
+            {
+                Debug.Log(i + " isn't true");
                 return;
+            }
         }
+
+        Debug.Log(this + " End "+m_EndDrawCard);
 
         m_EndDrawCard.Trigger();
     }

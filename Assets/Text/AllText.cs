@@ -9,7 +9,7 @@ public class AllText : SingletonScriptableObject<AllText>
     public enum Language
     {
         English,
-        SimpleChinese,
+        简体中文,
     }
 
     public string m_File;
@@ -21,10 +21,14 @@ public class AllText : SingletonScriptableObject<AllText>
 
     private List<string> textID;
 
+    public const string PrefLanguageKey = "Language";
     private const char delimiter = '\t';
     public void OnEnable()
     {
         Read();
+
+        int index = PlayerPrefs.GetInt(PrefLanguageKey, 0);
+        m_Language = (Language)index;
     }
 
     public void AddText(string id, string content, Language lan = Language.English)

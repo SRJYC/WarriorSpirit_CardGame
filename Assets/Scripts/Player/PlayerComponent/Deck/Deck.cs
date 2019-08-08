@@ -28,7 +28,7 @@ public class Deck : MonoBehaviour
     public SelectFromCardOptions m_PlayerSelect;
     public GameEvent m_DisplayCardOptionEvent;
     public TextProperty message;
-    private void Start()
+    public virtual void Start()
     {
         m_DrawCardComponent = new DeckDrawCard(this,m_PlayerSelect, m_DisplayCardOptionEvent,message.ToString());
     }
@@ -51,7 +51,7 @@ public class Deck : MonoBehaviour
     /// <param name="times">The times of selection</param>
     public virtual void RegularDrawCard(int OptionNum = 3, int choiceNum = 1, int times = 1)
     {
-        if (m_Hand.ReachMax)
+        if (m_Hand.ReachMax && notifyDeckManager)
         {
             Notify();
         }
@@ -97,6 +97,7 @@ public class Deck : MonoBehaviour
 
     protected void Notify()
     {
+        Debug.Log(this+" Done Draw Card");
         DeckManager.Instance.EndDrawCard(m_ID);
         notifyDeckManager = false;
     }

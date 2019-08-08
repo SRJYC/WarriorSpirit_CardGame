@@ -22,6 +22,8 @@ public class TooltipDisplay : MonoBehaviour
     void OnDestroy()
     {
         m_Event.UnregisterListenner(Trigger);
+
+        CancelInvoke();
     }
 
     public void Display(string message)

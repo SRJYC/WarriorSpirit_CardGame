@@ -13,11 +13,11 @@ public class TestEventRespond : MonoBehaviour
         m_receivedEvent.RegisterListenner(Respond);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
+        m_receivedEvent.UnregisterListenner(Respond);
+        CancelInvoke();
     }
-
     void Respond(GameEventData eventData)
     {
         Invoke("t", 1);

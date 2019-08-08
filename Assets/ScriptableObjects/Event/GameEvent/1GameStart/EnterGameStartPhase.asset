@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: EnterGameStartPhase
   m_EditorClassIdentifier: 
   description: Initialize game
+  chain: 0

@@ -281,5 +281,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b643f732fd1ca147ac8806dcfefe992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEndEvent: {fileID: 11400000, guid: ac9272107e4541e4cb0fba6eba19ea36, type: 2}
+  gameEndEvent: {fileID: 11400000, guid: 625378533fdbc364e8067684a27d64ac, type: 2}
+  winText: {fileID: 11400000, guid: e6605d239093bea46b3681a6fe3b84f0, type: 2}
+  loseText: {fileID: 11400000, guid: 32013ef5773798d429458cb3d3e28095, type: 2}
+  endText: {fileID: 11400000, guid: 736b93cadab211c45bc43546f07197e0, type: 2}
   text: {fileID: 3713523119078482357}

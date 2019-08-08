@@ -18,6 +18,8 @@ public class CardPreviewClick : EmptyClick
     }
     protected override void TriggerLeftClickEvent()
     {
+        Debug.Log("left Click");
+        Debug.Log(m_LeftClickEvent);
         if (m_LeftClickEvent == null)
             return;
 
@@ -30,6 +32,7 @@ public class CardPreviewClick : EmptyClick
 
     protected override void TriggerRightClickEvent()
     {
+        Debug.Log("Right Click");
         if (m_RightClickEvent == null)
             return;
 

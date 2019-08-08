@@ -6,15 +6,19 @@ using UnityEngine.UI;
 
 public class OrderManager : Singleton<OrderManager>
 {
+    [Header("Game State/Phase Event")]
     public GameEvent m_OrderInitEvent;
     public GameEvent m_EndOrderInitEvent;
 
+    [Header("Game Object")]
     public GameObject m_Container;
 
+    [Header("Prefab")]
     public GameObject m_MarkObject;
     private ObjectPool m_Pool;
 
-    //public ScrollRect scrolRect;
+    [Header("Game End Event")]
+    public GameEvent m_WarriorDestroyEvent;
 
     private List<Unit> m_SortedUnitList;
     private List<Unit> m_UnsortedUnitList;
@@ -106,17 +110,30 @@ public class OrderManager : Singleton<OrderManager>
     }
 
     public void RemoveUnit(Unit unit)
-    {   
+    {
         m_UnsortedUnitList.Remove(unit);
         m_SortedUnitList.Remove(unit);
 
         GameObject mark;
-        if(m_UnitMarkMap.TryGetValue(unit, out mark))
+        if (m_UnitMarkMap.TryGetValue(unit, out mark))
         {
             mark.transform.SetParent(null);
             m_Pool.Deactivate(mark, true);
 
             m_UnitMarkMap.Remove(unit);
+        }
+
+        WarriorDestroy(unit);
+    }
+
+    private void WarriorDestroy(Unit unit)
+    {
+        if (unit.m_Data.IsWarrior)
+        {
+            SingleUnitData data = new SingleUnitData();
+            data.m_Unit = unit;
+
+            m_WarriorDestroyEvent.Trigger(data);
         }
     }
 

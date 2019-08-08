@@ -17,6 +17,7 @@ namespace DeckBuilder
 
         public void OnDrop(PointerEventData eventData)
         {
+            Debug.Log("Drop");
             UnitData data = eventData.pointerDrag.GetComponent<CardDisplay>().m_CardData;
             Display(data);
         }
@@ -35,4 +36,3 @@ namespace DeckBuilder
         }
     }
 }
-

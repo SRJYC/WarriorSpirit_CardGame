@@ -11,12 +11,10 @@ public abstract class SingletonScriptableObject<T> : ScriptableObject where T : 
         {   
             if (_instance == null)
             {
-                string[] guids = AssetDatabase.FindAssets("t:" + typeof(T).Name);
-                if(guids.Length != 0)
-                {
-                    string path = AssetDatabase.GUIDToAssetPath(guids[0]);
-                    _instance = AssetDatabase.LoadAssetAtPath<T>(path);
-                }
+                //Debug.Log(typeof(T).Name);
+                //_instance = Resources.FindObjectsOfTypeAll<T>().FirstOrDefault();
+                _instance = Resources.Load(typeof(T).Name) as T;
+                //Debug.Log(_instance);
             }
 
             return _instance;

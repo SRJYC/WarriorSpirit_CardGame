@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 181e37c2b10159c43a0ba7c228cd64fb, type: 3}
-  m_Name: All Text
+  m_Script: {fileID: 11500000, guid: ddba5626ab530c640bb4a1335913c329, type: 3}
+  m_Name: AllUnitReference
   m_EditorClassIdentifier: 
-  m_File: ./text.tsv
-  m_Language: 0
+  m_Warriors: {fileID: 11400000, guid: f746e3fedf5cc0e45a6c0009215408e0, type: 2}
+  m_Spirits: {fileID: 11400000, guid: d159d58a6f8f37e43934cf6fbcc4f2f7, type: 2}

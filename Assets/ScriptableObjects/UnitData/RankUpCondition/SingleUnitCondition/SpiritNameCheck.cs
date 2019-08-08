@@ -8,7 +8,10 @@ public class SpiritNameCheck
     public UnitData m_Unit;
     public bool Check(UnitData data)
     {
-        return m_Unit.UnitName == data.UnitName;
+        if(m_Unit == null)
+            return true;
+        else
+            return m_Unit.UnitName == data.UnitName;
     }
 
     public override string ToString()

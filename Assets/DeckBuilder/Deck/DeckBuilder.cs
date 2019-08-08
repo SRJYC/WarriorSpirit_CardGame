@@ -66,6 +66,8 @@ namespace DeckBuilder
             deckSelect.ChangeSelect(true);
 
             m_CurrentSelect = deckSelect;
+
+            OverwriteSelect(m_CurrentSelect.m_Deck);
         }
 
         public void SaveAllDecks()

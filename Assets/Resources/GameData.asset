@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerId: 0
   decks:
-  - {fileID: 11400000, guid: a887a2ce28d7e204aba853b4627420bd, type: 2}
-  - {fileID: 11400000, guid: a887a2ce28d7e204aba853b4627420bd, type: 2}
+  - {fileID: 11400000, guid: 4429964cc543845448e3545c6f2326ce, type: 2}
+  - {fileID: 11400000, guid: e84a4b095e01e8f45ae1a196b79004c9, type: 2}

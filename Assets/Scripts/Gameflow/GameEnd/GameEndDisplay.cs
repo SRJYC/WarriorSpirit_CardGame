@@ -6,6 +6,10 @@ public class GameEndDisplay : MonoBehaviour
 {
     public GameEvent gameEndEvent;
 
+    public TextProperty winText;
+    public TextProperty loseText;
+    public TextProperty endText;
+
     public TextMeshProUGUI text;
     // Start is called before the first frame update
     void Start()
@@ -22,9 +26,24 @@ public class GameEndDisplay : MonoBehaviour
 
     void Display(GameEventData data)
     {
-        gameObject.SetActive(true);
+        if(data == null)
+        {
+            gameObject.SetActive(true);
+            text.text = endText.ToString();
+        }
+        else
+        {
+            SingleUnitData unitData = data.CastDataType<SingleUnitData>();
+            if (unitData == null)
+                return;
 
-        text.text = "Game End";
+            PlayerID loseId = unitData.m_Unit.m_PlayerID;
+
+            TextProperty word = loseId == PlayerManager.Instance.GetLocalPlayerID() ? loseText : winText;
+
+            gameObject.SetActive(true);
+            text.text = word.ToString();
+        }
     }
 
     void Hide()

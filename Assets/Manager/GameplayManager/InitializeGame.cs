@@ -15,11 +15,15 @@ public class InitializeGame : MonoBehaviour
 
     private void OnDestroy()
     {
+        //Debug.Log("Game init on destroy");
         m_GameStartEvent.UnregisterListenner(Init);
+
+        CancelInvoke();
     }
 
     void Init(GameEventData data)
     {
+        //Debug.Log("Game Init:" + this);
         //set player Id
         BoardManager.Instance.SetID(GameData.Instance.playerId != PlayerID.Player1);
 

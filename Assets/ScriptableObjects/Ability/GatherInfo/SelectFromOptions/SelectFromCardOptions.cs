@@ -42,6 +42,7 @@ public class SelectFromCardOptions : SelectTargetInfoGetter
 
             DisplayInfo();
 
+            Unregister();
             Register();
         }
     }
@@ -61,13 +62,16 @@ public class SelectFromCardOptions : SelectTargetInfoGetter
 
     public override void SelectTrigger(GameEventData eventData)
     {
+        //Debug.Log("Select");
         CardPreviewData data = eventData.CastDataType<CardPreviewData>();
         if (data == null)
             return;
 
+        //Debug.Log("Check Select");
         GameObject cardPreview = data.m_Card;
         if (!m_CanRepeat && m_selectedCardPreviewList.Contains(cardPreview))
         {
+            //Debug.Log("Repeat Select");
             UnselectTarget(cardPreview);
             return;
         }
@@ -75,6 +79,7 @@ public class SelectFromCardOptions : SelectTargetInfoGetter
         if (numberLeft <= 0)
             return;
 
+        //Debug.Log("Confirm Select");
         m_selectedCardPreviewList.Add(cardPreview);
 
         HighlightTarget(cardPreview);

@@ -35,6 +35,11 @@ public class ActionManager : Singleton<ActionManager>
         m_IsBusy = false;
     }
 
+    private void OnDestroy()
+    {
+        CancelInvoke();
+    }
+
     public void TriggerAction(Ability action, bool Check = true, bool enterActionPhase = true)
     {
         //Debug.Log("Trigger Ability [" + action.m_Data.m_AbilityName + "]");

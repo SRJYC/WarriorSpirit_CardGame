@@ -106,13 +106,13 @@ public class Player : MonoBehaviour
         }
 
         Debug.Log("Test Mark");
-        //
+        
         //check cost
-        //if (!SummonManager.CheckCost(unit, m_Mana))
-        //{
-        //    GameMessage.Instance.Display("You don't have enough Mana");
-        //    return false;
-        //}
+        if (!PlayerManager.Instance.test && !SummonManager.CheckCost(unit, m_Mana))
+        {
+            GameMessage.Instance.Display("You don't have enough Mana");
+            return false;
+        }
 
         return true;
     }

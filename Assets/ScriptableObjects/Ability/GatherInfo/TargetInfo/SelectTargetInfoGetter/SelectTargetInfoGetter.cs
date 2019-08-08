@@ -46,6 +46,8 @@ public class SelectTargetInfoGetter : TargetInfoGetter
             numberLeft = m_Num;
             DisplayInfo();
             HighlightAvaliableTarget(source);
+
+            Unregister();
             Register();
         }
     }

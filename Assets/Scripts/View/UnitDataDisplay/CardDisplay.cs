@@ -30,7 +30,6 @@ public class CardDisplay : UnitDataDisplay
         Refresh();
     }
 
-
     private void Refresh()
     {
         if (m_CardData == null)

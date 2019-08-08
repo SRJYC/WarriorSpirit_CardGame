@@ -35,7 +35,7 @@ public class UnitStatusDisplay : UnitDataDisplay
             result += "(" + status.m_Duration.ToString() + ")";
         }
 
-        result += ":" + status.m_Description+"\n";
+        result += ":" + status.GetDescription()+"\n";
         return result;
     }
 }

@@ -204,6 +204,7 @@ AnimatorState:
   - {fileID: 1360763350207551255}
   - {fileID: 5751678164200150692}
   - {fileID: -3871083792036096798}
+  - {fileID: -2972247243058028485}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -275,6 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Event: {fileID: 11400000, guid: af7e052c89758454cb183d6937b895ae, type: 2}
   parameter: EndOrderInit
+  dontUnregisterAtExit: 0
   m_Animator: {fileID: 0}
 --- !u!114 &-7230576432729280156
 MonoBehaviour:
@@ -365,6 +367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Event: {fileID: 11400000, guid: d5e470a5afda2534bb79107e8024552b, type: 2}
   parameter: TurnStartFinished
+  dontUnregisterAtExit: 0
   m_Animator: {fileID: 0}
 --- !u!1101 &-6404715577127956574
 AnimatorStateTransition:
@@ -420,6 +423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Event: {fileID: 11400000, guid: 1d875a9d1bb57f34dabbe42422142b5e, type: 2}
   parameter: TurnEndFinished
+  dontUnregisterAtExit: 0
   m_Animator: {fileID: 0}
 --- !u!1101 &-5472562432945189973
 AnimatorStateTransition:
@@ -535,6 +539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Event: {fileID: 11400000, guid: b654aeeaf0312ef40abab66522dc87bd, type: 2}
   parameter: TurnPass
+  dontUnregisterAtExit: 0
   m_Animator: {fileID: 0}
 --- !u!1101 &-4225053511463194286
 AnimatorStateTransition:
@@ -575,6 +580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Event: {fileID: 11400000, guid: 71553f2b0a299184480b5ce9444f5a43, type: 2}
   parameter: EndRankUp
+  dontUnregisterAtExit: 0
   m_Animator: {fileID: 0}
 --- !u!114 &-4001313278756149607
 MonoBehaviour:
@@ -675,7 +681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: Exit
   layer: 
-  id: 0
+  id: 15
 --- !u!1101 &-3669791604489493598
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -758,6 +764,22 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &-2972247243058028485
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8126106b8341d9448b9cf7d373c5dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Event: {fileID: 11400000, guid: 625378533fdbc364e8067684a27d64ac, type: 2}
+  parameter: WarriorDestroy
+  dontUnregisterAtExit: 1
+  m_Animator: {fileID: 0}
 --- !u!1102 &-2779231303314637442
 AnimatorState:
   serializedVersion: 5
@@ -815,6 +837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Event: {fileID: 11400000, guid: b654aeeaf0312ef40abab66522dc87bd, type: 2}
   parameter: TurnPass
+  dontUnregisterAtExit: 0
   m_Animator: {fileID: 0}
 --- !u!1102 &-1998548491857878364
 AnimatorState:
@@ -1008,6 +1031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Event: {fileID: 11400000, guid: b654aeeaf0312ef40abab66522dc87bd, type: 2}
   parameter: TurnPass
+  dontUnregisterAtExit: 0
   m_Animator: {fileID: 0}
 --- !u!114 &-94015209037719797
 MonoBehaviour:
@@ -1023,6 +1047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Event: {fileID: 11400000, guid: e07736a4c9cbeab40a8066087592c854, type: 2}
   parameter: RankUp
+  dontUnregisterAtExit: 0
   m_Animator: {fileID: 0}
 --- !u!114 &-6041415742959577
 MonoBehaviour:
@@ -1079,91 +1104,91 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: TurnStartFinished
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: EndDrawCard
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: RankUp
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: EndRankUp
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: TurnPass
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: EndOrderInit
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: PlayerTurn
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: EnemyTurn
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Action
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: EndAction
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: UnitTurnEndWithNext
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: UnitTurnEndWithoutNext
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: TurnEndFinished
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: WarriorDestroy
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: base
@@ -1391,6 +1416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Event: {fileID: 11400000, guid: 596cc38676ed09d4281c4d54acbaeec6, type: 2}
   parameter: EndAction
+  dontUnregisterAtExit: 0
   m_Animator: {fileID: 0}
 --- !u!114 &2548406163097006555
 MonoBehaviour:
@@ -1521,6 +1547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Event: {fileID: 11400000, guid: 150ee9061527a534d960e521d04c772d, type: 2}
   parameter: EndDrawCard
+  dontUnregisterAtExit: 0
   m_Animator: {fileID: 0}
 --- !u!1107 &5121662237256746617
 AnimatorStateMachine:
@@ -1630,6 +1657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Event: {fileID: 11400000, guid: cca6482f32f876a4998114f2642faa05, type: 2}
   parameter: GameStart
+  dontUnregisterAtExit: 0
   m_Animator: {fileID: 0}
 --- !u!114 &6140876992046000772
 MonoBehaviour:
@@ -1734,6 +1762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Event: {fileID: 11400000, guid: 3d6c79975ce2c844a9be69ef578f9057, type: 2}
   parameter: Action
+  dontUnregisterAtExit: 0
   m_Animator: {fileID: 0}
 --- !u!114 &7925007284165994329
 MonoBehaviour:
