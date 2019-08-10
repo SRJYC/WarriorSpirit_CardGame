@@ -27,11 +27,7 @@ public class CardCollection : ScriptableObject
                 index = Random.Range(0, size);
             }
             indices.Add(index);
-        }
-
-        foreach(int i in indices)
-        {
-            list.Add(m_CardList[i]);
+            list.Add(m_CardList[index]);
         }
 
         return list;

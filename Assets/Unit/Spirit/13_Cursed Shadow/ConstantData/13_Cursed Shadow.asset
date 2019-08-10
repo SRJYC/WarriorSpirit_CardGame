@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bfd68220a6c161429409a2b8ead5d8c, type: 3}
+  m_Name: 13_Cursed Shadow
+  m_EditorClassIdentifier: 
+  ID: 13
+  m_UnitName: {fileID: 11400000, guid: 0bae8dd1b36144d4a9ba122c398933d3, type: 2}
+  m_Description: {fileID: 11400000, guid: 68fcb4d23ee900c468de01ca288cda56, type: 2}
+  m_Artwork: {fileID: 21300000, guid: 84531c5f96e7ed5419dd10f1187767fb, type: 3}
+  m_IsWarrior: 0
+  m_CanBeFront: 1
+  m_CanBeBack: 1
+  m_Unique: 0
+  m_Rank: 1
+  m_RankUps:
+  - {fileID: 11400000, guid: f3e4c04d9d2252c49a60ef271887c8c8, type: 2}
+  - {fileID: 11400000, guid: 762fcc5ba28cd11439ec6651ada3a446, type: 2}
+  - {fileID: 11400000, guid: c8cd9d3cc6c1a7b4f8ab528f12fb4a7c, type: 2}
+  - {fileID: 11400000, guid: 3f595ee7374fca6439aea3355a426209, type: 2}
+  - {fileID: 11400000, guid: e2fe36755cf3d4a49a7fcd7a98ae4d71, type: 2}

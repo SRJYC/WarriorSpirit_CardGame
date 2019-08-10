@@ -6,6 +6,9 @@ using UnityEngine;
 public class ActiveListenner : ScriptableObject
 {
     public UnitEvent m_Event;
+
+    [Header("Ignore event when in one of these states")]
+    public List<StateID> m_NotActivateStates;
     [HideInInspector] public Ability m_Owner { get; private set; }
     public void Awake()
     {
@@ -25,10 +28,20 @@ public class ActiveListenner : ScriptableObject
 
     public virtual void Trigger(GameEventData eventData)
     {
+        if (!CheckState())
+            return;
+
         Debug.Log(this + " is Triggered.");
         m_Owner.Trigger();
     }
 
-    //protected abstract void Register();
-    //protected abstract void Unregister();
+    private bool CheckState()
+    {
+        foreach(StateID id in m_NotActivateStates)
+        {
+            if (StateMachineManager.Instance.IsState(id))
+                return false;
+        }
+        return true;
+    }
 }

@@ -14,8 +14,8 @@ AnimatorState:
   - {fileID: 124924137591443035}
   m_StateMachineBehaviours:
   - {fileID: -7259312429746695485}
-  - {fileID: -6904740933770708910}
   - {fileID: 953283302369377918}
+  - {fileID: -6904740933770708910}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -111,9 +111,9 @@ AnimatorState:
   m_Transitions:
   - {fileID: -6404715577127956574}
   m_StateMachineBehaviours:
-  - {fileID: -3318704994973959580}
   - {fileID: -6431992961050770998}
   - {fileID: -920437491547235210}
+  - {fileID: -3318704994973959580}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -320,10 +320,10 @@ AnimatorState:
   - {fileID: -5186458995050499819}
   - {fileID: -4225053511463194286}
   m_StateMachineBehaviours:
-  - {fileID: 2548406163097006555}
   - {fileID: -94015209037719797}
   - {fileID: -2076726200795376719}
   - {fileID: 6140876992046000772}
+  - {fileID: 2548406163097006555}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -650,9 +650,9 @@ AnimatorState:
   m_Transitions:
   - {fileID: 3860080967673322095}
   m_StateMachineBehaviours:
+  - {fileID: -5682610400857455904}
   - {fileID: -753855203730304073}
   - {fileID: 5675712128662904937}
-  - {fileID: -5682610400857455904}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -720,19 +720,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Event: {fileID: 11400000, guid: 70a1d7044c1cf7c408ae9c487c62cc18, type: 2}
---- !u!114 &-3297302307403955426
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fe24ab6bb6a02c4ab78363025ea5ca1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Event: {fileID: 0}
 --- !u!1102 &-3001703322793092323
 AnimatorState:
   serializedVersion: 5
@@ -747,9 +734,9 @@ AnimatorState:
   - {fileID: -7485383929019226854}
   - {fileID: 5675736830891665464}
   m_StateMachineBehaviours:
-  - {fileID: -8731522299737214936}
   - {fileID: 7719551635150960999}
   - {fileID: -143870211123594864}
+  - {fileID: -8731522299737214936}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -921,8 +908,8 @@ AnimatorState:
   m_Transitions:
   - {fileID: -8018450796600784291}
   m_StateMachineBehaviours:
-  - {fileID: -4001313278756149607}
   - {fileID: -4479541348131700329}
+  - {fileID: -4001313278756149607}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1104,91 +1091,91 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: TurnStartFinished
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: EndDrawCard
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: RankUp
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: EndRankUp
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: TurnPass
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: EndOrderInit
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: PlayerTurn
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: EnemyTurn
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Action
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: EndAction
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: UnitTurnEndWithNext
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: UnitTurnEndWithoutNext
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: TurnEndFinished
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: WarriorDestroy
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: base
@@ -1385,9 +1372,9 @@ AnimatorState:
   m_Transitions:
   - {fileID: -5472562432945189973}
   m_StateMachineBehaviours:
-  - {fileID: -2613315642481251795}
   - {fileID: 4130119406063401548}
   - {fileID: -6453225803525479563}
+  - {fileID: -2613315642481251795}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1702,8 +1689,8 @@ AnimatorState:
   m_Transitions:
   - {fileID: 4061151642650946556}
   m_StateMachineBehaviours:
-  - {fileID: 1622521476794480124}
   - {fileID: 2119560217079994898}
+  - {fileID: 1622521476794480124}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1799,7 +1786,6 @@ AnimatorState:
   m_Transitions:
   - {fileID: -3904362244171797019}
   m_StateMachineBehaviours:
-  - {fileID: -3297302307403955426}
   - {fileID: -4179685440497995916}
   - {fileID: -7230576432729280156}
   m_Position: {x: 50, y: 50, z: 0}

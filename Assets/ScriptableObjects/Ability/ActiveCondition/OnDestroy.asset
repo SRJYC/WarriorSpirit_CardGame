@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee526bbbbea7d5d4fa90d2c300837484, type: 3}
   m_Name: OnDestroy
   m_EditorClassIdentifier: 
-  m_Event: {fileID: 0}
+  m_Event: {fileID: 11400000, guid: d881c49eb5d73b0498ce6dac2bb2ef3b, type: 2}
+  m_NotActivateStates: 0400000005000000

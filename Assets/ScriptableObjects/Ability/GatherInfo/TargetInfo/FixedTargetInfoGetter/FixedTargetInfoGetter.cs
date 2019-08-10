@@ -18,8 +18,8 @@ public abstract class FixedTargetInfoGetter : TargetInfoGetter
 
         //get field
         m_Field = m_IsAlly ? 
-            BoardManager.Instance.GetFieldController(m_Position.m_PlayerID) 
-            : BoardManager.Instance.GetFieldController(m_Position.m_PlayerID, true);
+            BoardManager.Instance.GetFieldController(source.m_PlayerID) 
+            : BoardManager.Instance.GetFieldController(source.m_PlayerID, true);
 
         ConcreteGather();
 

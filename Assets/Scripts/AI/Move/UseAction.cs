@@ -13,7 +13,7 @@ namespace AIPlayer
 
                 List<ActionOption> options = EvaluateAction(abilities);
 
-                if (options.Count == 0)
+                if (options.Count <= 0)
                 {
                     AIAction.Pass.Do();
                     return;
