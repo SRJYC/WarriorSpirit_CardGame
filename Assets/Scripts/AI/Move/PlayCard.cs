@@ -84,15 +84,15 @@ namespace AIPlayer
                         continue;
 
                     //evaluate
-                    Debug.Log("Summon Option [" + data.UnitName + "]");
+                    //Debug.Log("Summon Option [" + data.UnitName + "]");
 
                     UnitOption option = new UnitOption(data);
 
                     float score = AIRule.EvaluateUnitData.Evaulate(data);
                     option.score += score;
-                    Debug.Log("\t Unit Evaulate Score: [" + score + "]");
+                    //Debug.Log("\t Unit Evaulate Score: [" + score + "]");
 
-                    Debug.Log("Total: " + option.score);
+                    //Debug.Log("Total: " + option.score);
 
                     list.Add(option);
                 }
@@ -117,25 +117,25 @@ namespace AIPlayer
                             UnitData data = ruc.m_HighRankSpirit;
 
                             //evaluate
-                            Debug.Log("Rank Up Option: [" + unit1.m_Data.UnitName + "](board) + [" + unit2.m_Data.UnitName + "](hand) => [" + data.UnitName + "]");
+                            //Debug.Log("Rank Up Option: [" + unit1.m_Data.UnitName + "](board) + [" + unit2.m_Data.UnitName + "](hand) => [" + data.UnitName + "]");
 
                             RankUpOption option = new RankUpOption(data, unit1.m_Data, unit2.m_Data, block);
 
                             float score = AIRule.EvaluateUnitData.Evaulate(data);
                             option.score += score;
-                            Debug.Log("\t Unit Evaulate Score: [" + score + "]");
+                            //Debug.Log("\t Unit Evaulate Score: [" + score + "]");
 
                             float scoreForUnitOnBoard = AIRule.EvaluateUnitData.Evaulate(unit1.m_Data);
                             scoreForUnitOnBoard = scoreForUnitOnBoard * rankUpScoreRatio;
                             option.score -= scoreForUnitOnBoard;
-                            Debug.Log("\t ["+ unit1.m_Data.UnitName + "] Unit Evaulate Score: (-)[" + scoreForUnitOnBoard + "]");
+                            //Debug.Log("\t ["+ unit1.m_Data.UnitName + "] Unit Evaulate Score: (-)[" + scoreForUnitOnBoard + "]");
 
                             float scoreForUnitOnHand = AIRule.EvaluateUnitData.Evaulate(unit2.m_Data);
                             scoreForUnitOnHand = scoreForUnitOnHand * rankUpScoreRatio;
                             option.score -= scoreForUnitOnHand;
-                            Debug.Log("\t [" + unit2.m_Data.UnitName + "] Unit Evaulate Score: (-)[" + scoreForUnitOnHand + "]");
+                            //Debug.Log("\t [" + unit2.m_Data.UnitName + "] Unit Evaulate Score: (-)[" + scoreForUnitOnHand + "]");
 
-                            Debug.Log("Total: " + option.score);
+                            //Debug.Log("Total: " + option.score);
 
                             list.Add(option);
                         }

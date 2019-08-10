@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SaberSoldier(Exchange)
   m_EditorClassIdentifier: 
   m_HighRankSpirit: {fileID: 11400000, guid: 7ff339b9463a4824f990bf7a20ffdebe, type: 2}
-  m_Scarifice: 0
+  m_Sacrifice: 0
+  m_CanSame: 1
   data1Condition:
     nameCheck:
       m_Unit: {fileID: 0}

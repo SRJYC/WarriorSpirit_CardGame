@@ -19,7 +19,7 @@ public class DisplayCondition : MonoBehaviour
             return;
         }
 
-        m_ScaficeIcon.SetActive(condition.m_Scarifice);
+        m_ScaficeIcon.SetActive(condition.m_Sacrifice);
 
         m_Text1.text = condition.GetStringOfCondition1();
         m_Text2.text = condition.GetStringOfCondition2();

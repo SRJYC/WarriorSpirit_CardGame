@@ -24,6 +24,7 @@ namespace AIPlayer
 
         public void StartPlay(GameEventData data)
         {
+            //Debug.Log("AI Play Card");
             AIManager.Instance.PlayCard();
         }
 

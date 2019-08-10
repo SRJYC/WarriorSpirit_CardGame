@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fde014ade0f764ebd8c41178a2ada0, type: 3}
   m_Name: Soldier
   m_EditorClassIdentifier: 
+  m_HighRankSpirit: {fileID: 11400000, guid: 482e2cc0a7b969344b9ffeca2ceb44b8, type: 2}
+  m_Sacrifice: 0
+  m_CanSame: 1
   data1Condition:
     nameCheck:
       m_Unit: {fileID: 0}
@@ -23,5 +26,3 @@ MonoBehaviour:
     typeChecks:
     - spiritTypes: 00000000
     propertyConditions: []
-  m_HighRankSpirit: {fileID: 11400000, guid: 482e2cc0a7b969344b9ffeca2ceb44b8, type: 2}
-  m_Scarifice: 0

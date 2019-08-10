@@ -97,7 +97,7 @@ public class Deck : MonoBehaviour
 
     protected void Notify()
     {
-        Debug.Log(this+" Done Draw Card");
+        //Debug.Log(this+" Done Draw Card");
         DeckManager.Instance.EndDrawCard(m_ID);
         notifyDeckManager = false;
     }

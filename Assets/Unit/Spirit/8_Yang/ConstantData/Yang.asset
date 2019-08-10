@@ -21,4 +21,7 @@ MonoBehaviour:
   m_CanBeBack: 1
   m_Unique: 0
   m_Rank: 1
-  m_RankUps: []
+  m_RankUps:
+  - {fileID: 11400000, guid: 0333ae34d56111c47b6573fb19ae73d9, type: 2}
+  - {fileID: 11400000, guid: 8cd507c430f986642a241186b28b6bf0, type: 2}
+  - {fileID: 11400000, guid: 373f83d536908f74aab011eceb34d0e6, type: 2}

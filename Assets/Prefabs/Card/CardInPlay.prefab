@@ -41,6 +41,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RankUpEvent: {fileID: 11400000, guid: 9224393026adac9469b5104fdfd1b054, type: 2}
+--- !u!114 &6265903641947831933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415838891725698651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3657d555d32ace446b482e5ad278661a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StateChangeEvent: {fileID: 11400000, guid: 888e3879974507947b2d4b1872b15eed, type: 2}
+  m_AvaliableState: 04000000
+  m_ControlledComponent: {fileID: 7208917595144313669}
 --- !u!114 &6497320704226163393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,6 +72,7 @@ MonoBehaviour:
   m_PlayerID: 0
   m_DestroyEvent: {fileID: 11400000, guid: d881c49eb5d73b0498ce6dac2bb2ef3b, type: 2}
   m_StatsChangeEvent: {fileID: 11400000, guid: 84d2f1c3924e32844bdefb35626966dc, type: 2}
+  m_SummonEvent: {fileID: 11400000, guid: e4aaf0cb74c1a664fa711afc10286156, type: 2}
 --- !u!114 &7208917595144313669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,21 +88,6 @@ MonoBehaviour:
   parentToMoveTo: {fileID: 0}
   cursorTextureController: {fileID: 11400000, guid: 36e4d1d007a75d34da7a66777fc24a18,
     type: 2}
---- !u!114 &6265903641947831933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415838891725698651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3657d555d32ace446b482e5ad278661a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_StateChangeEvent: {fileID: 11400000, guid: 888e3879974507947b2d4b1872b15eed, type: 2}
-  m_AvaliableState: 04000000
-  m_ControlledComponent: {fileID: 7208917595144313669}
 --- !u!1001 &4141594267913272089
 PrefabInstance:
   m_ObjectHideFlags: 0

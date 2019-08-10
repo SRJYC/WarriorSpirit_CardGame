@@ -34,6 +34,9 @@ public class ClickTriggerAbility : MonoBehaviour
         if (ability.m_Owner == null)
             return;
 
+        if (!ability.m_IsAction)
+            return;
+
         if (!ability.m_IsActive)
             return;
 

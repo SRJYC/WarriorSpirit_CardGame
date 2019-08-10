@@ -24,7 +24,7 @@ namespace AIPlayer
 
         public void UseAction()
         {
-            Debug.Log("Use Action");
+            //Debug.Log("Use Action");
 
             AIView.Instance.View();
 

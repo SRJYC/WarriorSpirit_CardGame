@@ -298,7 +298,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Data
       value: 
-      objectReference: {fileID: 11400000, guid: 89501bbcbdb9d754cb82746849314277,
+      objectReference: {fileID: 11400000, guid: 20b8776fd8363574d8438d71f4c1b663,
         type: 2}
     - target: {fileID: 2557573030510494506, guid: 58f3ae04c3bee82448b4526173371b57,
         type: 3}
@@ -327,6 +327,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58f3ae04c3bee82448b4526173371b57, type: 3}
+--- !u!1 &255788984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7629700856758082800, guid: b761e179a7724e04391a1d199e1d68fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 7629700856578786546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &255788985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255788984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7aedf3df588cdd4eb947f89d3350996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AuraList: []
+  m_ToRemove: []
 --- !u!224 &271574629 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8173285713663653458, guid: 5faa46cd710129343ae9b096b7d285ce,

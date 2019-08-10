@@ -16,7 +16,7 @@ public class RankUpManagerCheckPhase
         //add rank ups with sacrifice from Spirit 2
         foreach (RankUpCondition rankUp in data2.m_RankUps)
         {
-            if (rankUp.m_Scarifice)
+            if (rankUp.m_Sacrifice)
                 conditions.Add(rankUp);
         }
 

@@ -8,6 +8,7 @@ MonoImporter:
   - m_DestroyEvent: {fileID: 11400000, guid: d881c49eb5d73b0498ce6dac2bb2ef3b, type: 2}
   - m_StatsChangeEvent: {fileID: 11400000, guid: 84d2f1c3924e32844bdefb35626966dc,
       type: 2}
+  - m_SummonEvent: {fileID: 11400000, guid: e4aaf0cb74c1a664fa711afc10286156, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -68,7 +68,7 @@ public class StateMachineManager : Singleton<StateMachineManager>
     {
         if (state.CurrentState != id)
         {
-            Debug.Log("Change State");
+            //Debug.Log("Change State");
             state.CurrentState = id;
             TriggerEvent(layer);
         }

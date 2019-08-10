@@ -10,7 +10,7 @@ namespace AIPlayer
         {
             public static void Do(AIMove.RankUpOption option)
             {
-                Debug.Log("AI Rank Up Unit");
+                //Debug.Log("AI Rank Up Unit");
 
                 RankUpManagerSummonPhase.Summon(option.data,option.block,option.spirit1,option.spirit2);
             }

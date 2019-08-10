@@ -40,17 +40,17 @@ public class ActionManager : Singleton<ActionManager>
         CancelInvoke();
     }
 
-    public void TriggerAction(Ability action, bool Check = true, bool enterActionPhase = true)
+    public void TriggerAction(Ability action, bool check = true, bool enterActionPhase = true)
     {
-        //Debug.Log("Trigger Ability [" + action.m_Data.m_AbilityName + "]");
+        //Debug.Log("Trigger Ability [" + action.m_AbilityName + "]");
         if (m_IsBusy)
             return;
 
         //Debug.Log("Not Busy");
-        if (Check && !CheckAvaliablity(action))
+        if (check && !CheckAvaliablity(action))
             return;
 
-        //Debug.Log("pass check");
+        //Debug.Log("pass check :" + check);
         if (enterActionPhase)
             EnterPhase();
 
@@ -193,7 +193,7 @@ public class ActionManager : Singleton<ActionManager>
 
     private void EndTurn()
     {
-        Debug.Log("End Turn");
+        //Debug.Log("End Turn");
         m_TurnPassEvent.Trigger();
     }
 }

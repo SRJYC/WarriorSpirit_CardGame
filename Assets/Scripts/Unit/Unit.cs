@@ -12,8 +12,10 @@ public class Unit : MonoBehaviour
 
     public PlayerID m_PlayerID;
 
+    [Header("Unit Event")]
     public UnitEvent m_DestroyEvent;
     public UnitEvent m_StatsChangeEvent;
+    public UnitEvent m_SummonEvent;
 
     private bool init = false;
     public void Init(UnitData data, PlayerID id)
@@ -41,17 +43,14 @@ public class Unit : MonoBehaviour
             Init(m_Data, PlayerID.Player1);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public bool PlayerControl()
     {
-        if (PlayerManager.Instance.test)
-            return true;
-
         return OrderManager.Instance.CurrentUnit == this && PlayerManager.Instance.GetLocalPlayerID() == m_PlayerID;
+    }
+
+    public void OnSummon()
+    {
+        if (m_SummonEvent != null)
+            m_SummonEvent.Trigger(this);
     }
 }

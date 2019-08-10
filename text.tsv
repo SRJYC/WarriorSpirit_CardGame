@@ -130,3 +130,11 @@ GML_RankDetail	Rank Detail	N/A
 GM_GameWin	Victory	N/A	
 GM_GameLose	Loss	N/A	
 GM_GameEnd	Game Over	N/A	
+US11A1_Name	Morale Improvment	N/A	
+US11A1_Description	Enhance Ally Legion Spirits' damage while on board.	N/A	
+US11_Name	War Banner	N/A	
+US11_Description	Every Warrior will have its own flag, but the basic effects are same, make Legion Spirit Stronger.	N/A	
+US12_Description	This Spirit creates a Domain which constantly apply Yin and Yang.	N/A	
+US12_Name	Yin Yang	N/A	
+US12A1_Name	Yin Yang	N/A	
+US12A1_Description	All Enemy POW-1 while all Ally POW+1.	N/A	

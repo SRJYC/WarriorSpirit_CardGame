@@ -48,7 +48,7 @@ public class RankUpManager : MonoBehaviour
         if (data == null)
             return;
 
-        Debug.Log("Receive");
+        //Debug.Log("Receive");
 
         List<RankUpCondition> conditions = RankUpManagerCheckPhase.GetAllConditions(data.data1,data.data2,data.block);
         
@@ -58,7 +58,7 @@ public class RankUpManager : MonoBehaviour
             return;
         }
 
-        Debug.Log("Get Choice");
+        //Debug.Log("Get Choice");
         //foreach(RankUpCondition rankUpCondition in conditions)
         //{
         //    Debug.Log("\t" + rankUpCondition.name);
@@ -106,7 +106,7 @@ public class RankUpManager : MonoBehaviour
 
     private void Summon()
     {
-        Debug.Log("Summon High Rank Unit");
+        //Debug.Log("Summon High Rank Unit");
         GameObject selectedCard = m_PlayerSelect.m_selectedCardPreviewList[0];
 
         RankUpManagerSummonPhase.Summon(selectedCard, data.block, data.data1, data.data2);

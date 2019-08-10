@@ -10,7 +10,7 @@ namespace AIPlayer
         {
             public static void Do()
             {
-                Debug.Log("AI Pass turn");
+                //Debug.Log("AI Pass turn");
 
                 AIManager.Instance.Pass();
             }

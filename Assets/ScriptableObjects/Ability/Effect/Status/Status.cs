@@ -16,7 +16,10 @@ public class Status : ScriptableObject
 
     public virtual string GetDescription()
     {
-        return m_Description.ToString();
+        if (m_Description != null)
+            return m_Description.ToString();
+        else
+            return "";
     }
 
     public virtual void AffectUnit(UnitStatus unitStatus)

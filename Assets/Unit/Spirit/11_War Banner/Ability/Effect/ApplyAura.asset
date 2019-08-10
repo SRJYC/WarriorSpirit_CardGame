@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b821fe57256ac2647867872fecb24db0, type: 3}
+  m_Name: ApplyAura
+  m_EditorClassIdentifier: 
+  m_Aura: {fileID: 11400000, guid: 7231f5f18dfc06e44aa4635a07d0a5ee, type: 2}
+  m_status: {fileID: 11400000, guid: 33492821261d81f4eab0b7cd07b98f60, type: 2}
+  m_EndEvent: {fileID: 11400000, guid: d881c49eb5d73b0498ce6dac2bb2ef3b, type: 2}

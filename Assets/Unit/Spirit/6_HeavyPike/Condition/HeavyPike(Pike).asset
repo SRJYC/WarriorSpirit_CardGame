@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: HeavyPike(Pike)
   m_EditorClassIdentifier: 
   m_HighRankSpirit: {fileID: 11400000, guid: 89501bbcbdb9d754cb82746849314277, type: 2}
-  m_Scarifice: 0
+  m_Sacrifice: 0
+  m_CanSame: 1
   data1Condition:
     nameCheck:
       m_Unit: {fileID: 11400000, guid: dc140dba34e77a44cb5f1cc44efa9f97, type: 2}

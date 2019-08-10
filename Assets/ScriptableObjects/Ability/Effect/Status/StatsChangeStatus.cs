@@ -30,18 +30,23 @@ public class StatsChangeStatus : Status
 
     protected override void Regiseter()
     {
-        m_EndEffectEvent.RegisterListenner(End);
+        if (m_EndEffectEvent != null)
+            m_EndEffectEvent.RegisterListenner(End);
     }
 
     protected override void Unregister()
     {
-        m_EndEffectEvent.UnregisterListenner(End);
+        if (m_EndEffectEvent != null)
+            m_EndEffectEvent.UnregisterListenner(End);
     }
 
     private void End(GameEventData data = null)
     {
-        m_Duration--;
-        if (m_Duration <= 0)
-            m_Status.RemoveStatus(this);
+        if(m_Duration >= 0)
+        {
+            m_Duration--;
+            if (m_Duration <= 0)
+                m_Status.RemoveStatus(this);
+        }
     }
 }

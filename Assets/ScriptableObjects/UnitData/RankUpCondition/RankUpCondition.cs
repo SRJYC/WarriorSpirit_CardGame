@@ -8,7 +8,9 @@ public class RankUpCondition : ScriptableObject
     [Header("High Rank Spirit")]
     public UnitData m_HighRankSpirit;
     [Tooltip("With [Scarifice] property, this condition will be checked even the original spirit is in hand(slot 2).")]
-    public bool m_Scarifice = false;
+    public bool m_Sacrifice = false;
+    [Header("Can two Spirit be same")]
+    public bool m_CanSame = true;
 
     [Header("Spirit 1 / Spirit on Board")]
     public SingleUnitCondition data1Condition = null;
@@ -24,6 +26,9 @@ public class RankUpCondition : ScriptableObject
     /// <returns></returns>
     public bool Check(UnitData data1, UnitData data2)
     {
+        if (!m_CanSame && data1.ID == data2.ID)
+            return false;
+
         if(data1Condition != null)
         {
             bool check1 = data1Condition.Check(data1);

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 045fc6e542ec4004584307de93bb118c, type: 3}
+  m_Name: Negative 1
+  m_EditorClassIdentifier: 
+  checkWarrior: 1
+  checkSpirit: 1
+  m_ID: 0
+  checkAlly: 0
+  checkEnemy: 1
+  m_Condition:
+    nameCheck:
+      m_Unit: {fileID: 0}
+    typeChecks: []
+    propertyConditions: []
+  m_Status: {fileID: 11400000, guid: 7c2246273f1356f4e9ab28a038445582, type: 2}

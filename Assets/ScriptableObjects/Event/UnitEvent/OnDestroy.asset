@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbadcd8fda8386479ce8b9f11881072, type: 3}
   m_Name: OnDestroy
   m_EditorClassIdentifier: 
-  m_UnitDestroyEvent: {fileID: 11400000}
+  description: 
+  m_UnitDestroyEvent: {fileID: 0}
+  chain: 0

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class ActiveListenner : ScriptableObject
+[CreateAssetMenu(menuName ="Ability/Activate")]
+public class ActiveListenner : ScriptableObject
 {
     public UnitEvent m_Event;
     [HideInInspector] public Ability m_Owner { get; private set; }
@@ -25,6 +26,7 @@ public abstract class ActiveListenner : ScriptableObject
     public virtual void Trigger(GameEventData eventData)
     {
         Debug.Log(this + " is Triggered.");
+        m_Owner.Trigger();
     }
 
     //protected abstract void Register();

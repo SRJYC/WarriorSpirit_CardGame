@@ -16,12 +16,11 @@ public class UnitEvent : ScriptableObject
 
     private Dictionary<Unit, List<ListennerTrigger>> ToRemove = new Dictionary<Unit, List<ListennerTrigger>>();
     private List<Unit> UnitToRemove = new List<Unit>();
-    private int chain = 0;
+    [SerializeField]private int chain = 0;
 
     public void Trigger(Unit unit, GameEventData data = null)
     {
         chain++;
-
         ListennerTrigger trigger;
         if(m_Listenners.TryGetValue(unit, out trigger))
         {
@@ -35,18 +34,19 @@ public class UnitEvent : ScriptableObject
 
     public void RegisterListenner(Unit unit, ListennerTrigger newTrigger)
     {
-        ListennerTrigger trigger;
-        if (m_Listenners.TryGetValue(unit, out trigger))
+        if (m_Listenners.ContainsKey(unit))
         {
-            trigger += newTrigger;
+            m_Listenners[unit] += newTrigger;
         }
         else
         {
+            ListennerTrigger trigger = null;
             trigger += newTrigger;
 
             m_Listenners.Add(unit, trigger);
 
-            m_UnitDestroyEvent.RegisterListenner(unit, UnitDestroy);
+            if(m_UnitDestroyEvent != null)
+                m_UnitDestroyEvent.RegisterListenner(unit, UnitDestroy);
         }
     }
 
@@ -74,6 +74,9 @@ public class UnitEvent : ScriptableObject
         {
             foreach(KeyValuePair<Unit, List<ListennerTrigger>> pair in ToRemove)
             {
+                if(!m_Listenners.ContainsKey(pair.Key))
+                    continue;
+
                 foreach(ListennerTrigger trigger in  pair.Value)
                 {
                     m_Listenners[pair.Key] -= trigger;
@@ -94,12 +97,14 @@ public class UnitEvent : ScriptableObject
 
     private void UnitDestroy(GameEventData eventData)
     {
+        //Debug.Log(this + " Receive Unit Destroy Event");
         SingleUnitData data = eventData.CastDataType<SingleUnitData>();
         if(data != null)
         {
             Unit unit = data.m_Unit;
             UnitToRemove.Add(unit);
 
+            //Debug.Log(this + " chain "+ chain);
             m_UnitDestroyEvent.UnregisterListenner(unit, UnitDestroy);
         }
 

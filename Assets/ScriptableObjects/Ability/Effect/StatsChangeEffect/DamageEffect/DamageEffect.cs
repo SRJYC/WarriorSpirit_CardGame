@@ -20,6 +20,8 @@ public class DamageEffect : StatsChangeEffect
         //get source power;
         int pow = sourceInfo.GetPower();
 
+        m_SourceDelta += sourceInfo.m_Source.m_Data.GetStat(UnitStatsProperty.Breaker);
+
         foreach (Unit unit in targetInfo.m_Targets)
         {
             m_TargetDelta = 0;

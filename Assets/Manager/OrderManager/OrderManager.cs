@@ -38,6 +38,8 @@ public class OrderManager : Singleton<OrderManager>
 
         if (m_OrderInitEvent != null)
             m_OrderInitEvent.RegisterListenner(TurnStartInit);
+
+        AuraManager.Instance.Init();
     }
 
     private void OnDestroy()
@@ -52,6 +54,8 @@ public class OrderManager : Singleton<OrderManager>
     /// <returns></returns>
     public Unit NextUnit()
     {
+        AuraManager.Instance.RefreshAura(m_UnsortedUnitList);
+
         if (m_CurrentUnit == null)
             return null;
 
@@ -88,6 +92,9 @@ public class OrderManager : Singleton<OrderManager>
         else
             m_CurrentUnit = null;
 
+
+        AuraManager.Instance.RefreshAura(m_UnsortedUnitList);
+
         //Debug.Log("Order Manager Trigger ");
         m_EndOrderInitEvent.Trigger();
     }
@@ -107,6 +114,8 @@ public class OrderManager : Singleton<OrderManager>
         mark.transform.SetSiblingIndex(m_SortedUnitList.IndexOf(unit));
 
         m_UnitMarkMap.Add(unit, mark);
+
+        AuraManager.Instance.RefreshAura(m_UnsortedUnitList);
     }
 
     public void RemoveUnit(Unit unit)
@@ -122,6 +131,8 @@ public class OrderManager : Singleton<OrderManager>
 
             m_UnitMarkMap.Remove(unit);
         }
+
+        AuraManager.Instance.RemoveUnit(unit);
 
         WarriorDestroy(unit);
     }

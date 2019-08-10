@@ -58,8 +58,8 @@ public class UnitData : ScriptableObject
 
         m_Stats = new Dictionary<UnitStatsProperty, int>();
 
-        if (!m_ConstantData.m_IsWarrior)
-            m_Stats.Add(UnitStatsProperty.LV, BASE_LEVEL);
+        //if (!m_ConstantData.m_IsWarrior)
+        //    m_Stats.Add(UnitStatsProperty.LV, BASE_LEVEL);
 
         if (!m_ConstantData.m_IsWarrior)
         {

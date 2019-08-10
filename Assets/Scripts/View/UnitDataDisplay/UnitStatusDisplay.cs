@@ -27,15 +27,22 @@ public class UnitStatusDisplay : UnitDataDisplay
 
     private string StatusDescription(Status status)
     {
-        string result= "[" + status.m_StatusName + "]";
-
-        //duration
-        if (status.m_Duration > 0)
+        if(status.m_StatusName != null)
         {
-            result += "(" + status.m_Duration.ToString() + ")";
-        }
+            string result = "[" + status.m_StatusName + "]";
 
-        result += ":" + status.GetDescription()+"\n";
-        return result;
+            //duration
+            if (status.m_Duration > 0)
+            {
+                result += "(" + status.m_Duration.ToString() + ")";
+            }
+
+            result += ":" + status.GetDescription() + "\n";
+            return result;
+        }
+        else
+        {
+            return "";
+        }
     }
 }
