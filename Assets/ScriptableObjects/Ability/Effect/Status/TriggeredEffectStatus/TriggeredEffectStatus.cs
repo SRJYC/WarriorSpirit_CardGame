@@ -38,7 +38,8 @@ public class TriggeredEffectStatus : Status
 
     protected override void Regiseter()
     {
-        m_EndEffectEvent.RegisterListenner(End);
+        if(m_EndEffectEvent != null)
+            m_EndEffectEvent.RegisterListenner(End);
 
         if (isGameEvent)
             gameEvent.RegisterListenner(TakeEffect);
@@ -48,7 +49,8 @@ public class TriggeredEffectStatus : Status
 
     protected override void Unregister()
     {
-        m_EndEffectEvent.UnregisterListenner(End);
+        if (m_EndEffectEvent != null)
+            m_EndEffectEvent.UnregisterListenner(End);
 
         if (isGameEvent)
             gameEvent.UnregisterListenner(TakeEffect);
@@ -78,11 +80,11 @@ public class TriggeredEffectStatus : Status
         }
     }
 
-    private void TakeEffect(GameEventData data = null)
+    private void TakeEffect(GameEventData data)
     {
         foreach(StatusEffect effect in effects)
         {
-            effect.TakeEffect(m_Status.m_Owner,power);
+            effect.TakeEffect(m_Status.m_Owner, power, data);
         }
     }
 }

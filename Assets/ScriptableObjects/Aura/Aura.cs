@@ -5,14 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName ="Ability/Aura/Aura")]
 public class Aura : ScriptableObject
 {
-    [Header("Spirit or Warrior")]
-    public bool checkWarrior = true;
-    public bool checkSpirit = true;
-
-    [Header("Ally or Enemy")]
-    [HideInInspector] public PlayerID m_ID;
-    public bool checkAlly;
-    public bool checkEnemy;
+    [Header("Range")]
+    public List<TargetInfoGetter> m_InfoGetter;
+    private List<FieldBlock> m_EffectArea;
 
     [Header("Condition For Unit")]
     public SingleUnitCondition m_Condition;
@@ -22,10 +17,20 @@ public class Aura : ScriptableObject
 
     private Dictionary<Unit, Status> m_StatusRecord;
 
-    public void Init(PlayerID id)
+    public void Init(Unit source)
     {
-        m_ID = id;
+        GetArea(source);
         m_StatusRecord = new Dictionary<Unit, Status>();
+    }
+
+    private void GetArea(Unit source)
+    {
+        m_EffectArea = new List<FieldBlock>();
+        foreach (FixedTargetInfoGetter infoGetter in m_InfoGetter)
+        {
+            infoGetter.GetInfo(source);
+            m_EffectArea.AddRange(infoGetter.m_Blocks);
+        }
     }
 
     public void RemoveUnit(Unit unit)
@@ -37,7 +42,7 @@ public class Aura : ScriptableObject
     {
         foreach(Unit unit in units)
         {
-            if (GetRightSide(unit) && GetRightType(unit))
+            if (CheckInArea(unit))
             {
                 bool result = m_Condition.Check(unit.m_Data);
 
@@ -53,19 +58,10 @@ public class Aura : ScriptableObject
         }
     }
 
-    private bool GetRightType(Unit unit)
+    private bool CheckInArea(Unit unit)
     {
-        bool warrior = unit.m_Data.IsWarrior;
-        bool rightType = (warrior && checkWarrior) || (!warrior && checkSpirit);
-        return rightType;
-    }
-
-    private bool GetRightSide(Unit unit)
-    {
-        PlayerID id = unit.m_PlayerID;
-        bool ally = id == m_ID;
-        bool rightSide = (ally && checkAlly) || (!ally && checkEnemy);
-        return rightSide;
+        FieldBlock block = unit.m_Position.m_Block;
+        return m_EffectArea.Contains(block);
     }
 
     public void RemoveAura(List<Unit> units)

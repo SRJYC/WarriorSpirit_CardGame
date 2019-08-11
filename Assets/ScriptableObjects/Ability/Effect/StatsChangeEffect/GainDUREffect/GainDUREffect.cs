@@ -30,8 +30,10 @@ public class GainDUREffect : StatsChangeEffect
             int value = GetValue(unit, pow);
             if (value > 0)
                 GainDUR(unit, value);
+            else
+                GainDUR(unit, 0);
 
-            TriggerAfterReceiveEffectEvent(unit);
+            //TriggerAfterReceiveEffectEvent(unit);
         }
     }
 

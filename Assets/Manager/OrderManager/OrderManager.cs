@@ -38,8 +38,6 @@ public class OrderManager : Singleton<OrderManager>
 
         if (m_OrderInitEvent != null)
             m_OrderInitEvent.RegisterListenner(TurnStartInit);
-
-        AuraManager.Instance.Init();
     }
 
     private void OnDestroy()

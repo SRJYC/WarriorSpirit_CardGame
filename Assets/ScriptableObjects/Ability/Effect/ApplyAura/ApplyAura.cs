@@ -28,7 +28,7 @@ public class ApplyAura : Effect
     private Aura AddAura(Unit unit)
     {
         Aura aura = Instantiate(m_Aura);
-        aura.Init(unit.m_PlayerID);
+        aura.Init(unit);
         AuraManager.Instance.AddAura(aura);
 
         return aura;

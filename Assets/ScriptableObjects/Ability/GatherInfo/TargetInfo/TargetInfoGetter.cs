@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class TargetInfoGetter : AbilityInfoGetter
 {
-    [Header("Condition")]
+    [Header("Condition, Select Both If Need All Blocks")]
     public bool m_NeedUnit = true;
     public bool m_NeedEmpty = false;
 

@@ -144,3 +144,9 @@ US14A2_Name	Curse	N/A
 US14A2_Description	After being destroyed, summon a Cursed Shadow on a Random Position of Enemy field.	N/A	
 US14_Name	Cursed Soldier	N/A	
 US14_Description		N/A	
+US15A2_Name	Shield Wall	N/A	
+US15A2_Description	Enhance defense. Spirits in frontline and Warrior will take less damage.	N/A	
+US15_Name	Tower Shield	N/A	
+US15_Description	The iconic Spirit of Legion's Defensive Power.	N/A	
+US15A2St1_Name	Shield Wall	N/A	
+US15A2St1_Description	Reduce income damage by 1.	N/A	

@@ -9,15 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fac18f9898ee204e9ff44d529a70a91, type: 3}
-  m_Name: AllyEmptyBlocks
+  m_Script: {fileID: 11500000, guid: b5311b6bf98f24c4887a5628f1961f2a, type: 3}
+  m_Name: AllyCenterBlock
   m_EditorClassIdentifier: 
   m_Automatic: 1
   m_Done: 0
+  m_NeedUnit: 1
+  m_NeedEmpty: 1
   m_ExculdeSelf: 0
   m_ExcludeWarrior: 0
-  m_NeedUnit: 0
-  m_NeedEmpty: 1
   m_Targets: []
   m_Blocks: []
   m_IsAlly: 1
+  m_SameRowAsSourceUnit: 0
+  m_SameColumnAsSourceUnit: 0
+  m_LineType: 2

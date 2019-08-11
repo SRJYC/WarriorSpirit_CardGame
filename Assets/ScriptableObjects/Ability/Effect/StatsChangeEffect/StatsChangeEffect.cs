@@ -16,7 +16,7 @@ public class StatsChangeEffect : Effect
     [Header("Event")]
     public UnitEvent m_BeforeActionEvent;
     public UnitEvent m_BeforeReceiveEffectEvent;
-    public UnitEvent m_AfterReceiveEffectEvent;
+    //public UnitEvent m_AfterReceiveEffectEvent;
 
     /// <summary>
     /// They type of changing in stats
@@ -41,11 +41,11 @@ public class StatsChangeEffect : Effect
     }
 
 
-    protected void TriggerAfterReceiveEffectEvent(Unit unit)
-    {
-        if (m_AfterReceiveEffectEvent != null)
-            m_AfterReceiveEffectEvent.Trigger(unit, m_EventData);
-    }
+    //protected void TriggerAfterReceiveEffectEvent(Unit unit)
+    //{
+    //    if (m_AfterReceiveEffectEvent != null)
+    //        m_AfterReceiveEffectEvent.Trigger(unit, m_EventData);
+    //}
 
     protected void CreateEventData(SourceInfo sourceInfo, TargetInfo targetInfo)
     {

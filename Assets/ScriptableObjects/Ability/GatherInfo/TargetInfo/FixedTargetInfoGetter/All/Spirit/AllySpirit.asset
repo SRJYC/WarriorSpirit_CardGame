@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: AllySpirit
   m_EditorClassIdentifier: 
   m_Automatic: 1
-  m_Done: 0
+  m_Done: 1
+  m_NeedUnit: 1
+  m_NeedEmpty: 0
   m_ExculdeSelf: 0
   m_ExcludeWarrior: 1
-  m_NeedUnit: 1
-  m_Targets: []
-  m_Blocks: []
+  m_Targets:
+  - {fileID: 0}
+  m_Blocks:
+  - {fileID: 0}
   m_IsAlly: 1

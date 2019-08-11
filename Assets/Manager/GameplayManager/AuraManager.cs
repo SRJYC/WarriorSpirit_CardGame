@@ -7,6 +7,12 @@ public class AuraManager : Singleton<AuraManager>
     [SerializeField] private List<Aura> m_AuraList;
 
     [SerializeField] private List<Aura> m_ToRemove;
+
+    private void Start()
+    {
+        Init();
+    }
+
     public void Init()
     {
         m_AuraList = new List<Aura>();

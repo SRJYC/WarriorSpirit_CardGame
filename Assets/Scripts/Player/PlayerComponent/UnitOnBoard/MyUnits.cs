@@ -81,14 +81,13 @@ public class MyUnits : MonoBehaviour
         int value = 0;
         if (m_History.TryGetValue(origin, out value))
         {
-            m_History[origin]++;
+            return ++m_History[origin];
         }
         else
         {
             m_History.Add(origin, 1);
+            return 1;
         }
-
-        return value;
     }
 
     public int GetHistoryNumber(UnitData data)

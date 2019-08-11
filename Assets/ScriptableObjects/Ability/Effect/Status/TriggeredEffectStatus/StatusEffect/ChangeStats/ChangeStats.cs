@@ -7,7 +7,7 @@ public class ChangeStats : StatusEffect
 {
     public UnitStatsProperty property;
     public bool force;
-    public override void TakeEffect(Unit unit, int power = 0)
+    public override void TakeEffect(Unit unit, int power = 0, GameEventData eventData = null)
     {
         base.TakeEffect(unit, power);
 

@@ -23,3 +23,4 @@ MonoBehaviour:
   m_Rank: 2
   m_RankUps:
   - {fileID: 11400000, guid: 61da951faa11ff54d920e0223adc4c7c, type: 2}
+  - {fileID: 11400000, guid: 484655b70606e5e4fb97ebae15161477, type: 2}

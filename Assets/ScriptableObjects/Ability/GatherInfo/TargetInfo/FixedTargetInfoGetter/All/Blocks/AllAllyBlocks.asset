@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fac18f9898ee204e9ff44d529a70a91, type: 3}
+  m_Name: AllAllyBlocks
+  m_EditorClassIdentifier: 
+  m_Automatic: 1
+  m_Done: 0
+  m_NeedUnit: 1
+  m_NeedEmpty: 1
+  m_ExculdeSelf: 0
+  m_ExcludeWarrior: 0
+  m_Targets: []
+  m_Blocks: []
+  m_IsAlly: 1

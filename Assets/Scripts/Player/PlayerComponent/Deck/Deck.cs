@@ -6,7 +6,7 @@ public class Deck : MonoBehaviour
 {
     protected PlayerID m_ID;
     protected Hand m_Hand;
-    protected CardCollection m_Deck;
+    [SerializeField]protected CardCollection m_Deck;
     public int CardCount
     {
         get

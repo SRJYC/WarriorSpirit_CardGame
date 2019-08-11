@@ -12,11 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045fc6e542ec4004584307de93bb118c, type: 3}
   m_Name: Negative 1
   m_EditorClassIdentifier: 
-  checkWarrior: 1
-  checkSpirit: 1
-  m_ID: 0
-  checkAlly: 0
-  checkEnemy: 1
+  m_InfoGetter:
+  - {fileID: 11400000, guid: 6f31bfede65c5864cb2b25e7b509ca8a, type: 2}
   m_Condition:
     nameCheck:
       m_Unit: {fileID: 0}

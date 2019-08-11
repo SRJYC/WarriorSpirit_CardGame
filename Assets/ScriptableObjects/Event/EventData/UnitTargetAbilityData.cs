@@ -11,5 +11,5 @@ public class EffectData : GameEventData
     public List<Unit> m_Targets;
     public List<FieldBlock> m_TargetBlock;
 
-    public Effect m_TriggeredEffect;
+    public StatsChangeEffect m_TriggeredEffect;
 }

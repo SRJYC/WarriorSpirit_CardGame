@@ -31,8 +31,10 @@ public class DamageEffect : StatsChangeEffect
             int value = GetValue(unit, pow);
             if (value > 0)
                 Damage(unit, value);
+            else
+                Damage(unit, 0);
 
-            TriggerAfterReceiveEffectEvent(unit);
+            //TriggerAfterReceiveEffectEvent(unit);
         }
     }
 

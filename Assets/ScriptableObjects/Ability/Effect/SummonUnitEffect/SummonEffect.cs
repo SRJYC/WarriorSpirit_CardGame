@@ -11,23 +11,16 @@ public class SummonEffect : Effect
     {
         base.TakeEffect(info);
 
-        FieldBlock block = GetBlock();
-
-        if (block == null || block.m_Unit != null)
-        {
-            //Debug.LogError("Wrong Target");
+        TargetInfo info1 = GetAbilityInfo<TargetInfo>();
+        if (info1 == null)
             return;
+
+        foreach(FieldBlock block in info1.m_Blocks)
+        {
+            if(block.m_Unit == null)
+            {
+                SummonManager.Summon(m_Unit, block, block.m_PlayerID);
+            }
         }
-
-        SummonManager.Summon(m_Unit, block,block.m_PlayerID);
-    }
-
-    private FieldBlock GetBlock()
-    {
-        TargetInfo info = GetAbilityInfo<TargetInfo>();
-        if (info == null || info.m_Blocks.Count <= 0)
-            return null;
-
-        return info.m_Blocks[0];
     }
 }

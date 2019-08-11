@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7fde014ade0f764ebd8c41178a2ada0, type: 3}
+  m_Name: 15_TowerShield
+  m_EditorClassIdentifier: 
+  m_HighRankSpirit: {fileID: 11400000, guid: ff74b6dbee301ac498dbbdd14c508f5f, type: 2}
+  m_Sacrifice: 0
+  m_CanSame: 1
+  data1Condition:
+    nameCheck:
+      m_Unit: {fileID: 0}
+    typeChecks:
+    - spiritTypes: 00000000
+    propertyConditions:
+    - property: 2
+      compare: 1
+      value: 3
+  data2Condition:
+    nameCheck:
+      m_Unit: {fileID: 0}
+    typeChecks: []
+    propertyConditions:
+    - property: 1
+      compare: 1
+      value: 3
