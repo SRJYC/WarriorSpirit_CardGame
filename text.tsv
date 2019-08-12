@@ -67,11 +67,11 @@ US6A2_Description	Damage all Enemy in front.	N/A
 US6A2_Name	Puncture	N/A	
 US7_Description	The basic element of Nature. Its power and effect can expand.	N/A	
 US7_Name	Yin	N/A	
-US7A1_Description	Increase Target POW same as POW until end of the turn.	N/A	
+US7A1_Description	Target POW - [same amount as POW] until end of the turn.	N/A	
 US7A1_Name	Weaken	N/A	
 US8_Description	The basic element of Nature. Its power and effect can expand.	N/A	
 US8_Name	Yang	N/A	
-US8A1_Description	Increase Target POW same as POW until end of the turn.	N/A	
+US8A1_Description	Target POW + [same amount as POW] until end of the turn.	N/A	
 US8A1_Name	Strengthen	N/A	
 US9_Description	The base form of Fairy Type. Its mobility grants it various path of Rank Up.	N/A	
 US9_Name	Pixie	N/A	
@@ -141,7 +141,7 @@ US12A1_Description	All Enemy POW-1 while all Ally POW+1.	N/A
 US13_Name	Cursed Shadow	N/A	
 US13_Description	Useless Spirit that's meant to block Enemy field. However, it may become useful and powerful.	N/A	
 US14A2_Name	Curse	N/A	
-US14A2_Description	After being destroyed, summon a Cursed Shadow on a Random Position of Enemy field.	N/A	
+US14A2_Description	After being destroyed, summon a useless Shadow on a Random Position of Enemy field.	N/A	
 US14_Name	Cursed Soldier	N/A	
 US14_Description		N/A	
 US15A2_Name	Shield Wall	N/A	
@@ -150,3 +150,19 @@ US15_Name	Tower Shield	N/A
 US15_Description	The iconic Spirit of Legion's Defensive Power.	N/A	
 US15A2St1_Name	Shield Wall	N/A	
 US15A2St1_Description	Reduce income damage by 1.	N/A	
+US16_Name	Secret Agent	N/A	
+US16_Description	This Spirit can mess Enemy up.	N/A	
+US16A1_Name	Interfere	N/A	
+US16A1_Description	Summon a useless Shadow on Enemy Field.	N/A	
+UW1A2_Name	Reinforce	N/A	
+UW1A2_Description	Draw a Legion Type Spirit.	N/A	
+US17_Name	Assassin	N/A	
+US17_Description	This Spirit can move around and threat Enemy's backline.	N/A	
+US17A1_Name	Assassinate	N/A	
+US17A1_Description	Deal damage that's same as POW to Enemy Spirit in the backline of same column.	N/A	
+US18_Name	Blacksmith	N/A	
+US18_Description	This Spirit can provide great support to Legion Spirit.	N/A	
+US18A2_Name	Forge Weapon	N/A	
+US18A2_Description	Target Legion Spirit POW + [same amount as POW]	N/A	
+US18A1_Name	Forge Armor	N/A	
+US18A1_Description	Target Legion Spirit DUR + [same amount as POW]	N/A	

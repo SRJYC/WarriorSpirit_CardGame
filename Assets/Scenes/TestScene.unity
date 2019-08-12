@@ -265,6 +265,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CardInPlay (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1415838891725698651, guid: 58f3ae04c3bee82448b4526173371b57,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7999024246525968724, guid: 58f3ae04c3bee82448b4526173371b57,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -374,7 +379,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Data
       value: 
-      objectReference: {fileID: 11400000, guid: 029b082ed55ca42439340d9356219c12,
+      objectReference: {fileID: 11400000, guid: 94dd88e623947e4498957738282efdcb,
         type: 2}
     - target: {fileID: 2557573030510494506, guid: 58f3ae04c3bee82448b4526173371b57,
         type: 3}
@@ -491,6 +496,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CardInPlay
       objectReference: {fileID: 0}
+    - target: {fileID: 1415838891725698651, guid: 58f3ae04c3bee82448b4526173371b57,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7999024246525968724, guid: 58f3ae04c3bee82448b4526173371b57,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -600,7 +610,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Data
       value: 
-      objectReference: {fileID: 11400000, guid: ff74b6dbee301ac498dbbdd14c508f5f,
+      objectReference: {fileID: 11400000, guid: 94dd88e623947e4498957738282efdcb,
         type: 2}
     - target: {fileID: 2557573030510494506, guid: 58f3ae04c3bee82448b4526173371b57,
         type: 3}
@@ -1156,7 +1166,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Deck: {fileID: 0}
   m_initalCardsNumber: 3
-  notifyDeckManager: 0
   m_PlayerSelect: {fileID: 0}
   m_DisplayCardOptionEvent: {fileID: 0}
   message: {fileID: 0}
@@ -2428,6 +2437,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CardInPlay (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1415838891725698651, guid: 58f3ae04c3bee82448b4526173371b57,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7999024246525968724, guid: 58f3ae04c3bee82448b4526173371b57,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2486,12 +2500,12 @@ PrefabInstance:
     - target: {fileID: 7999024246525968724, guid: 58f3ae04c3bee82448b4526173371b57,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7999024246525968724, guid: 58f3ae04c3bee82448b4526173371b57,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -55
       objectReference: {fileID: 0}
     - target: {fileID: 7999024246525968724, guid: 58f3ae04c3bee82448b4526173371b57,
         type: 3}
@@ -2511,7 +2525,7 @@ PrefabInstance:
     - target: {fileID: 7999024246525968724, guid: 58f3ae04c3bee82448b4526173371b57,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7999024246525968724, guid: 58f3ae04c3bee82448b4526173371b57,
         type: 3}
@@ -2521,7 +2535,7 @@ PrefabInstance:
     - target: {fileID: 7999024246525968724, guid: 58f3ae04c3bee82448b4526173371b57,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7999024246525968724, guid: 58f3ae04c3bee82448b4526173371b57,
         type: 3}
@@ -3127,6 +3141,7 @@ MonoBehaviour:
     type: 3}
   m_StatsChangeEvent: {fileID: 11400000, guid: b0f68383cad413848b1c3dc7cebe45c8, type: 2}
   m_DisplayTime: 1.25
+  m_NeutralColor: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
   m_PositiveColor: {r: 0, g: 1, b: 0, a: 1}
   m_NegativeColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1306757182 stripped
@@ -3533,7 +3548,6 @@ MonoBehaviour:
   m_UnitsOnBoard: {fileID: 1413472136}
   manaDisplay: {fileID: 164280737}
   m_SummonEvent: {fileID: 0}
-  m_DrawPhaseEvent: {fileID: 11400000, guid: 3e64953f7b62aba459e48f5032e64a64, type: 2}
 --- !u!114 &1413472135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3922,7 +3936,6 @@ MonoBehaviour:
   m_UnitsOnBoard: {fileID: 1472118706}
   manaDisplay: {fileID: 1119566963}
   m_SummonEvent: {fileID: 11400000, guid: 0e2c56f00d9a58e4abfb5e9ac23e4c85, type: 2}
-  m_DrawPhaseEvent: {fileID: 11400000, guid: 3e64953f7b62aba459e48f5032e64a64, type: 2}
 --- !u!4 &1472118705
 Transform:
   m_ObjectHideFlags: 0
@@ -8056,7 +8069,7 @@ PrefabInstance:
     - target: {fileID: 1312163428, guid: b761e179a7724e04391a1d199e1d68fa, type: 3}
       propertyPath: m_DrawCard
       value: 
-      objectReference: {fileID: 11400000, guid: d5e470a5afda2534bb79107e8024552b,
+      objectReference: {fileID: 11400000, guid: 3e64953f7b62aba459e48f5032e64a64,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b761e179a7724e04391a1d199e1d68fa, type: 3}

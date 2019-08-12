@@ -17,13 +17,9 @@ public class DeckManager : Singleton<DeckManager>
 
     //private DeckDrawCard m_DrawCardComponent;
 
-    private ObjectPool m_Pool;
-
     private bool[] draw = new bool[2];
     private void Start()
     {
-        m_Pool = new ObjectPool(cardPrefab);
-
         if (m_DrawCard != null)
             m_DrawCard.RegisterListenner(DrawCardPhaseStart);
     }
@@ -36,7 +32,7 @@ public class DeckManager : Singleton<DeckManager>
 
     public GameObject GetEmptyCard()
     {
-        return m_Pool.Get();
+        return Instantiate(cardPrefab);
     }
 
     public GameObject GetCard(UnitData data, PlayerID id)
@@ -54,6 +50,11 @@ public class DeckManager : Singleton<DeckManager>
         for (int i=0; i<draw.Length; i++)
         {
             draw[i] = false;
+        }
+
+        for (int i = 0; i < draw.Length; i++)
+        {
+            PlayerManager.Instance.GetPlayer((PlayerID)i).m_Deck.DrawCard(EndDrawCard);
         }
     }
 

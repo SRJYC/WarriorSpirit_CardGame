@@ -20,14 +20,17 @@ public class Deck : MonoBehaviour
 
     [Header("Inital")]
     public int m_initalCardsNumber;
-
-    [HideInInspector]public bool notifyDeckManager;
-
+    
     [Header("Draw Card")]
     private DeckDrawCard m_DrawCardComponent;
     public SelectFromCardOptions m_PlayerSelect;
     public GameEvent m_DisplayCardOptionEvent;
     public TextProperty message;
+
+    //callback
+    public delegate void Notify(PlayerID id);
+    protected Notify notify;
+
     public virtual void Start()
     {
         m_DrawCardComponent = new DeckDrawCard(this,m_PlayerSelect, m_DisplayCardOptionEvent,message.ToString());
@@ -49,26 +52,31 @@ public class Deck : MonoBehaviour
     /// <param name="OptionNum">The number of random cards from deck</param>
     /// <param name="choiceNum">The number of cards to choose in one selection</param>
     /// <param name="times">The times of selection</param>
-    public virtual void RegularDrawCard(int OptionNum = 3, int choiceNum = 1, int times = 1)
+    public virtual void DrawCard(Notify n, SingleUnitCondition condition = null, int OptionNum = 3, int choiceNum = 1, int times = 1)
     {
-        if (m_Hand.ReachMax && notifyDeckManager)
+        notify = n;
+        if (m_Hand.ReachMax)
         {
-            Notify();
+            NotifyCallback();
         }
         else
         {
-            StartCoroutine(DrawCard(OptionNum, choiceNum, times));
+            StartCoroutine(DrawCardCoroutine(condition, OptionNum, choiceNum, times));
         }
     }
 
-    private IEnumerator DrawCard(int OptionNum, int choiceNum, int times)
+    private IEnumerator DrawCardCoroutine(SingleUnitCondition condition, int OptionNum, int choiceNum, int times)
     {
         //Debug.Log("Get Triggered");
         for(int i = 0; i < times; i++)
         {
             //Debug.Log("Get Cards");
             //get cards
-            List<UnitData> cards = m_Deck.GetRandomCards(OptionNum);
+            List<UnitData> cards = new List<UnitData>();
+            if (condition == null)
+                cards = m_Deck.GetRandomCards(OptionNum);
+            else
+                cards = m_Deck.GetRandomCardsWithCondition(condition,OptionNum);
 
             //Debug.Log("Display options");
 
@@ -89,17 +97,13 @@ public class Deck : MonoBehaviour
             m_Hand.AddCard(card);
         }
 
-        if (notifyDeckManager)
-        {
-            Notify();
-        }
+        NotifyCallback();
     }
 
-    protected void Notify()
+    protected void NotifyCallback()
     {
-        //Debug.Log(this+" Done Draw Card");
-        DeckManager.Instance.EndDrawCard(m_ID);
-        notifyDeckManager = false;
+        notify?.Invoke(m_ID);
+        notify = null;
     }
 
     public void AddToDeck(UnitData data)

@@ -96,11 +96,19 @@ public class ActionManager : Singleton<ActionManager>
         return true;
     }
 
-    public void ActionConfirm()
+    public void ActionConfirm(bool force)
     {
         //Debug.Log("Need Confirm");
         if (StateMachineManager.Instance.IsState(StateID.ActionPhase) || StateMachineManager.Instance.IsState(StateID.PlayerTurn))
-            StartCoroutine(PlayerConfirm());
+        {
+            if(force)
+            {
+                TakeEffect();
+                ExitPhase();
+            }
+            else
+                StartCoroutine(PlayerConfirm());
+        }
         else
             Enemy.Instance.Confirm(TakeEffect);
     }

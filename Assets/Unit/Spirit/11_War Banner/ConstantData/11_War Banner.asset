@@ -17,8 +17,10 @@ MonoBehaviour:
   m_Description: {fileID: 11400000, guid: b1a973610ad0b7249871daa07f7a3fd7, type: 2}
   m_Artwork: {fileID: 21300000, guid: 84531c5f96e7ed5419dd10f1187767fb, type: 3}
   m_IsWarrior: 0
-  m_CanBeFront: 0
+  m_CanBeFront: 1
   m_CanBeBack: 1
   m_Unique: 0
   m_Rank: 2
-  m_RankUps: []
+  m_RankUps:
+  - {fileID: 11400000, guid: 1448955e601a096498a0d41695822534, type: 2}
+  - {fileID: 11400000, guid: 28e7ec9f734b7bd4ead1897300c49052, type: 2}

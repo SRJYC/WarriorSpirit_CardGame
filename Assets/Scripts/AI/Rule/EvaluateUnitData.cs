@@ -11,7 +11,7 @@ namespace AIPlayer
             public const int scorePerRank = 15;
             public const int scorePerDUR = 8;
             public const int scorePerPOW = 3;
-            public const int scorePerSPD = 3;
+            public const int scorePerSPD = 2;
             public const int scorePerCost = -10;
 
             public static float Evaulate(UnitData data)

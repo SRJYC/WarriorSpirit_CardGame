@@ -2,8 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[CreateAssetMenu(menuName = "Ability/Effect/ChangeStats")]
 public class StatsChangeEffect : Effect
 {
+    [Header("Property")]
+    public UnitStatsProperty m_Property;
+    public bool m_Negative;
+
+    [Header("Type")]
     [SerializeField] protected ChangeType m_ChangeTypeToSpirit = ChangeType.minimum;
     [SerializeField] protected ChangeType m_ChangeTypeToWarrior = ChangeType.minimum;
 
@@ -28,6 +35,46 @@ public class StatsChangeEffect : Effect
         power,//deal damage same as source unit's power
     }
 
+    public override void TakeEffect(AbilityInfo[] info)
+    {
+        base.TakeEffect(info);
+
+        //Get Info
+        SourceInfo sourceInfo = GetAbilityInfo<SourceInfo>();
+        TargetInfo targetInfo = GetAbilityInfo<TargetInfo>();
+
+        CreateEventData(sourceInfo, targetInfo);
+
+        TrigggerBeforeActionEvent(sourceInfo.m_Source);
+
+        //get source power;
+        int pow = sourceInfo.GetPower();
+
+        foreach (Unit unit in targetInfo.m_Targets)
+        {
+            m_TargetDelta = 0;
+
+            TriggerBeforeReceiveEffectEvent(unit);
+
+            int value = GetValue(unit, pow);
+            if (value > 0)
+                ChangeStats(unit, value);
+            else
+                ChangeStats(unit, 0);
+
+            //TriggerAfterReceiveEffectEvent(unit);
+        }
+    }
+
+    protected void ChangeStats(Unit target, int value)
+    {
+        int amount = value;
+        if (m_Negative)
+            amount = -value;
+
+        target.m_Data.ChangeStats(m_Property, amount);
+    }
+
     protected void TrigggerBeforeActionEvent(Unit unit)
     {
         if (m_BeforeActionEvent != null)
@@ -39,13 +86,6 @@ public class StatsChangeEffect : Effect
         if (m_BeforeReceiveEffectEvent != null)
             m_BeforeReceiveEffectEvent.Trigger(unit, m_EventData);
     }
-
-
-    //protected void TriggerAfterReceiveEffectEvent(Unit unit)
-    //{
-    //    if (m_AfterReceiveEffectEvent != null)
-    //        m_AfterReceiveEffectEvent.Trigger(unit, m_EventData);
-    //}
 
     protected void CreateEventData(SourceInfo sourceInfo, TargetInfo targetInfo)
     {

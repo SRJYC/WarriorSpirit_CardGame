@@ -15,7 +15,6 @@ public class Player : MonoBehaviour
 
     [Header("Event")]
     public GameEvent m_SummonEvent;
-    public GameEvent m_DrawPhaseEvent;
 
     private void Start()
     {
@@ -50,18 +49,12 @@ public class Player : MonoBehaviour
     {
         if(m_SummonEvent != null)
             m_SummonEvent.RegisterListenner(TrySummon);
-
-        if(m_DrawPhaseEvent != null)
-            m_DrawPhaseEvent.RegisterListenner(TryDrawCard);
     }
 
     protected virtual void Unregister()
     {
         if (m_SummonEvent != null)
             m_SummonEvent.UnregisterListenner(TrySummon);
-
-        if (m_DrawPhaseEvent != null)
-            m_DrawPhaseEvent.UnregisterListenner(TryDrawCard);
     }
 
     protected virtual void TrySummon(GameEventData eventData)
@@ -115,12 +108,6 @@ public class Player : MonoBehaviour
         }
 
         return true;
-    }
-
-    protected virtual void TryDrawCard(GameEventData eventData)
-    {
-        m_Deck.notifyDeckManager = true;
-        m_Deck.RegularDrawCard();
     }
 
     public bool CheckUniqueUnit(UnitData unit)

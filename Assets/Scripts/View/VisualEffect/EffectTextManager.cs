@@ -10,6 +10,7 @@ public class EffectTextManager : MonoBehaviour
 
     public float m_DisplayTime;
 
+    public Color m_NeutralColor;
     public Color m_PositiveColor;
     public Color m_NegativeColor;
 
@@ -37,10 +38,14 @@ public class EffectTextManager : MonoBehaviour
         int delta = data.m_Delta;
         string property = data.m_ChangedStats.ToString();
 
-        string op = delta >= 0 ? " +" : " ";
+        string op = delta > 0 ? " +" : " ";
         string text = property + op + delta;
 
-        Color color = delta < 0 ? m_NegativeColor : m_PositiveColor;
+        Color color = m_NeutralColor;
+        if (delta < 0)
+            color = m_NegativeColor;
+        else if (delta > 0)
+            color = m_PositiveColor;
 
         GameObject go = m_Pool.Get(true);
         go.transform.SetParent(this.transform);

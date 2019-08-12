@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7b603c0b4c502a4fb6146eb3775d207, type: 3}
   m_Name: US8A1_Description
   m_EditorClassIdentifier: 
-  text: Increase Target POW same as POW until end of the turn.
+  text: Target POW + [same amount as POW] until end of the turn.

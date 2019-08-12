@@ -6,6 +6,7 @@ public class Effect : ScriptableObject
 {
 
     protected AbilityInfo[] m_InfoList;
+
     public virtual void TakeEffect(AbilityInfo[] info)
     {
         m_InfoList = info;

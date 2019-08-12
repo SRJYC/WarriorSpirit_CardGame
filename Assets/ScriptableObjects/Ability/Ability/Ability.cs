@@ -28,6 +28,7 @@ public class Ability : ScriptableObject
 
     [Header("Active")]
     public bool m_IsAction = true;
+    public bool m_ForceConfirm = false;
     public bool m_IsActive = true;
     public bool m_IsDisplay = true;
     public ActiveListenner[] m_ActiveListenners;
@@ -131,7 +132,7 @@ public class Ability : ScriptableObject
         }
 
         if(m_IsAction)
-            ActionManager.Instance.ActionConfirm();
+            ActionManager.Instance.ActionConfirm(m_ForceConfirm);
         else
             TakeEffect();
     }

@@ -8,28 +8,29 @@ public class CardCollection : ScriptableObject
     public UnitData m_Warrior;
     public List<UnitData> m_CardList;
 
+    public List<UnitData> GetAllCardsWithCondition(SingleUnitCondition condition)
+    {
+        List<UnitData> copy = new List<UnitData>();
+        copy.AddRange(m_CardList);
+
+        for(int i=copy.Count -1; i>=0; i--)
+        {
+            if (!condition.Check(copy[i]))
+                copy.RemoveAt(i);
+        }
+
+        return copy;
+    }
+
+    public List<UnitData> GetRandomCardsWithCondition(SingleUnitCondition condition, int num, bool repeat = false)
+    {
+        List<UnitData> list = GetAllCardsWithCondition(condition);
+
+        return RandomPickFromList.RandomSelect<UnitData>(list, num, repeat);
+    }
+
     public List<UnitData> GetRandomCards(int num, bool repeat = false)
     {
-        int size = m_CardList.Count;
-        if(size <= num)
-        {
-            return m_CardList;
-        }
-
-        List<UnitData> list = new List<UnitData>();
-
-        List<int> indices = new List<int>();
-        for(int i=0; i<num; i++)
-        {
-            int index = Random.Range(0, size);
-            while(!repeat && indices.Contains(index))
-            {
-                index = Random.Range(0, size);
-            }
-            indices.Add(index);
-            list.Add(m_CardList[index]);
-        }
-
-        return list;
+        return RandomPickFromList.RandomSelect<UnitData>(m_CardList, num, repeat);
     }
 }
