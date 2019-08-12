@@ -18,7 +18,7 @@ public abstract class TargetInfoGetter : AbilityInfoGetter
     [HideInInspector] public List<Unit> m_Targets;
     [HideInInspector] public List<FieldBlock> m_Blocks;
 
-    protected void Filter()
+    protected virtual void Filter()
     { 
         ExculdeBlocks();
 

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3768750022729826424}
   - component: {fileID: 7910859788628439433}
   - component: {fileID: 3412745166727268726}
-  - component: {fileID: 2938547284747214224}
   m_Layer: 5
   m_Name: ScrollView
   m_TagString: Untagged
@@ -96,20 +95,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711d708ccc75b8249b728d70520c7a59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2938547284747214224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 115063846220633079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c774d1bae1d3b1d449467808897deaa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  scrollRect: {fileID: 0}
 --- !u!1 &3210473766590028931
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +132,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 410, y: 400}
+  m_SizeDelta: {x: 520, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6441087464272749127
 Canvas:
@@ -167,7 +152,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1744894633
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &9189472689819655034
@@ -261,6 +246,7 @@ MonoBehaviour:
     type: 3}
   m_WarriorDestroyEvent: {fileID: 11400000, guid: 625378533fdbc364e8067684a27d64ac,
     type: 2}
+  m_MechanicManager: {fileID: 11400000, guid: fee0e63a3e15c1b45a16efcfb3f6a501, type: 2}
 --- !u!1 &7994369369543529019
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,7 +282,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -55, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4322394612662109479

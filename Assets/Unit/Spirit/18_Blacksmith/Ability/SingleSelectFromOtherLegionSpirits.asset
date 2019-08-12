@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af2b77a2c8b9f3c42aa7d242ffcb633b, type: 3}
+  m_Name: SingleSelectFromOtherLegionSpirits
+  m_EditorClassIdentifier: 
+  m_Automatic: 0
+  m_Done: 0
+  m_NeedUnit: 1
+  m_NeedEmpty: 0
+  m_ExculdeSelf: 1
+  m_ExcludeWarrior: 1
+  m_Targets: []
+  m_Blocks: []
+  m_AvaliableTargetGetter:
+  - {fileID: 11400000, guid: 584cb53ec4241af4cbbebd576b795fbc, type: 2}
+  - {fileID: 11400000, guid: e4b9598f69fe98844addfb026058a0a3, type: 2}
+  m_AvaliableBlocks: []
+  m_SelectEvent: {fileID: 11400000, guid: 5683092d3041a2c4cab346db047ae4ba, type: 2}
+  m_CancalSelectEvent: {fileID: 11400000, guid: 99ac84b4b0d740146b70b07f0e77ba69,
+    type: 2}
+  m_Num: 1
+  m_CanRepeat: 0
+  m_CanEndEarly: 0
+  m_HighlightBlock: 0
+  m_HighlightOptions: {fileID: 11400000, guid: 020d777363b67e34aa71a4dc5cfd52b3, type: 2}
+  EnemySelect: 0

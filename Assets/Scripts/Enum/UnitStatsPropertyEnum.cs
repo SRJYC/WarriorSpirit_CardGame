@@ -15,4 +15,5 @@ public enum UnitStatsProperty
     Charged,
     Formation,
     Negative,
+    Shield,
 }

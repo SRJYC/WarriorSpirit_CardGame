@@ -54,6 +54,7 @@ public class StatsChangeEffect : Effect
         {
             m_TargetDelta = 0;
 
+            m_EventData.m_CurrentTarget = unit;
             TriggerBeforeReceiveEffectEvent(unit);
 
             int value = GetValue(unit, pow);

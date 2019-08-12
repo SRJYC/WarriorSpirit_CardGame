@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fde014ade0f764ebd8c41178a2ada0, type: 3}
   m_Name: 18_Blacksmith
   m_EditorClassIdentifier: 
-  m_HighRankSpirit: {fileID: 0}
+  m_HighRankSpirit: {fileID: 11400000, guid: 94dd88e623947e4498957738282efdcb, type: 2}
   m_Sacrifice: 0
   m_CanSame: 1
   data1Condition:

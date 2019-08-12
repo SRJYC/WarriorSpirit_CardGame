@@ -30,3 +30,4 @@ MonoBehaviour:
   - 
   - DUR becomes negative, so common damage effect only makes it more durable. You
     need to gain its DUR until it reaches 0.
+  - Spirit with SHIELD will take less damage.

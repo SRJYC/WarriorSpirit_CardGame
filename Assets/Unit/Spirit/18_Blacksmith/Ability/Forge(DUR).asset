@@ -18,10 +18,12 @@ MonoBehaviour:
   m_Description: {fileID: 11400000, guid: d11fd773457164e4483db777850fecdc, type: 2}
   m_InfoGetters:
   - {fileID: 11400000, guid: 5d8493d9f91c3d4499be272ba10d2868, type: 2}
-  - {fileID: 11400000, guid: 98974b48259b94e469435d2d64e579d0, type: 2}
+  - {fileID: 11400000, guid: 034194343ece99242a093c74f80bde4f, type: 2}
+  - {fileID: 11400000, guid: 072e016eed09b9b4f8a91924d0c63f6d, type: 2}
   m_AbilityInfos:
   - {fileID: 11400000, guid: 14ccc5cd910b4f04588797a2fc19afda, type: 2}
   - {fileID: 11400000, guid: 870a3a46885e02048bf05b60229ed120, type: 2}
+  - {fileID: 11400000, guid: dda09bf1debb7354489503725d7ef775, type: 2}
   m_CD: 2
   m_CurrentCD: 0
   m_ManaCost: 0
@@ -31,12 +33,12 @@ MonoBehaviour:
   m_IsDisplay: 1
   m_ActiveListenners: []
   m_Conditions:
-  - {fileID: 11400000, guid: bb425e119afee7448af0c0b63f9e9993, type: 2}
+  - {fileID: 11400000, guid: 1e441d676347fb74a9f691d62865bb13, type: 2}
   m_Effects:
   - {fileID: 11400000, guid: c9b27d5f05221bc4bb2f3d9485efeaf3, type: 2}
   m_EffectInfoIndices:
   - row: 0000000001000000
   m_ConditionInfoIndices:
-  - row: 01000000
+  - row: 0000000002000000
   m_EffectConditionIndices:
   - row: 00000000

@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32237da992032e04783abdac4be7aa66, type: 3}
-  m_Name: ReduceDMG
+  m_Script: {fileID: 11500000, guid: 504cdb50df3d3b946b5cf76e5c789b15, type: 3}
+  m_Name: Breaker
   m_EditorClassIdentifier: 
-  value: -1
+  m_Event: {fileID: 11400000, guid: 00c7036629ace774a94ca52824f7986a, type: 2}
+  property: 7

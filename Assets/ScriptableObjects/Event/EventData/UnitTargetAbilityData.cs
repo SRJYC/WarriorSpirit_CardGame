@@ -8,6 +8,7 @@ using UnityEngine;
 public class EffectData : GameEventData
 {
     public Unit m_Source;
+    public Unit m_CurrentTarget;
     public List<Unit> m_Targets;
     public List<FieldBlock> m_TargetBlock;
 

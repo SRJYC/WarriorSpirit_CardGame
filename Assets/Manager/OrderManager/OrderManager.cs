@@ -20,12 +20,14 @@ public class OrderManager : Singleton<OrderManager>
     [Header("Game End Event")]
     public GameEvent m_WarriorDestroyEvent;
 
+    [Header("Unit Property Mechanic")]
+    public UnitPropertyMechanicManager m_MechanicManager;
+
     private List<Unit> m_SortedUnitList;
     private List<Unit> m_UnsortedUnitList;
     private Dictionary<Unit, GameObject> m_UnitMarkMap;
 
     private Unit m_CurrentUnit;
-
     public Unit CurrentUnit { get { return m_CurrentUnit; } }
 
     // Start is called before the first frame update
@@ -113,6 +115,7 @@ public class OrderManager : Singleton<OrderManager>
 
         m_UnitMarkMap.Add(unit, mark);
 
+        m_MechanicManager.RegisterUnit(unit);
         AuraManager.Instance.RefreshAura(m_UnsortedUnitList);
     }
 
@@ -130,6 +133,8 @@ public class OrderManager : Singleton<OrderManager>
             m_UnitMarkMap.Remove(unit);
         }
 
+
+        m_MechanicManager.UnregisterUnit(unit);
         AuraManager.Instance.RemoveUnit(unit);
 
         WarriorDestroy(unit);

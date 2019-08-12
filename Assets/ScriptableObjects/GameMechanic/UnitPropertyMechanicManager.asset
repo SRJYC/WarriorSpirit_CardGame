@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7b603c0b4c502a4fb6146eb3775d207, type: 3}
-  m_Name: US18A2_Description
+  m_Script: {fileID: 11500000, guid: b7322f01ec5257c4aa1867dc4c556f3f, type: 3}
+  m_Name: UnitPropertyMechanicManager
   m_EditorClassIdentifier: 
-  text: Target another Legion Spirit. Its POW + [same amount as POW] if there are
-    two other Legion Spirit with higher power in the same line. Otherwise, +1.
+  mechanics:
+  - {fileID: 11400000, guid: 16b65cf1f7c80e34e96b02963d692437, type: 2}
+  - {fileID: 11400000, guid: ff9ffd06dcc34df41a25a6c7b259c125, type: 2}

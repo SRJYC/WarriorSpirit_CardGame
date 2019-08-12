@@ -10,6 +10,9 @@ public class StatsChangeStatus : Status
 
     public override string GetDescription()
     {
+        if (m_Description != null)
+            return m_Description.ToString();
+
         string and = m_ChangedValue >= 0 ? " +" : " ";
         return AllTextEnumProxy.Instance.GetText(m_Property) + and + m_ChangedValue;
     }

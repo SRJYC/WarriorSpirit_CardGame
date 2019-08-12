@@ -9,15 +9,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 045fc6e542ec4004584307de93bb118c, type: 3}
-  m_Name: ShieldWall
+  m_Script: {fileID: 11500000, guid: 1fac18f9898ee204e9ff44d529a70a91, type: 3}
+  m_Name: AllOtherLegionAllySpirits
   m_EditorClassIdentifier: 
-  m_InfoGetter:
-  - {fileID: 11400000, guid: fe661cb97f5d85742b2ef072606d92f1, type: 2}
-  - {fileID: 11400000, guid: 23e5d91581beb1647a03e1da386f8d27, type: 2}
+  m_Automatic: 1
+  m_Done: 0
+  m_NeedUnit: 1
+  m_NeedEmpty: 0
+  m_ExculdeSelf: 1
+  m_ExcludeWarrior: 1
+  m_Targets: []
+  m_Blocks: []
+  m_IsAlly: 1
+  m_Exclude: 0
   m_Condition:
     nameCheck:
       m_Unit: {fileID: 0}
-    typeChecks: []
+    typeChecks:
+    - spiritTypes: 00000000
     propertyConditions: []
-  m_Status: {fileID: 11400000, guid: dd5bd91d8c4b6ce4da00679ff6c0ff88, type: 2}
