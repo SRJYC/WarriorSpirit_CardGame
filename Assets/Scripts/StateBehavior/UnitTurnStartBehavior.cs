@@ -20,7 +20,9 @@ public class UnitTurnStartBehavior : StateMachineBehaviour
             return;
         }
 
-        unitTurnStartEvent.Trigger(unit);
+        SingleUnitData data = new SingleUnitData();
+        data.m_Unit = unit;
+        unitTurnStartEvent.Trigger(unit,data);
 
         NextState(animator, unit);
     }

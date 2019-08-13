@@ -13,21 +13,18 @@ MonoBehaviour:
   m_Name: StatsDisplayReference
   m_EditorClassIdentifier: 
   hideProperties: 09000000
-  boolProperties: 08000000
+  boolProperties: 080000000a000000
   tooltipList:
-  - 
-  - 'POWER isn''t like ATK. It''s rather an evaluation than a strength. Not all abilities
-    can benefits from POWER. '
-  - 'DURABILITY is like hitpoint. When it reaches 0, unit is destroyed. There''s no
-    maximum value. '
-  - Player need to pay COST to summon Spirit. It's not a big restriction. The real
-    matter is what you have on board.
-  - SPEED determines the order of Spirit to take action.
-  - 
-  - 
-  - Spirit with BREAKER can deal more damage to Spirit.
-  - 
-  - 
-  - DUR becomes negative, so common damage effect only makes it more durable. You
-    need to gain its DUR until it reaches 0.
-  - Spirit with SHIELD will take less damage.
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 92d86bcd9183940489c05ea63421b5d5, type: 2}
+  - {fileID: 11400000, guid: f3132b41b9e97584abd5b1df312acb04, type: 2}
+  - {fileID: 11400000, guid: 2ae3e234ebf0c734daa7eeaf4f405c31, type: 2}
+  - {fileID: 11400000, guid: 96e3b53c4af0c9c479d14bcb543a97e8, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: e3581d5d3f7f6e04ca2dd74f36496d88, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 44125bd4ecbf8ee4e99f3fc3bab60008, type: 2}
+  - {fileID: 11400000, guid: 88ad114a67391044987e3a0c6690bcbe, type: 2}
+  - {fileID: 11400000, guid: 476ec9aa9366a3448989c4b550f346e1, type: 2}

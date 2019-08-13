@@ -26,7 +26,4 @@ MonoBehaviour:
       m_Unit: {fileID: 0}
     typeChecks:
     - spiritTypes: 00000000
-    propertyConditions:
-    - property: 1
-      compare: 4
-      value: 1
+    propertyConditions: []

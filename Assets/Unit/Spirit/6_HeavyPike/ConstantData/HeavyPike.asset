@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 0
   m_UnitName: {fileID: 11400000, guid: fa799bd6476e49a4a8f93587bff4a933, type: 2}
   m_Description: {fileID: 11400000, guid: f596fb23cd85c7d4b810c074a45e1038, type: 2}
-  m_Artwork: {fileID: 21300000, guid: 84531c5f96e7ed5419dd10f1187767fb, type: 3}
+  m_Artwork: {fileID: 21300000, guid: 2554604503788724b9f23a213b9243ad, type: 3}
   m_IsWarrior: 0
   m_CanBeFront: 1
   m_CanBeBack: 0
@@ -25,3 +25,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 484655b70606e5e4fb97ebae15161477, type: 2}
   - {fileID: 11400000, guid: 1448955e601a096498a0d41695822534, type: 2}
   - {fileID: 11400000, guid: 28e7ec9f734b7bd4ead1897300c49052, type: 2}
+  - {fileID: 11400000, guid: aabf2cd589faede4f959f6b4ebaa6870, type: 2}

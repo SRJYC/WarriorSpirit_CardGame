@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "GameMechanic/Manager", order = 1)]
 public class UnitPropertyMechanicManager : ScriptableObject
 {
-    [SerializeField]private List<UnitPropertyMechanic> mechanics;
+    [SerializeField]private List<UnitPropertyMechanic> mechanics = new List<UnitPropertyMechanic>();
 
     public void RegisterUnit(Unit unit)
     {

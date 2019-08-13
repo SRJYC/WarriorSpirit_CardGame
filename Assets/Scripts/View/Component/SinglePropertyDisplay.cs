@@ -42,15 +42,14 @@ public class SinglePropertyDisplay : MonoBehaviour
         if (tooltip == null)
             return;
 
-        string tip = StatsDisplayReference.Instance.tooltipList[(int)statsProperty];
-        //Debug.Log("Get Tooltip["+statsProperty.ToString()+"]["+ (int)statsProperty + "]:["+tip+"]");
+        TextProperty tip = StatsDisplayReference.Instance.tooltipList[(int)statsProperty];
 
-        if (tip == "")
+        if (tip == null)
             tooltip.enabled = false;
         else
         {
             tooltip.enabled = true;
-            tooltip.m_Tooltip = tip;
+            tooltip.m_Tooltip = tip.ToString();
         }
     }
 

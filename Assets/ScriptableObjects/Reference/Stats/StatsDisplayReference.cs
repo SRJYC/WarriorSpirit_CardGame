@@ -13,5 +13,5 @@ public class StatsDisplayReference : SingletonScriptableObject<StatsDisplayRefer
 
     [Tooltip("The tooltip will be displayed when player hover on corresponding property." +
         "\nIt should be same size as properties")]
-    public List<string> tooltipList;
+    public List<TextProperty> tooltipList;
 }

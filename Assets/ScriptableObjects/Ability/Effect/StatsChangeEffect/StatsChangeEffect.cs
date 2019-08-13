@@ -11,6 +11,7 @@ public class StatsChangeEffect : Effect
     public bool m_Negative;
 
     [Header("Type")]
+    [SerializeField] protected int m_MinValue = 1;
     [SerializeField] protected ChangeType m_ChangeTypeToSpirit = ChangeType.minimum;
     [SerializeField] protected ChangeType m_ChangeTypeToWarrior = ChangeType.minimum;
 
@@ -111,7 +112,7 @@ public class StatsChangeEffect : Effect
             case ChangeType.none:
                 return 0;
             case ChangeType.minimum:
-                value = 1;
+                value = m_MinValue;
                 break;
             case ChangeType.power:
                 value = power;

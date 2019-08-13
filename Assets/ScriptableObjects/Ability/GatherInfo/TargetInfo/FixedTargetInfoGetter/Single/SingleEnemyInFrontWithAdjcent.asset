@@ -14,12 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Automatic: 1
   m_Done: 0
+  m_NeedUnit: 1
+  m_NeedEmpty: 1
   m_ExculdeSelf: 0
   m_ExcludeWarrior: 0
-  m_NeedUnit: 1
   m_Targets: []
   m_Blocks: []
   m_IsAlly: 0
+  m_Exclude: 0
+  m_Condition:
+    nameCheck:
+      m_Unit: {fileID: 0}
+    typeChecks: []
+    propertyConditions: []
   m_Row: 0
   m_EnemyExtend: 0
   m_Self: 0

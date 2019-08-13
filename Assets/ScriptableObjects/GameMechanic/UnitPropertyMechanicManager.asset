@@ -15,3 +15,4 @@ MonoBehaviour:
   mechanics:
   - {fileID: 11400000, guid: 16b65cf1f7c80e34e96b02963d692437, type: 2}
   - {fileID: 11400000, guid: ff9ffd06dcc34df41a25a6c7b259c125, type: 2}
+  - {fileID: 11400000, guid: 81440ed8f1663654b97b7df6ee141da5, type: 2}

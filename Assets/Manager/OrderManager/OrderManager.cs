@@ -28,6 +28,7 @@ public class OrderManager : Singleton<OrderManager>
     private Dictionary<Unit, GameObject> m_UnitMarkMap;
 
     private Unit m_CurrentUnit;
+    private int m_NextUnitIndex;
     public Unit CurrentUnit { get { return m_CurrentUnit; } }
 
     // Start is called before the first frame update
@@ -56,21 +57,19 @@ public class OrderManager : Singleton<OrderManager>
     {
         AuraManager.Instance.RefreshAura(m_UnsortedUnitList);
 
-        if (m_CurrentUnit == null)
-            return null;
+        if (m_CurrentUnit != null)
+            m_UnitMarkMap[m_CurrentUnit].GetComponent<OrderMarkDisplay>().Resize();
 
-        m_UnitMarkMap[m_CurrentUnit].GetComponent<OrderMarkDisplay>().Resize();
-
-        int index = m_SortedUnitList.IndexOf(m_CurrentUnit);
-        if (index < m_SortedUnitList.Count - 1)
-        {
-            m_CurrentUnit = m_SortedUnitList[++index];
-            m_UnitMarkMap[m_CurrentUnit].GetComponent<OrderMarkDisplay>().Enlarge();
-        }
-        else
+        if (m_NextUnitIndex >= m_SortedUnitList.Count)
         {
             m_CurrentUnit = null;
+            return null;
         }
+
+        m_CurrentUnit = m_SortedUnitList[m_NextUnitIndex];
+        m_UnitMarkMap[m_CurrentUnit].GetComponent<OrderMarkDisplay>().Enlarge();
+
+        m_NextUnitIndex++;
 
         return m_CurrentUnit;
     }
@@ -88,6 +87,8 @@ public class OrderManager : Singleton<OrderManager>
         {
             m_CurrentUnit = m_SortedUnitList[0];
             m_UnitMarkMap[m_CurrentUnit].GetComponent<OrderMarkDisplay>().Enlarge();
+
+            m_NextUnitIndex = 1;
         }
         else
             m_CurrentUnit = null;
@@ -121,6 +122,16 @@ public class OrderManager : Singleton<OrderManager>
 
     public void RemoveUnit(Unit unit)
     {
+        if(m_CurrentUnit == unit)
+        {
+            m_CurrentUnit = null;
+        }
+
+        if(m_SortedUnitList.IndexOf(unit) < m_NextUnitIndex)
+        {
+            m_NextUnitIndex--;
+        }
+
         m_UnsortedUnitList.Remove(unit);
         m_SortedUnitList.Remove(unit);
 

@@ -11,15 +11,15 @@ GM_BreakerNote	Spirit with BREAKER can deal more damage to Spirit.	拥有[破坏
 GM_CantControl	Spirit can't be controlled. It's either not its turn or it's enemy.	无法控制，可能还没有到其行动的回合，或者这是敌方	
 GM_Confirm	Please [Confirm] Your Choice	请[确认]你的选择	
 GM_Cooldown	This Action is still in Cooldown. You may Pass turn instead.	[行动]还在冷却中,你可选择[Pass]你的回合.	
-GM_CostNote	Player need to pay COST to summon Spirit. It's not a big restriction. The real matter is what you have on board.	玩家需要消耗法力召唤[灵]	
-GM_DurNote	DURABILITY is like hitpoint. When it reaches 0,unit is destroyed. There's no maximum value.	[DUR]下降为0时,单位死亡. [DUR]没有上限.	
+GM_CostNote	Player need to pay COST to summon Spirit. And some Spirit needs to cost Mana to use Ability.	玩家需要消耗法力召唤[灵]	
+GM_DurNote	DURABILITY is like hitpoint. When it reaches 0, unit is destroyed. There's no maximum value. 	[DUR]下降为0时,单位死亡. [DUR]没有上限.	
 GM_Mana	This Action will cost Mana, make sure you have enough of it.	这个[行动]需要消耗法力	
 GM_MsgWhenSelect	Select and Confirm Your Choice.	选择并确认	
 GM_NegativeNote	DUR becomes negative, so common damage effect only makes it more durable. You need to gain its DUR until it reaches 0.	[DUR]变成负数,当其提升至0或以上时才会死亡.普通的伤害只会加强它.	
 GM_NoOption	No Avaliable Rank Up Option.	未达成任何进阶的条件	
 GM_NotOnBoard	Spirit is not on Battlefield	[灵]不在战场上	
-GM_PowerNote	POWER isn't like ATK. It's rather an evaluation than a strength. Not all abilities can benefits from POWER.	不是所有的能力都需要[POW],但是它是进阶的重要标准.	
-GM_SpeedNote	SPEED determines the order.	速度决定行动顺序	
+GM_PowerNote	POWER isn't like ATK. It's rather an evaluation than a strength. Not all abilities can benefits from POWER. 	不是所有的能力都需要[POW],但是它是进阶的重要标准.	
+GM_SpeedNote	SPEED determines the order of Spirit to take action.	速度决定行动顺序	
 GMT_EnemyDeck	Enemy Deck Number	敌方卡组数量	
 GMT_EnemyHand	Card Number in Enemy Hand	敌方手牌数量	
 GMT_PositionIcon	These icons show which postion the unit can be summoned on.	表示[灵]可以召唤的位置	
@@ -167,3 +167,22 @@ US18A2_Description	Target Legion Spirit POW + [same amount as POW]	N/A
 US18A1_Name	Forge Armor	N/A	
 US18A1_Description	Target Legion Spirit DUR + [same amount as POW]	N/A	
 Shield	Shield	N/A	
+US19A2_Name	Masterpiece(Shield)	N/A	
+US19A2_Description	Target Legion Spirit +1 Shield. If there are two other Legion Spirit with equal or higher power, then +2 instead.	N/A	
+US19A1_Name	Masterpiece(Breaker)	N/A	
+US19A1_Description	Target Legion Spirit +1 Breaker. If there are two other Legion Spirit with equal or higher power, then +2 instead.	N/A	
+US19_Name	Master Blacksmith	N/A	
+US19_Description		N/A	
+GM_ShieldNote	Unit with SHIELD will take less damage.	N/A	
+US20A1_Name	Comet	N/A	
+US20A1_Description	Damage all Enemy in front. Deal [Pow] damage to Spirit and Warrior.	N/A	
+US20_Name	Comet Spear	N/A	
+US20_Description		N/A	
+GM_EvanescentNote	Unit with Evanescent will be destroyed automatically. It losses DUR at end of its turn( or gain DUR if it's Negative)	N/A	
+Evanescent	Evanescent	N/A	
+US21A2_Name	Slash	N/A	
+US21A2_Description	Attack Enemy in front and adjcent Enemy. Deal [Pow] damage to them	N/A	
+US21A1_Name	Attack	N/A	
+US21A1_Description	Attack Enemy in front. Deal [POW] damage to Spirit and 3 damage to Warrior. It can reach 2nd block if there's no Enemy on the 1st.	N/A	
+US21_Name	Death Knight	N/A	
+US21_Description		N/A	

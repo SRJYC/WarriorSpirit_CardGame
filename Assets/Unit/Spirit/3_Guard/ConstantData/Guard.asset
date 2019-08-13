@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 3
   m_UnitName: {fileID: 11400000, guid: c18413f38e9fbec4b9978d4a2b797786, type: 2}
   m_Description: {fileID: 11400000, guid: 9c9a3da3738135248bda62b7892488d4, type: 2}
-  m_Artwork: {fileID: 21300000, guid: 84531c5f96e7ed5419dd10f1187767fb, type: 3}
+  m_Artwork: {fileID: 21300000, guid: 6c86173fa7b55c44396431455c7cc544, type: 3}
   m_IsWarrior: 0
   m_CanBeFront: 1
   m_CanBeBack: 0

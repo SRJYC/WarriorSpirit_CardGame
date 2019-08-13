@@ -14,7 +14,9 @@ public class UnitTurnEndBehavior : StateMachineBehaviour
         //get current unit
         Unit unit = OrderManager.Instance.CurrentUnit;
 
-        unitTurnEndEvent.Trigger(unit);
+        SingleUnitData data = new SingleUnitData();
+        data.m_Unit = unit;
+        unitTurnEndEvent.Trigger(unit, data);
 
         unit = OrderManager.Instance.NextUnit();
 

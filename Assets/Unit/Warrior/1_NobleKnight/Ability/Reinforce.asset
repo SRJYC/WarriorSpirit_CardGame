@@ -29,7 +29,10 @@ MonoBehaviour:
   m_IsDisplay: 1
   m_ActiveListenners: []
   m_Conditions: []
-  m_Effects: []
-  m_EffectInfoIndices: []
+  m_Effects:
+  - {fileID: 11400000, guid: d49ee04df80226b4095860c8a1579577, type: 2}
+  m_EffectInfoIndices:
+  - row: 
   m_ConditionInfoIndices: []
-  m_EffectConditionIndices: []
+  m_EffectConditionIndices:
+  - row: 

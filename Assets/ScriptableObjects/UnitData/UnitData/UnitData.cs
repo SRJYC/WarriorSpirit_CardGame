@@ -66,6 +66,7 @@ public class UnitData : ScriptableObject
             m_Stats.Add(UnitStatsProperty.Cost, m_Cost);
         }
 
+        m_Stats.Add(UnitStatsProperty.Rank, m_ConstantData.m_Rank);
         m_Stats.Add(UnitStatsProperty.DUR, m_Durability);
         m_Stats.Add(UnitStatsProperty.POW, m_Power);
         m_Stats.Add(UnitStatsProperty.SPD, m_Speed);

@@ -15,10 +15,12 @@ MonoBehaviour:
   ID: 17
   m_UnitName: {fileID: 11400000, guid: 763d55c9d442183438fcc0dda399e860, type: 2}
   m_Description: {fileID: 11400000, guid: 72ac8263bdebb6b4391a9b5c3c229c8b, type: 2}
-  m_Artwork: {fileID: 21300000, guid: 84531c5f96e7ed5419dd10f1187767fb, type: 3}
+  m_Artwork: {fileID: 21300000, guid: 05f76628f06d8b145a3d24a36409f5aa, type: 3}
   m_IsWarrior: 0
   m_CanBeFront: 1
   m_CanBeBack: 1
   m_Unique: 0
   m_Rank: 4
-  m_RankUps: []
+  m_RankUps:
+  - {fileID: 11400000, guid: 4c6a1f8f07747414ab609174f4c30b79, type: 2}
+  - {fileID: 11400000, guid: aabf2cd589faede4f959f6b4ebaa6870, type: 2}

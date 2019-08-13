@@ -16,4 +16,5 @@ public enum UnitStatsProperty
     Formation,
     Negative,
     Shield,
+    Evanescent
 }

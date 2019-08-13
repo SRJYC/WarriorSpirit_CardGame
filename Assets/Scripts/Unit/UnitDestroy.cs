@@ -63,7 +63,7 @@ public class UnitDestroy
 
     private void CheckDUR(GameEventData eventData)
     {
-        Debug.Log("Check DUR");
+        //Debug.Log("Check DUR");
         UnitStatsChangeData data = eventData.CastDataType<UnitStatsChangeData>();
         if (data == null)
             return;
