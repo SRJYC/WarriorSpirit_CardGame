@@ -1,7 +1,7 @@
 # WarriorSpirit_CardGame
 This is a card game project demo by one developer.
 
-![](Screenshot (4).png) 
+![](./Screenshot (4).png) 
 
 My idea is that cards are limited in deck, but unlimited in Game. When build the deck, player has a few choices. They can only add 6 cards from all the Rank 1 cards. But in the game, player can Rank Up units. Cards can developed into different High Rank Cards by combining with other cards. 
 
