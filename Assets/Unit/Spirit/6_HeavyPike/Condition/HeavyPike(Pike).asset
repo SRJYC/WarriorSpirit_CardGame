@@ -31,5 +31,5 @@ MonoBehaviour:
     - spiritTypes: 00000000
     propertyConditions:
     - property: 2
-      compare: 4
-      value: 4
+      compare: 1
+      value: 2

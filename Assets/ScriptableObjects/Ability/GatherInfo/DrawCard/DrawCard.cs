@@ -15,6 +15,8 @@ public class DrawCard : AbilityInfoGetter
 
     public override void GetInfo(Unit source)
     {
+        m_Done = false;
+
         PlayerID player = source.m_PlayerID;
 
         PlayerManager.Instance.GetPlayer(player).m_Deck.DrawCard(Done, m_Condition, m_Options, m_Choice, m_Times);

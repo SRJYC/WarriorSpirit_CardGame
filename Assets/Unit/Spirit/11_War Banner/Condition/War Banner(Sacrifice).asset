@@ -22,7 +22,7 @@ MonoBehaviour:
     - spiritTypes: 00000000
     propertyConditions:
     - property: 1
-      compare: 1
+      compare: 4
       value: 1
   data2Condition:
     nameCheck:

@@ -234,8 +234,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Cost
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 79296d2750f48064c9f73017e6e33e53, type: 2}
+  m_sharedMaterial: {fileID: 6556019252037063127, guid: 79296d2750f48064c9f73017e6e33e53,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -260,7 +261,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 22.35
+  m_fontSize: 25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -549,4 +550,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Event: {fileID: 11400000, guid: 260b120c43fdb44469e46af128cf7739, type: 2}
   m_TimeRequire: 1
+  m_text: {fileID: 0}
   m_Tooltip: 

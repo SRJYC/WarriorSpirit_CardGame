@@ -30,7 +30,7 @@ public class OrderMarkDisplay : MonoBehaviour
     private HighlightType highlightType = HighlightType.CardIndicate;
     private LayoutGroup group;
 
-    private Vector3 origin;
+    private Vector3 origin = Vector3.zero;
 
     public void SetActiveColor(bool active)
     {
@@ -110,9 +110,12 @@ public class OrderMarkDisplay : MonoBehaviour
     [ContextMenu("Resize")]
     public void Resize()
     {
-        this.transform.localScale = origin;
+        if(origin != Vector3.zero && this.transform.localScale != origin)
+        {
+            this.transform.localScale = origin;
 
-        ResetParentLayoutGroup();
+            ResetParentLayoutGroup();
+        }
     }
 
     private void ResetParentLayoutGroup()

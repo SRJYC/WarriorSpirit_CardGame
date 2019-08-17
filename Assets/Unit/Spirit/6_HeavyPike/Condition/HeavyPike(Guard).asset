@@ -27,5 +27,5 @@ MonoBehaviour:
     - spiritTypes: 00000000
     propertyConditions:
     - property: 1
-      compare: 4
-      value: 3
+      compare: 1
+      value: 1

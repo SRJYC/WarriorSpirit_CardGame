@@ -1,0 +1,188 @@
+﻿Artifact	Artifact	神器
+Breaker	Breaker	破坏者
+Charged	Charged	充能
+Cost	Cost	Cost
+DUR	DUR	DUR
+Evanescent	Evanescent	消逝
+Fairy	Fairy	妖精
+Formation	Formation	阵型
+GI_10SetHeader	<b>Set: </b>	<b>套牌:</b>
+GI_11Set	You can choose 1 Warrior and 6 Spirits in your set. The Warrior will be summoned on your board at the beginning and the 6 Spirits will be added to your deck.	你可以选择1个[战士]和6个[灵]. [战士]会直接召唤到场上，[灵]则会加入卡组。
+GI_12BoardHeader	<b>Board:</b>	<b>场地:</b>
+GI_13Board	Each player has a field. Player can only summon Spirits on his field. Each Field contains 7 blocks. 3 are frontline, 3 are backline, and 1 is center. Spirit may have restrictions of position. For example, it can only be summoned to the frontline.	每个玩家有一个场地。玩家可以在自己的场地上召唤[灵]。每个场地有7个格子，其中3个是前线，3个是后方，1个是中心。有些[灵]仅能召唤到前线或者后方。
+GI_14GamePhaseHeader	<b>Game Phase:</b>	<b>游戏阶段:</b>
+GI_15GamePhase1	Each player will draw random three cards at Game Start. Then each turn, the Player can choose 1 from 3 cards randomly chosen from the deck and add it to the Hand. It's copy. The number of cards in deck remain.	每个玩家在游戏开始时抽三张卡，之后每个回合开始时，游戏随机选出三张卡组里的牌，玩家选择其中一张加入手卡。卡组不会减少。
+GI_16GamePhase2	After Drawing, players can Summon or Rank Up Spirit. Beware, they both cost Mana. After using cards, press <b>Pass</b> button to end this phase.	抽卡阶段后，玩家可以使用手卡并消耗法力召唤或者升阶[灵]。之后按[Pass]按钮结束阶段。
+GI_17GamePhase3	Next, all units will take turn one by one based on their SPD. You can use action or pass the turn. To use action, you have to Right Click the card to open Info Window and then click Action.	之后，所有单位依据SPD属性依次行动。玩家可以使用能力或者直接[Pass]。右键点击单位可以查看其资料，点击能力就可以使用。
+GI_18RankUpHeader	<b>Rank Up:</b>	<b>升阶:</b>
+GI_19RU1	Spirit can Rank Up if the Player drags another card and drop on it. So the Player can access more powerful Spirit. All High-Rank Spirits require the two Low-Rank Spirits to have some properties. You can view Rank up detail in Deck Builder.	拖动手卡并放到另一个单位上就可以根据两张卡片的能力选择进阶成更厉害的卡。在改变卡组界面可以查看进阶的可能与条件。
+GI_1IntroHeader	<b>Introduction:</b>	<b>介绍:</b>
+GI_20RU2	The conditions showed in the left is the requirement for Spirit 1 which is the Spirit on the board. It’s also the Spirit to Rank Up, so it’s called Base.	左侧的是场上的[单位](称为基石)所需要满足的条件。
+GI_21RU3	The conditions showed in the right is the requirement for Spirit 2 which is the Spirit in the Hand. It’s the Spirit that’s used to Rank Up, so it’s called Material.	右侧的是手卡的[单位](称为素材)所需要满足的条件。
+GI_22RU4	Rank Up will cost Mana as well.	升阶同样需要消耗法力。
+GI_23RU5	If player summoned(or Rank Up) any new Spirits (not in the deck) , then this Spirit will be added to the Deck. Therefore, player has a chance to draw the Spirit directly and summon it without Rank Up or used as Material.	当玩家召唤或进阶出新的单位（未在卡组中）时，这张卡片会加入卡组中，玩家youjihui抽到
+GI_2IntroContent	First. Thanks For Playing! This is a Card Game Demo created all by myself. So, please don't expect any fancy Images and Music.	首先，感谢游玩！这是一个个人制作的卡牌对战游戏Demo. 并没有优秀美工和音乐，请见谅.
+GI_3RuleHeader	<b>Rule:</b>	<b>规则:</b>
+GI_4Win	There are 2 kinds of cards, Warrior and Spirit. Warrior is like player's Avatar and Spirit is like player's minion. Destroy Enemy Warrior to win the game.	卡片分为两种[战士]与[灵]. 摧毁敌方[战士]以获得胜利.
+GI_5ControlHeader	<b>Control:</b>	<b>控制:</b>
+GI_6Control1	You can always right-click a card in Gameplay or in Deck Builder to see its detail.	你可以在游戏中右击卡片查看其细节。
+GI_7Control2	You can drag a card in hand and drop it on the board to summon it.	你可以拖曳手卡到场上来召唤它。
+GI_8Control3	You can drag a card in hand and drop it on a Spirit (that’s on the board) to Rank Up.	你可以拖曳手卡到场上的单位来进阶。
+GI_9Control4	You can right-click empty space to cancel your selection in Gameplay.	游戏中你可以右击空白处以取消你的选择。
+GI_AddCard	Drag card from top to center to add the card to your deck.	把卡片从上方拖到中心以加入套牌。
+GI_DeckLimit	A deck must have 1 Warrior and 6 Spirits. You can have at most 3 copies of same Spirit. You can only add basic Spirits to your deck and Rank Up in game.	一个套牌必须有1[战士]和6[灵]。同种灵可以放三张。能直接加入套牌的卡片都是基础卡片，你需要在游戏中升阶。
+GI_RankDetail	You can drag cards to [Rank Detail] to see its Rank Up Options and Requirements.	你可以把卡片拖到[Rank Detail]按钮上以查看其进阶可能以及条件。
+GI_SaveButton	SAVE	N/A
+GL_Confirm	Confirm	确认
+GM_BreakerNote	Spirit with BREAKER can deal more damage to Spirit.	拥有[破坏者]属性的[灵]可以对[灵]造成更多伤害
+GM_CantControl	Spirit can't be controlled. It's either not its turn or it's enemy.	无法控制，可能还没有到其行动的回合，或者这是敌方
+GM_CardListExplain1	Below are Spirits that may Rank Up to Selected Spirit	可进阶为所选卡片的
+GM_CardListExplain2	Above are Spirits that selected Spirit may Rank Up to	所选卡片可进阶的
+GM_Confirm	Please [Confirm] Your Choice	请[确认]你的选择
+GM_Cooldown	This Action is still in Cooldown. You may Pass turn instead.	[行动]还在冷却中,你可选择[Pass]你的回合.
+GM_CostNote	Player need to pay COST to summon Spirit. And some Spirit needs to cost Mana to use Ability.	玩家需要消耗法力召唤[灵]
+GM_DrawCard	Choose one Card add to your Hand	选择一张加入你的手卡
+GM_DurNote	DURABILITY is like hitpoint. When it reaches 0, unit is destroyed. There's no maximum value.	[DUR]下降为0时,单位死亡. [DUR]没有上限.
+GM_EvanescentNote	Unit with Evanescent will be destroyed automatically. It losses DUR at end of its turn( or gain DUR if it's Negative)	消逝属性会让单位在每回合结束时损失DUR。
+GM_GameEnd	Game Over	N/A
+GM_GameLose	Loss	N/A
+GM_GameWin	Victory	N/A
+GM_Mana	This Action will cost Mana, make sure you have enough of it.	这个[行动]需要消耗法力
+GM_MsgWhenSelect	Select and Confirm Your Choice.	选择并确认
+GM_NegativeNote	DUR becomes negative, so common damage effect only makes it more durable. You need to gain its DUR until it reaches 0.	[DUR]变成负数,当其提升至0或以上时才会死亡.普通的伤害只会加强它.
+GM_NoOption	No Avaliable Rank Up Option.	未达成任何进阶的条件
+GM_NotOnBoard	Spirit is not on Battlefield	[灵]不在战场上
+GM_PowerNote	POWER isn't like ATK. It's rather an evaluation than a strength. Not all abilities can benefits from POWER.	不是所有的能力都需要[POW],但是它是进阶的重要标准.
+GM_Restart	Need Restart Game	需要重启游戏
+GM_Satify	The unit must satify	单位必须满足
+GM_ScarficeExplain	The red icon indicate this Spirit has Sacrifice Property. It means even the base Spirit is used as Material (in hand), this Spirit will still be considered as a possible result of Rank Up as the base Spirit is Base.	红印表示[牺牲]属性，若可进阶单位用作素材，这个[灵]会被视为可进阶的选择之一。
+GM_SetNotAvaliable	Your Set Is Not Avaliable	不可用
+GM_ShieldNote	Unit with SHIELD will take less damage.	护盾属性减免所受伤害
+GM_SpeedNote	SPEED determines the order of Spirit to take action.	速度决定行动顺序
+GML_ChangeSet	Change Set	改变套牌
+GML_NotAvaliable	Not Avaliable	不可用
+GML_Quit	Quit	退出
+GML_RankDetail	Rank Detail	N/A
+GML_Rule	Rule (Read Me)	规则（必读）
+GML_Set	Your Set	你的套牌
+GML_SwitchButton	Switch	交换
+GMT_EnemyDeck	Enemy Deck Number	敌方卡组数量
+GMT_EnemyHand	Card Number in Enemy Hand	敌方手牌数量
+GMT_Mana	Increase Maximum amount by 1 at turn start each turn until reach the limit 7.	每回合提升最大值1，直到7.
+GMT_PositionIcon	These icons show which postion the unit can be summoned on.	表示[灵]可以召唤的位置
+GMT_YourDeck	Your Deck Number.	你的卡组数量
+Golem	Golem	魔像
+ID	English	简体中文
+Legion	Legion	军团
+LV	LV	LV
+Module	Module	组件
+Nature	Nature	自然
+Negative	Negative	负极
+None	None	无
+POW	POW	POW
+Rank	Rank	阶级
+Shadow	Shadow	暗影
+Shield	Shield	N/A
+SPD	SPD	SPD
+Structure	Structure	建筑
+Undead	Undead	亡灵
+US10_Description	This Spirit can extend another Spirit's lifetime. But only Fairy Type Spirit can really benefit from it.	一个可以延长其他[灵]生命的[灵]，但只有妖精可以受益。
+US10_Name	Little Light	微光
+US10A1_Description	Target Ally Spirit DUR+1. And its DUR-1 at Whole Turn End if it's not Fairy Type	友军目标DUR+1.如果不是妖精，则总回合结束时DUR-1。
+US10A1_Name	Help	援助
+US10A1St1_Description	The DUR it gains will be lost very soon.	虚假耐久很快会失去
+US10A1St1_Name	Loss	失去
+US11_Description	Every Warrior will have its own flag, but the basic effects are same, make Legion Spirit Stronger.	每个战士都有自己的旗帜，但是基本效果一样，强化军团[灵]。
+US11_Name	War Banner	战旗
+US11A1_Description	All Ally Legion Spirits Breaker+1 while on board. 	当在场时，所有友方军团[灵]获得[破坏者+1]
+US11A1_Name	Morale Improvment	士气提升
+US12_Description	This Spirit creates a Domain which constantly apply Yin and Yang.	这个[灵]构筑了一个领域。
+US12_Name	Yin Yang	阴阳
+US12A1_Description	All Enemy POW-1 while all Ally POW+1.	所有敌方POW-1，所有友方POW+1
+US12A1_Name	Yin Yang	阴阳
+US13_Description	Useless Spirit that's meant to block Enemy field. However, it may become useful and powerful.	无用的[灵]，能够占据敌方的位置。但是它有可能变得强大。
+US13_Name	Shadow	影子
+US14_Description		N/A
+US14_Name	Cursed Soldier	诅咒士兵
+US14A2_Description	After being destroyed, summon a useless Shadow on a Random Position of Enemy field.	被破坏后，在敌方随机位置召唤一个无用的[影子]。
+US14A2_Name	Curse	诅咒
+US15_Description	The iconic Spirit of Legion's Defensive Power.	军团防御力量的标志。
+US15_Name	Tower Shield	塔盾
+US15A2_Description	Enhance defense. Spirits in frontline and Warrior will take less damage.	强化防御。前线的[灵]和战士受到更少伤害。
+US15A2_Name	Shield Wall	盾墙
+US15A2St1_Description	Reduce income damage by 1.	减少1点伤害。
+US15A2St1_Name	Shield Wall	盾墙
+US16_Description	This Spirit can mess Enemy up.	用于干扰敌方
+US16_Name	Secret Agent	密探
+US16A1_Description	Summon a useless Shadow on Enemy Field.	在敌方场上召唤一个无用的[影子]。
+US16A1_Name	Interfere	干扰
+US17_Description	This Spirit can move around and threat Enemy's backline.	[灵]拥有灵活的移动力，并能够威胁敌方后卫。
+US17_Name	Assassin	刺客
+US17A1_Description	Deal [same as POW] damage  to Enemy Spirit in the backline of same column.	对同一列敌方后排的敌人造成[等同于POW]的shanghai
+US17A1_Name	Assassinate	刺杀
+US18_Description	This Spirit can provide great support to Legion Spirit.	对军团支援的辅助型[灵]
+US18_Name	Blacksmith	铁匠
+US18A1_Description	Target another Legion Spirit. Its DUR + [same amount as POW] if there are two other Legion Spirit with higher power in the same line. Otherwise, +1.	如果同一行有其他两个相同或更高POW的军团型[灵]，那么目标其他军团型[灵] DUR+[等同于POW]的数值，否则只+1。
+US18A1_Name	Forge Armor	铸造护甲
+US18A2_Description	Target another Legion Spirit. Its POW + [same amount as POW] if there are two other Legion Spirit with higher power in the same line. Otherwise, +1.	如果同一行有其他两个相同或更高POW的军团型[灵]，那么目标其他军团型[灵] POW+[等同于POW]的数值，否则只+1。
+US18A2_Name	Forge Weapon	铸造武器
+US19_Description		N/A
+US19_Name	Master Blacksmith	铁匠大师
+US19A1_Description	Target Legion Spirit +1 Breaker. If there are two other Legion Spirit with equal or higher power, then +2 instead.	如果同一行有其他两个相同或更高POW的军团型[灵]，那么目标其他军团型[灵] [破坏者+2]，否则只+1。
+US19A1_Name	Masterpiece(Breaker)	杰作(破坏者)
+US19A2_Description	Target Legion Spirit +1 Shield. If there are two other Legion Spirit with equal or higher power, then +2 instead.	如果同一行有其他两个相同或更高POW的军团型[灵]，那么目标其他军团型[灵] [hudun+2]，否则只+1。
+US19A2_Name	Masterpiece(Shield)	杰作(护盾)
+US2_Description	The basic spirits in Legion. It has great potential.	军团型的基础[灵]
+US2_Name	Soldier	士兵
+US20_Description		N/A
+US20_Name	Comet Spear	流星枪
+US20A1_Description	Damage all Enemy in front. Deal [Pow] damage to Spirit and Warrior.	对前方所有敌人造成[等同于POW]的伤害。
+US20A1_Name	Comet	流星
+US21_Description		N/A
+US21_Name	Death Knight	死亡骑士
+US21A1_Description	Attack Enemy in front. Deal [POW] damage to Spirit and 3 damage to Warrior. It can reach 2nd block if there's no Enemy on the 1st.	攻击前方敌人，对[灵]造成[等同于POW]的伤害，对[战士]造成[3]点伤害。如果第1格没有敌人，可以攻击到第2格。
+US21A1_Name	Attack	攻击
+US21A2_Description	Attack Enemy in front and adjcent Enemy. Deal [Pow] damage to them	攻击前方和邻近的敌人，对[灵]造成[等同于POW]的伤害。
+US21A2_Name	Slash	横斩
+US2A1_Description	Attack Spirit in front. Deal 1 damage to it.	攻击前方敌人，造成[1]点伤害
+US2A1_Name	Attack	攻击
+US3_Description	More durability.	更耐久的[灵]
+US3_Name	Guard	守卫
+US3A1_Description	Attack Spirit in front. Deal 1 damage to it. If there are two other Legion Spirit with equal or higher power,then self Gain 1 DUR.	攻击前方敌人，造成[1]点伤害。如果同一行有其他两个相同或更高POW的军团型[灵]，那么自己DUR+1
+US3A1_Name	Attack	攻击
+US4_Description	Enhance Soldier with Pike. It increase its range and power of attack. It's the first threat of enemy Warrior.	用长枪强化士兵，增加其射程，使其能够伤害[战士]
+US4_Name	Pike Soldier	枪兵
+US4A1_Description	Attack Enemy in front. Deal 1 damage to it. It can reach 2nd block if there's no Enemy on the 1st.	攻击前方敌人，造成[1]伤害。如果第1格没有敌人，可以攻击到第2格。
+US4A1_Name	Pike	刺
+US5_Description	Enhance Soldier with Saber. It increase its range and power of attack.	用军刀强化士兵，增加其射程和力量。
+US5_Name	Saber Soldier	剑士
+US5A1_Description	Attack Enemy in front and adjcent Enemy. Deal 1 damage to them	攻击前方和邻近的敌人，造成[1]伤害
+US5A1_Name	Slash	横斩
+US6_Description	Enhance Pikeman with Heavy Armor, dramatically increase its durability. And, be careful, danger is near.	用重甲强化枪兵，大幅度提升其耐久。
+US6_Name	Heavy Pike	重装枪兵
+US6A1_Description	Attack Enemy in front. Deal [POW] damage to Spirit and 1 damage to Warrior. It can reach 2nd block if there's no Enemy on the 1st.	攻击前方敌人，对[灵]造成[等同于POW]的伤害，对[战士]造成[1]点伤害。如果第1格没有敌人，可以攻击到第2格。
+US6A1_Name	Pike	刺
+US6A2_Description	Damage all Enemy in front.	攻击前方所有敌人
+US6A2_Name	Puncture	穿刺
+US7_Description	The basic element of Nature. Its power and effect can expand.	自然型的基础元素。
+US7_Name	Yin	阴
+US7A1_Description	Target POW - [same amount as POW] until end of the turn.	直到回合结束 目标POW - [等同于POW]的量
+US7A1_Name	Weaken	虚弱
+US8_Description	The basic element of Nature. Its power and effect can expand.	自然型的基础元素。
+US8_Name	Yang	阳
+US8A1_Description	Target POW + [same amount as POW] until end of the turn.	直到回合结束 目标POW + [等同于POW]的量
+US8A1_Name	Strengthen	强劲
+US9_Description	The base form of Fairy Type. Its mobility grants it various path of Rank Up.	拥有移动力的妖精的基础形态
+US9_Name	Pixie	皮克西
+US9A1_Description	Move to another empty block.	移动到另一个空位置
+US9A1_Name	Move	移动
+UW1_Description	The Warrior who is known by his leadership. He is expert in command Legion Type Spirit.	一位以领导力闻名的战士，擅长使用军团型[灵]
+UW1_Name	Noble Knight	贵族骑士
+UW1A1_Description	Target one of your spirit. Until the end of this turn, it gains <b>Formation</b> if it's Legion. Otherwise, it gains Legion Type.	选择一位友方[灵]，直到回合结束，其被视为军团型，如果本身是军团型则获得[阵型]状态
+UW1A1_Name	Support	支援
+UW1A1St1_Description	Unit will be considered as there're two other Legion Spirits with higher power in the same row.	这个单位被视为有两个POW相同或更高的军团型[灵]在同一行。
+UW1A1St1_Name	Formation	阵型
+UW1A1St2_Description	Unit will be considered as Legion type.	单位被视作军团型
+UW1A1St2_Name	Legion Spirit	军团
+UW1A2_Description	Draw a Legion Type Spirit.	抽一张军团型卡
+UW1A2_Name	Reinforce	援军

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MyUnits : MonoBehaviour
 {
-    //when player has summoned 3 copies of new Spirits on his field, the Spirit will be added to the deck, so he can draw it diretly later.
-    public const int NumberOfCopyToAdd = 3; 
+    //when player has summoned 2 copies of new Spirits on his field, the Spirit will be added to the deck, so he can draw it diretly later.
+    public const int NumberOfCopyToAdd = 1; 
 
     public List<Unit> m_Units;
     public GameEvent m_TurnStartEvent;
@@ -78,6 +78,9 @@ public class MyUnits : MonoBehaviour
 
     private int IncreaseNumber(UnitData origin)
     {
+        if (origin.IsWarrior)
+            return -1;
+
         int value = 0;
         if (m_History.TryGetValue(origin, out value))
         {

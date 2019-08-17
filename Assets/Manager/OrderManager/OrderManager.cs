@@ -58,8 +58,16 @@ public class OrderManager : Singleton<OrderManager>
         AuraManager.Instance.RefreshAura(m_UnsortedUnitList);
 
         if (m_CurrentUnit != null)
+        {
             m_UnitMarkMap[m_CurrentUnit].GetComponent<OrderMarkDisplay>().Resize();
+            Debug.Log("Current unit index:" + m_SortedUnitList.IndexOf(m_CurrentUnit));
+        }
+        else
+        {
+            Debug.Log("Current unit is destroyed");
+        }
 
+        Debug.Log("Next unit index:" + m_NextUnitIndex);
         if (m_NextUnitIndex >= m_SortedUnitList.Count)
         {
             m_CurrentUnit = null;
@@ -122,22 +130,23 @@ public class OrderManager : Singleton<OrderManager>
 
     public void RemoveUnit(Unit unit)
     {
-        if(m_CurrentUnit == unit)
-        {
-            m_CurrentUnit = null;
-        }
-
-        if(m_SortedUnitList.IndexOf(unit) < m_NextUnitIndex)
-        {
-            m_NextUnitIndex--;
-        }
-
         m_UnsortedUnitList.Remove(unit);
         m_SortedUnitList.Remove(unit);
+
+        if (m_CurrentUnit == unit)
+        {
+            m_CurrentUnit = null;
+            m_NextUnitIndex--;
+        }
+        else
+        {
+            m_NextUnitIndex = m_SortedUnitList.IndexOf(m_CurrentUnit) + 1;
+        }
 
         GameObject mark;
         if (m_UnitMarkMap.TryGetValue(unit, out mark))
         {
+            mark.GetComponent<OrderMarkDisplay>().Resize();
             mark.transform.SetParent(null);
             m_Pool.Deactivate(mark, true);
 

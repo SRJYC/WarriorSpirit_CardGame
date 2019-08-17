@@ -31,4 +31,4 @@ MonoBehaviour:
     propertyConditions:
     - property: 1
       compare: 1
-      value: 3
+      value: 2
